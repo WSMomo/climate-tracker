@@ -2,8 +2,8 @@ import Home from "./assets/pages/home/Home";
 
 export default function App() {
   return (
-    <h1>
+    <div>
       <Home />
-    </h1>
+    </div>
   );
 }
