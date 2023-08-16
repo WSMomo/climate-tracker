@@ -1,0 +1,7 @@
+.container {
+  @apply bg-gradient-to-b from-secondary-color to-third-color border border-blue-950 aspect-square;
+}
+
+.title {
+  @apply text-gray-400 text-2xl text-left p-6;
+}
