@@ -7,8 +7,7 @@ import {
   NO2_URL,
   TEMPERATURE_URL,
 } from "../../global/global";
-
-export default function Home() {
+function Home() {
   return (
     <div className={styles.container}>
       <GridItem
@@ -16,6 +15,7 @@ export default function Home() {
         dataKey="station"
         url={TEMPERATURE_URL}
         color="#FF5733"
+        titleLink="/temperature"
       >
         Temperature
       </GridItem>
@@ -24,6 +24,7 @@ export default function Home() {
         dataKey="trend"
         url={CO2_URL}
         color="#339933"
+        titleLink="/co2"
       >
         CO2
       </GridItem>
@@ -32,6 +33,7 @@ export default function Home() {
         dataKey="average"
         url={METHANE_URL}
         color="#FF9900"
+        titleLink="/methane"
       >
         Methane
       </GridItem>
@@ -40,6 +42,7 @@ export default function Home() {
         dataKey="average"
         url={NO2_URL}
         color="#FF0000"
+        titleLink="/no2"
       >
         NO2
       </GridItem>
@@ -48,9 +51,12 @@ export default function Home() {
         dataKey="extent"
         url={ARCTIC_URL}
         color="#66CCFF"
+        titleLink="/arctic"
       >
         Arctic
       </GridItem>
     </div>
   );
 }
+
+export default Home;
