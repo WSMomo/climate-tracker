@@ -1,4 +1,5 @@
 import GridItem from "../../components/gridItem/GridItem";
+import styles from "./Home.module.css";
 import {
   ARCTIC_URL,
   CO2_URL,
@@ -9,7 +10,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-4/5 max-w-6xl h-4/5 p-2">
+    <div className={styles.container}>
       <GridItem
         graphicTitle="result"
         dataKey="station"
