@@ -1,5 +1,5 @@
 .container {
-  @apply bg-gradient-to-b from-secondary-color to-third-color border border-blue-950 aspect-square;
+  @apply bg-gradient-to-b from-secondary-color to-third-color border border-blue-950;
 }
 
 .title {

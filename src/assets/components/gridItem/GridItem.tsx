@@ -1,16 +1,16 @@
 // import { useEffect, useState } from "react";
 import styles from "./GridItem.module.css";
 import {
-  // LineChart,
-  // Line,
+  LineChart,
+  Line,
   // CartesianGrid,
   // XAxis,
   // YAxis,
   // Legend,
   Tooltip,
   ResponsiveContainer,
-  AreaChart,
-  Area,
+  // AreaChart,
+  // Area,
 } from "recharts";
 import { useData } from "../../../hooks/useData";
 
@@ -19,6 +19,7 @@ interface Props {
   graphicTitle: string;
   dataKey: string;
   url: string;
+  color: string;
 }
 
 export default function GridItem({
@@ -26,6 +27,7 @@ export default function GridItem({
   url,
   dataKey,
   graphicTitle,
+  color,
 }: Props) {
   // const data = useData(METHANE_API);
   const data = useData(url);
@@ -33,23 +35,21 @@ export default function GridItem({
     <div className={styles.container}>
       <h2 className={styles.title}>{children}</h2>
       {data !== undefined && (
-        <ResponsiveContainer>
-          <AreaChart
-            data={data[graphicTitle]}
-            // margin={{ top: 10, right: 10, left: 10, bottom: 10 }}
-          >
+        <ResponsiveContainer width="100%" height="80%">
+          <LineChart data={data[graphicTitle]} margin={{ top: 10, bottom: 20 }}>
             {/* <CartesianGrid strokeDasharray="3 3" /> */}
             {/* <XAxis dataKey="date" /> */}
             {/* <YAxis /> */}
             <Tooltip cursor={false} />
             {/* <Legend /> */}
-            <Area
+            <Line
               type="monotone"
               dataKey={dataKey}
-              stroke="#8884d8"
-              fill="#8884d8"
+              stroke={color}
+              // fill={color}
+              dot={false}
             />
-          </AreaChart>
+          </LineChart>
         </ResponsiveContainer>
       )}
     </div>
