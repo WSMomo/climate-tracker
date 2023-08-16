@@ -2,21 +2,25 @@ import { createSlice } from "@reduxjs/toolkit";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface DataState {
-  value: number;
+  showSidebar: boolean;
 }
 
 const initialState: DataState = {
-  value: 0,
+  showSidebar: false,
 };
 
 export const dataSlice = createSlice({
   name: "data",
   initialState,
-  reducers: {},
+  reducers: {
+    setShowSidebar: (state) => {
+      state.showSidebar = !state.showSidebar;
+    },
+  },
 });
 
 // Action creators are generated for each case reducer function
 
-// export const {  } = dataSlice.actions;
+export const { setShowSidebar } = dataSlice.actions;
 
 export default dataSlice.reducer;

@@ -1,17 +1,5 @@
-// import { useEffect, useState } from "react";
 import styles from "./GridItem.module.css";
-import {
-  LineChart,
-  Line,
-  // CartesianGrid,
-  // XAxis,
-  // YAxis,
-  // Legend,
-  Tooltip,
-  ResponsiveContainer,
-  // AreaChart,
-  // Area,
-} from "recharts";
+import { LineChart, Line, Tooltip, ResponsiveContainer } from "recharts";
 import { useData } from "../../../hooks/useData";
 import { Link } from "react-router-dom";
 
@@ -32,7 +20,6 @@ function GridItem({
   color,
   titleLink,
 }: Props) {
-  // const data = useData(METHANE_API);
   const data = useData(url);
   return (
     <div className={styles.container}>
@@ -44,16 +31,11 @@ function GridItem({
               data={data[graphicTitle]}
               margin={{ top: 10, bottom: 20 }}
             >
-              {/* <CartesianGrid strokeDasharray="3 3" /> */}
-              {/* <XAxis dataKey="date" /> */}
-              {/* <YAxis /> */}
               <Tooltip cursor={false} />
-              {/* <Legend /> */}
               <Line
                 type="monotone"
                 dataKey={dataKey}
                 stroke={color}
-                // fill={color}
                 dot={false}
               />
             </LineChart>
