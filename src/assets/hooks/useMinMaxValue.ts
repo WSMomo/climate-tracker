@@ -12,11 +12,10 @@ export function useMinMaxValue(
       const valuesArray = data.map((item) => +(item as any)[value]);
       const min = Math.min(...valuesArray);
       const max = Math.max(...valuesArray);
-      setMinValue(isNaN(min) ? 0 : Math.floor(min));
-      setMaxValue(isNaN(max) ? 0 : Math.floor(max));
+      setMinValue(Math.floor(min));
+      setMaxValue(Math.floor(max));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [data, value]);
 
   return { minValue, maxValue };
 }

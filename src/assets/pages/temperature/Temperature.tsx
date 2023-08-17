@@ -1,64 +1,56 @@
-// import { useSelector } from "react-redux";
-// import { RootState } from "../../redux/store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
-// import Sidebar from "../../components/sidebar/Sidebar";
-// import Loader from "../../components/loader/Loader";
-// import Slider from "../../components/slider/Slider";
-// import Chart from "../../components/chart/Chart";
-// import TemperatureSourceInfo from "./TemperatureSourceInfo";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Loader from "../../components/loader/Loader";
+import Slider from "../../components/slider/Slider";
+import Chart from "../../components/chart/Chart";
+import TemperatureSourceInfo from "./TemperatureSourceInfo";
 
-// import styles from "./temperature.module.css";
-// import { useSlider } from "../../hooks/useSlider";
-// import { useMinMaxValue } from "../../hooks/useMinMaxValue";
-// import { TemperatureType } from "../../global/types/temperatureType";
+import styles from "./temperature.module.css";
+import { useSlider } from "../../hooks/useSlider";
+import { useMinMaxValue } from "../../hooks/useMinMaxValue";
 
 function Temperature() {
-  return <></>;
-  // const data = useSelector((state: RootState) => state.data.temperature);
-  // const getDataProperty = (dataPoint: TemperatureType) => {
-  //   if (dataPoint.time) {
-  //     return dataPoint.time;
-  //   } else {
-  //     return undefined;
-  //   }
-  // };
-  // const { minValue: minYear, maxValue: maxYear } = useMinMaxValue(data, "time");
+  const data = useSelector((state: RootState) => state.data.temperature);
 
-  // const {
-  //   minValueSelected: minYearSelected,
-  //   maxValueSelected: maxYearSelected,
-  //   handleChangeSlider,
-  // } = useSlider(minYear, maxYear);
+  const { minValue: minYear, maxValue: maxYear } = useMinMaxValue(data, "time");
 
-  // if (data.length === 0) return <Loader />;
+  const {
+    minValueSelected: minYearSelected,
+    maxValueSelected: maxYearSelected,
+    handleChangeSlider,
+  } = useSlider(minYear, maxYear);
 
-  // return (
-  //   <div className={styles.container}>
-  //     <Sidebar />
-  //     {minYear && maxYear && (
-  //       <Slider
-  //         minYear={minYear}
-  //         maxYear={maxYear}
-  //         handleChangeSlider={handleChangeSlider}
-  //       />
-  //     )}
+  if (data.length === 0) return <Loader />;
 
-  //     {/* CHECK EMPTY DATA */}
-  //     {data.length > 0 && minYearSelected && maxYearSelected && (
-  //       <Chart
-  //         data={data}
-  //         minYearSelected={minYearSelected}
-  //         maxYearSelected={maxYearSelected}
-  //         dataKey="station"
-  //         color="#FF5733"
-  //         secondDataKey={"land"}
-  //         secondColor="blue"
-  //         dataProprierty={getDataProperty}
-  //       />
-  //     )}
-  //     <TemperatureSourceInfo />
-  //   </div>
-  // );
+  return (
+    <div className={styles.container}>
+      <Sidebar />
+      {minYear && maxYear && (
+        <Slider
+          minYear={minYear}
+          maxYear={maxYear}
+          handleChangeSlider={handleChangeSlider}
+        />
+      )}
+
+      {/* CHECK EMPTY DATA */}
+      {data.length > 0 && minYearSelected && maxYearSelected && (
+        <Chart
+          data={data}
+          minYearSelected={minYearSelected}
+          maxYearSelected={maxYearSelected}
+          dataKey="station"
+          color="#FF5733"
+          secondDataKey={"land"}
+          secondColor="blue"
+          dataProperty="time"
+        />
+      )}
+      <TemperatureSourceInfo />
+    </div>
+  );
 }
 
 export default Temperature;
