@@ -7,5 +7,4 @@ export interface ArcticType {
   hemisphere: string;
   month: string;
   rank: string;
-  time: string;
 }

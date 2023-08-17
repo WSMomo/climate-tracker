@@ -9,11 +9,11 @@ import {
 } from "recharts";
 import { TemperatureType } from "../../global/types/temperatureType";
 import { ArcticType } from "../../global/types/arcticType";
-type Data = TemperatureType | ArcticType; // Unione dei tipi
+type Data = TemperatureType | ArcticType;
 
 interface Props {
   data: Data[];
-  dataProperty: keyof Data;
+  dataProperty: keyof TemperatureType | keyof ArcticType;
   minYearSelected: number;
   maxYearSelected: number;
   dataKey: string;
@@ -38,8 +38,8 @@ function Chart({
       <LineChart
         data={data.filter(
           (obj) =>
-            +obj[dataProperty] > minYearSelected &&
-            +obj[dataProperty] < maxYearSelected
+            +obj[dataProperty as keyof typeof obj] > minYearSelected &&
+            +obj[dataProperty as keyof typeof obj] < maxYearSelected
         )}
         margin={{ top: 10, bottom: 20 }}
       >
