@@ -11,6 +11,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import ReactSlider from "react-slider";
 
 function Temperature() {
   const data = useSelector((state: RootState) => state.data.co2);
@@ -43,33 +44,35 @@ function Temperature() {
     console.log("MinYearSelected:", minYearSelected);
   }, [maxYearSelected, minYearSelected]);
 
+  function handleChangeSlider(value: number[]) {
+    setMinYearSelected(value[0]);
+    setMaxYearSelected(value[1]);
+  }
+
   return (
-    <div className="text-white">
+    <div className="text-white flex flex-col justify-center items-center w-96">
       <Sidebar />
 
-      <div>
-        <form className="flex flex-col justify-center items-center">
-          <label htmlFor="startDate">From</label>
-          <input
-            name="startDate"
-            className="text-black"
-            type="number"
-            min={minYear && minYear}
-            max={maxYearSelected && maxYearSelected - 1}
-            value={minYearSelected && minYearSelected}
-            onChange={(e) => setMinYearSelected(+e.target.value)}
+      <div className="w-96 h-12">
+        {minYear && maxYear && (
+          <ReactSlider
+            className="cursor-pointer"
+            thumbClassName="bg-red-500 h-12 w-12 flex justify-center items-center"
+            thumbActiveClassName="bg-white text-black"
+            trackClassName="bg-white h-2 top-5"
+            defaultValue={[minYear, maxYear]}
+            min={minYear}
+            max={maxYear}
+            ariaLabel={["Lower thumb", "Upper thumb"]}
+            ariaValuetext={(state) => `Thumb value ${state.valueNow}`}
+            renderThumb={(props, state) => (
+              <div {...props}>{state.valueNow}</div>
+            )}
+            onChange={(value) => handleChangeSlider(value)}
+            pearling
+            minDistance={15}
           />
-          <label htmlFor="endDate">To</label>
-          <input
-            name="endDate"
-            className="text-black"
-            type="number"
-            min={minYearSelected && minYearSelected + 1}
-            max={maxYear && maxYear}
-            value={maxYearSelected && maxYearSelected}
-            onChange={(e) => setMaxYearSelected(+e.target.value)}
-          />
-        </form>
+        )}
       </div>
 
       {/* CHECK EMPTY DATA */}
@@ -78,7 +81,7 @@ function Temperature() {
         minYearSelected > 0 &&
         maxYearSelected &&
         maxYearSelected > 0 && (
-          <ResponsiveContainer width={600} height={300}>
+          <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={data.filter(
                 (obj) =>
