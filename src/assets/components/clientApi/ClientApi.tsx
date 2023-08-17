@@ -34,18 +34,45 @@ function ClientApi({ children, className }: Props) {
   );
 
   useEffect(() => {
-    if (temperatureData && co2Data && methaneData && no2Data && arcticData) {
+    if (temperatureData) {
       dispatch(setTemperature(temperatureData["result"]));
+    }
+
+    if (co2Data) {
       dispatch(setCo2(co2Data["co2"]));
+    }
+
+    if (methaneData) {
       dispatch(setMethane(methaneData["methane"]));
+    }
+
+    if (no2Data) {
       dispatch(setNo2(no2Data["nitrous"]));
+    }
+
+    if (arcticData) {
       dispatch(setArctic(arcticData["arcticData"]));
-      if (!isClientApiActived) {
-        dispatch(setIsClientApiActived());
-      }
+    }
+
+    if (
+      !isClientApiActived &&
+      temperatureData &&
+      co2Data &&
+      methaneData &&
+      no2Data &&
+      arcticData
+    ) {
+      dispatch(setIsClientApiActived());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [temperatureData]);
+  }, [
+    arcticData,
+    co2Data,
+    isClientApiActived,
+    methaneData,
+    no2Data,
+    temperatureData,
+  ]);
 
   //DEBUG
   useEffect(() => {

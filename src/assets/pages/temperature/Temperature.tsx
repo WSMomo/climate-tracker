@@ -25,7 +25,6 @@ function Temperature() {
   const [maxYearSelected, setMaxYearSelected] = useState<number>();
 
   useEffect(() => {
-    console.log(data);
     if (data.length > 0) {
       data.map((data) => yearArray.push(+data.time));
       setMaxYear(Math.floor(Math.max(...yearArray)));
@@ -53,10 +52,14 @@ function Temperature() {
 
   if (data.length === 0) {
     return (
-      <ClientApi className="text-4xl bg-white text-black">
-        Loading data...
+      <ClientApi>
+        <Sidebar />
+        <div
+          className="inline-block h-16 w-16 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] text-white"
+          role="status"
+        ></div>
       </ClientApi>
-    ); // Mostra un messaggio di caricamento finché i dati non sono pronti
+    );
   }
 
   return (
