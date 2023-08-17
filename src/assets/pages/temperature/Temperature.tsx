@@ -15,6 +15,10 @@ function Temperature() {
   const data = useSelector((state: RootState) => state.data.temperature);
 
   const { minValue: minYear, maxValue: maxYear } = useMinMaxValue(data, "time");
+  const { minValue: minStation, maxValue: maxStation } = useMinMaxValue(
+    data,
+    "station"
+  );
 
   const {
     minValueSelected: minYearSelected,
@@ -46,6 +50,8 @@ function Temperature() {
           secondDataKey={"land"}
           secondColor="blue"
           dataProperty="time"
+          minValue={minStation}
+          maxValue={maxStation}
         />
       )}
       <TemperatureSourceInfo />

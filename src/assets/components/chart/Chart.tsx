@@ -20,6 +20,8 @@ interface Props {
   color: string;
   secondDataKey?: string;
   secondColor?: string;
+  minValue: number;
+  maxValue: number;
 }
 
 function Chart({
@@ -31,6 +33,8 @@ function Chart({
   secondDataKey,
   secondColor,
   dataProperty,
+  minValue,
+  maxValue,
 }: Props) {
   console.log(dataProperty);
   return (
@@ -45,11 +49,10 @@ function Chart({
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
-          dataKey={dataKey}
+          dataKey={dataProperty}
           // tickFormatter={(value) => value.substring(0, 4)}
         />
-        <YAxis type="number" domain={[-2, 1]} />
-        {/* <YAxis type="number" domain={[-2, 1]} /> */}
+        <YAxis type="number" domain={[minValue, maxValue]} />
         <Tooltip cursor={false} />
         <Line type="monotone" dataKey={dataKey} stroke={color} dot={false} />
         <Line

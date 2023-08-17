@@ -12,6 +12,7 @@ function Arctic() {
   const data = useSelector((state: RootState) => state.data.arctic);
 
   const { minValue: minYear, maxValue: maxYear } = useMinMaxValue(data, "year");
+  const { minValue: minArea, maxValue: maxArea } = useMinMaxValue(data, "area");
   const {
     minValueSelected: minYearSelected,
     maxValueSelected: maxYearSelected,
@@ -43,9 +44,9 @@ function Arctic() {
           maxYearSelected={maxYearSelected}
           dataKey="area"
           color="#FF5733"
-          secondDataKey={"land"}
-          secondColor="blue"
           dataProperty="year"
+          minValue={minArea}
+          maxValue={maxArea}
         />
       )}
     </div>
