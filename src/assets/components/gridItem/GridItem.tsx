@@ -1,4 +1,4 @@
-import styles from "./gridItem.module.css";
+import styles from "./xgridItem.module.css";
 import { LineChart, Line, ResponsiveContainer } from "recharts";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
