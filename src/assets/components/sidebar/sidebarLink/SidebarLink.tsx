@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./xsidebarLink.module.css";
+import styles from "./sidebarLink.module.css";
 import { useDispatch } from "react-redux";
 import { setShowSidebar } from "../../../redux/dataSlice";
 

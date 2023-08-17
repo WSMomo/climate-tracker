@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import GridItem from "../../components/gridItem/GridItem";
-import styles from "./xhome.module.css";
+import styles from "./home.module.css";
 import { RootState } from "../../redux/store";
 import Loader from "../../components/loader/Loader";
 

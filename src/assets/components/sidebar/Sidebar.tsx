@@ -1,4 +1,4 @@
-import styles from "./xsiderbar.module.css";
+import styles from "./siderbar.module.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
