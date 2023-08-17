@@ -52,7 +52,11 @@ function Temperature() {
   }
 
   if (data.length === 0) {
-    return <ClientApi>Loading data...</ClientApi>; // Mostra un messaggio di caricamento finché i dati non sono pronti
+    return (
+      <ClientApi className="text-4xl bg-white text-black">
+        Loading data...
+      </ClientApi>
+    ); // Mostra un messaggio di caricamento finché i dati non sono pronti
   }
 
   return (

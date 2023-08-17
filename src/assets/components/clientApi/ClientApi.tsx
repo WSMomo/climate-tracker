@@ -7,8 +7,9 @@ import { RootState } from "../../redux/store";
 
 interface Props {
   children: React.ReactNode;
+  className?: string;
 }
-function ClientApi({ children }: Props) {
+function ClientApi({ children, className }: Props) {
   const temperatureData = useData(TEMPERATURE_URL);
 
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ function ClientApi({ children }: Props) {
     console.log(temperatureData);
   }, [temperatureData]);
 
-  return <>{children}</>;
+  return <div className={className}>{children}</div>;
 }
 
 export default ClientApi;
