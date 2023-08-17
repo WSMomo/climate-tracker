@@ -12,7 +12,7 @@ import {
   YAxis,
 } from "recharts";
 import ReactSlider from "react-slider";
-import ClientApi from "../../components/clientApi/ClientApi";
+import Loader from "../../components/loader/Loader";
 
 function Temperature() {
   const data = useSelector((state: RootState) => state.data.temperature);
@@ -51,15 +51,7 @@ function Temperature() {
   }
 
   if (data.length === 0) {
-    return (
-      <ClientApi>
-        <Sidebar />
-        <div
-          className="inline-block h-16 w-16 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] text-white"
-          role="status"
-        ></div>
-      </ClientApi>
-    );
+    return <Loader />;
   }
 
   return (

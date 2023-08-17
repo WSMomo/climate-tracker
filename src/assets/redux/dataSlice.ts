@@ -14,6 +14,7 @@ export interface DataState {
   methane: MethaneType[];
   no2: No2Type[];
   arctic: ArcticType[];
+  allDataLoaded: boolean;
 }
 
 const initialState: DataState = {
@@ -24,6 +25,7 @@ const initialState: DataState = {
   methane: [],
   no2: [],
   arctic: [],
+  allDataLoaded: false,
 };
 
 export const dataSlice = createSlice({
@@ -51,6 +53,9 @@ export const dataSlice = createSlice({
     setArctic: (state, action: PayloadAction<Co2Type[]>) => {
       state.arctic = action.payload;
     },
+    setAllDataLoaded: (state) => {
+      state.allDataLoaded = true;
+    },
   },
 });
 
@@ -64,6 +69,7 @@ export const {
   setMethane,
   setNo2,
   setArctic,
+  setAllDataLoaded,
 } = dataSlice.actions;
 
 export default dataSlice.reducer;

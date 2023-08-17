@@ -1,17 +1,27 @@
+import { useSelector } from "react-redux";
 import GridItem from "../../components/gridItem/GridItem";
 import styles from "./Home.module.css";
-import { useEffect } from "react";
-
-import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
+import Loader from "../../components/loader/Loader";
+
 function Home() {
-  const dati = useSelector((state: RootState) => state.data.temperature);
-  useEffect(() => {
-    console.log(dati);
-  }, [dati]);
+  const allDataLoaded = useSelector(
+    (state: RootState) => state.data.allDataLoaded
+  );
+
+  if (!allDataLoaded) {
+    return <Loader />;
+  }
+
   return (
     <div className={styles.container}>
-      <GridItem dataKey="land" color="#FF5733" title="temperature">
+      <GridItem
+        dataKey="land"
+        color="#FF5733"
+        title="temperature"
+        secondDataKey="station"
+        secondColor="#0057FF"
+      >
         Temperature
       </GridItem>
       <GridItem dataKey="trend" color="#339933" title="co2">

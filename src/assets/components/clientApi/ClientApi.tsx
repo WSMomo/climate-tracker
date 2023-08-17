@@ -9,6 +9,7 @@ import {
 } from "../../global/global";
 import { useEffect } from "react";
 import {
+  setAllDataLoaded,
   setArctic,
   setCo2,
   setIsClientApiActived,
@@ -63,6 +64,9 @@ function ClientApi({ children, className }: Props) {
       arcticData
     ) {
       dispatch(setIsClientApiActived());
+    }
+    if (temperatureData && co2Data && methaneData && no2Data && arcticData) {
+      dispatch(setAllDataLoaded());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [

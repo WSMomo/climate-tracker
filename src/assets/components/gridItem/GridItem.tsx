@@ -1,5 +1,5 @@
 import styles from "./GridItem.module.css";
-import { LineChart, Line, Tooltip, ResponsiveContainer } from "recharts";
+import { LineChart, Line, ResponsiveContainer } from "recharts";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
@@ -11,9 +11,18 @@ interface Props {
   dataKey: string;
   color: string;
   children: React.ReactNode;
+  secondDataKey?: string;
+  secondColor?: string;
 }
 
-function GridItem({ title, dataKey, color, children }: Props) {
+function GridItem({
+  title,
+  dataKey,
+  color,
+  children,
+  secondDataKey,
+  secondColor,
+}: Props) {
   const data = useSelector((state: RootState) => state.data[title]);
 
   if (!Array.isArray(data)) {
@@ -28,13 +37,22 @@ function GridItem({ title, dataKey, color, children }: Props) {
         {data !== undefined && (
           <ResponsiveContainer width="100%" height="80%">
             <LineChart data={data} margin={{ top: 10, bottom: 20 }}>
-              <Tooltip cursor={false} />
               <Line
+                className="cursor-pointer"
                 type="monotone"
                 dataKey={dataKey}
                 stroke={color}
                 dot={false}
               />
+              {secondDataKey && (
+                <Line
+                  className="cursor-pointer"
+                  type="monotone"
+                  dataKey={secondDataKey}
+                  stroke={secondColor}
+                  dot={false}
+                />
+              )}
             </LineChart>
           </ResponsiveContainer>
         )}
