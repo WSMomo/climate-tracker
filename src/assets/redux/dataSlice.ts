@@ -44,13 +44,13 @@ export const dataSlice = createSlice({
     setCo2: (state, action: PayloadAction<Co2Type[]>) => {
       state.co2 = action.payload;
     },
-    setMethane: (state, action: PayloadAction<Co2Type[]>) => {
+    setMethane: (state, action: PayloadAction<MethaneType[]>) => {
       state.methane = action.payload;
     },
-    setNo2: (state, action: PayloadAction<Co2Type[]>) => {
+    setNo2: (state, action: PayloadAction<No2Type[]>) => {
       state.no2 = action.payload;
     },
-    setArctic: (state, action: PayloadAction<Co2Type[]>) => {
+    setArctic: (state, action: PayloadAction<ArcticType[]>) => {
       state.arctic = action.payload;
     },
     setAllDataLoaded: (state) => {
