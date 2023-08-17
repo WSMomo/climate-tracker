@@ -3,3 +3,9 @@ export interface TemperatureType {
   station: string;
   land: string;
 }
+
+export const TemperatureInfo: TemperatureType = {
+  time: "time",
+  station: "station",
+  land: "land",
+};
