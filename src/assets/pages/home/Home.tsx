@@ -14,43 +14,18 @@ function Home() {
       <GridItem dataKey="land" color="#FF5733" title="temperature">
         Temperature
       </GridItem>
-
-      {/* <GridItem
-        graphicTitle="co2"
-        dataKey="trend"
-        url={CO2_URL}
-        color="#339933"
-        titleLink="/co2"
-      >
-        CO2
+      <GridItem dataKey="trend" color="#339933" title="co2">
+        Co2
       </GridItem>
-      <GridItem
-        graphicTitle="methane"
-        dataKey="average"
-        url={METHANE_URL}
-        color="#FF9900"
-        titleLink="/methane"
-      >
+      <GridItem dataKey="average" color="#FF9900" title="methane">
         Methane
       </GridItem>
-      <GridItem
-        graphicTitle="nitrous"
-        dataKey="average"
-        url={NO2_URL}
-        color="#FF0000"
-        titleLink="/no2"
-      >
+      <GridItem dataKey="average" color="#FF0000" title="no2">
         NO2
       </GridItem>
-      <GridItem
-        graphicTitle="arcticData"
-        dataKey="extent"
-        url={ARCTIC_URL}
-        color="#66CCFF"
-        titleLink="/arctic"
-      >
+      <GridItem dataKey="extent" color="#66CCFF" title="arctic">
         Arctic
-      </GridItem> */}
+      </GridItem>
     </div>
   );
 }
