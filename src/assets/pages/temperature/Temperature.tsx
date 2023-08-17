@@ -50,10 +50,10 @@ function Temperature() {
   }
 
   return (
-    <div className="text-white flex flex-col justify-center items-center w-96">
+    <div className="text-white flex flex-col justify-center items-center w-3/4 max-w-[900px] h-full">
       <Sidebar />
 
-      <div className="w-96 h-12">
+      <div className="w-[600px] h-12">
         {minYear && maxYear && (
           <ReactSlider
             className="cursor-pointer"
@@ -81,7 +81,7 @@ function Temperature() {
         minYearSelected > 0 &&
         maxYearSelected &&
         maxYearSelected > 0 && (
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width={900} height={300}>
             <LineChart
               data={data.filter(
                 (obj) =>
@@ -111,6 +111,19 @@ function Temperature() {
             </LineChart>
           </ResponsiveContainer>
         )}
+      <div className="w-full">
+        Source: GISTEMP Team, 2020: GISS Surface Temperature Analysis (GISTEMP),
+        version 4. NASA Goddard Institute for Space Studies. Dataset accessed
+        20YY-MM-DD at{" "}
+        <a href="https://data.giss.nasa.gov/gistemp/">
+          https://data.giss.nasa.gov/gistemp/
+        </a>
+        .<br /> Source data 1880 - present: Lenssen, N., G. Schmidt, J. Hansen,
+        M. Menne, A. Persin, R. Ruedy, and D. Zyss, 2019: Improvements in the
+        GISTEMP uncertainty model. J. Geophys. Res. Atmos., 124, no. 12,
+        6307-6326, doi:10.1029/2018JD029522. Source data year 1 – 1979:
+        <a href="https://earthdata.nasa.gov/">https://earthdata.nasa.gov/</a>
+      </div>
     </div>
   );
 }
