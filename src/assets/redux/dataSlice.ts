@@ -1,9 +1,10 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { temperatureData } from "../global/types/temperatureData";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface DataState {
   showSidebar: boolean;
-  co2: object[];
+  co2: temperatureData[];
 }
 
 const initialState: DataState = {
@@ -18,7 +19,7 @@ export const dataSlice = createSlice({
     setShowSidebar: (state) => {
       state.showSidebar = !state.showSidebar;
     },
-    setCo2: (state, action: PayloadAction<object[]>) => {
+    setCo2: (state, action: PayloadAction<temperatureData[]>) => {
       state.co2 = action.payload;
     },
   },
