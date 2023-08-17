@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import { useEffect, useState } from "react";
 
 import Sidebar from "../../components/sidebar/Sidebar";
 import Loader from "../../components/loader/Loader";
@@ -9,26 +8,19 @@ import Chart from "../../components/chart/Chart";
 import TemperatureSourceInfo from "./TemperatureSourceInfo";
 
 import styles from "./temperature.module.css";
-import { useMinValue } from "../../hooks/useMinValue";
-import { useMaxValue } from "../../hooks/useMaxValue";
+import { useSlider } from "../../hooks/useSlider";
+import { useMinMaxValue } from "../../hooks/useMinMaxValue";
 
 function Temperature() {
   const data = useSelector((state: RootState) => state.data.temperature);
-  const minYear = useMinValue(data, "time");
-  const maxYear = useMaxValue(data, "time");
 
-  const [minYearSelected, setMinYearSelected] = useState<number>();
-  const [maxYearSelected, setMaxYearSelected] = useState<number>();
+  const { minValue: minYear, maxValue: maxYear } = useMinMaxValue(data, "time");
 
-  useEffect(() => {
-    setMinYearSelected(minYear);
-    setMaxYearSelected(maxYear);
-  }, [maxYear, minYear]);
-
-  function handleChangeSlider(value: number[]) {
-    setMinYearSelected(value[0]);
-    setMaxYearSelected(value[1]);
-  }
+  const {
+    minValueSelected: minYearSelected,
+    maxValueSelected: maxYearSelected,
+    handleChangeSlider,
+  } = useSlider(minYear, maxYear);
 
   if (data.length === 0) return <Loader />;
 

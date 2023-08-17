@@ -1,4 +1,4 @@
-import SourceInfo from "../../components/sourceInfo/sourceInfo";
+import SourceInfo from "../../components/sourceInfo/SourceInfo";
 import SourceLink from "../../components/sourceLink/SourceLink";
 function TemperatureSourceInfo() {
   return (
