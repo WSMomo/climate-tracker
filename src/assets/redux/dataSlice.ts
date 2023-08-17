@@ -6,12 +6,20 @@ export interface DataState {
   isClientApiActived: boolean;
   showSidebar: boolean;
   temperature: temperatureType[];
+  co2: [];
+  methane: [];
+  no2: [];
+  arctic: [];
 }
 
 const initialState: DataState = {
   isClientApiActived: false,
   showSidebar: false,
   temperature: [],
+  co2: [],
+  methane: [],
+  no2: [],
+  arctic: [],
 };
 
 export const dataSlice = createSlice({

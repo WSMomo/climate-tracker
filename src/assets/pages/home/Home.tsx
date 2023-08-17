@@ -2,13 +2,6 @@ import GridItem from "../../components/gridItem/GridItem";
 import styles from "./Home.module.css";
 import { useEffect } from "react";
 
-import {
-  ARCTIC_URL,
-  CO2_URL,
-  METHANE_URL,
-  NO2_URL,
-  TEMPERATURE_URL,
-} from "../../global/global";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 function Home() {
@@ -18,16 +11,11 @@ function Home() {
   }, [dati]);
   return (
     <div className={styles.container}>
-      <GridItem
-        graphicTitle="result"
-        dataKey="station"
-        url={TEMPERATURE_URL}
-        color="#FF5733"
-        titleLink="/temperature"
-      >
+      <GridItem dataKey="land" color="#FF5733" title="temperature">
         Temperature
       </GridItem>
-      <GridItem
+
+      {/* <GridItem
         graphicTitle="co2"
         dataKey="trend"
         url={CO2_URL}
@@ -62,7 +50,7 @@ function Home() {
         titleLink="/arctic"
       >
         Arctic
-      </GridItem>
+      </GridItem> */}
     </div>
   );
 }
