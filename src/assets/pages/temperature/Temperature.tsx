@@ -12,9 +12,10 @@ import {
   YAxis,
 } from "recharts";
 import ReactSlider from "react-slider";
+import ClientApi from "../../components/clientApi/ClientApi";
 
 function Temperature() {
-  const data = useSelector((state: RootState) => state.data.co2);
+  const data = useSelector((state: RootState) => state.data.temperature);
   const yearArray: number[] = [];
 
   const [maxYear, setMaxYear] = useState<number>();
@@ -24,6 +25,7 @@ function Temperature() {
   const [maxYearSelected, setMaxYearSelected] = useState<number>();
 
   useEffect(() => {
+    console.log(data);
     if (data.length > 0) {
       data.map((data) => yearArray.push(+data.time));
       setMaxYear(Math.floor(Math.max(...yearArray)));
@@ -47,6 +49,10 @@ function Temperature() {
   function handleChangeSlider(value: number[]) {
     setMinYearSelected(value[0]);
     setMaxYearSelected(value[1]);
+  }
+
+  if (data.length === 0) {
+    return <ClientApi>Loading data...</ClientApi>; // Mostra un messaggio di caricamento finché i dati non sono pronti
   }
 
   return (
@@ -76,53 +82,51 @@ function Temperature() {
       </div>
 
       {/* CHECK EMPTY DATA */}
-      {data.length > 0 &&
-        minYearSelected &&
-        minYearSelected > 0 &&
-        maxYearSelected &&
-        maxYearSelected > 0 && (
-          <ResponsiveContainer width={900} height={300}>
-            <LineChart
-              data={data.filter(
-                (obj) =>
-                  +obj.time > minYearSelected && +obj.time < maxYearSelected
-              )}
-              margin={{ top: 10, bottom: 20 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis
-                dataKey="time"
-                tickFormatter={(value) => value.substring(0, 4)}
-              />
-              <YAxis type="number" domain={[-2, 1]} />
-              <Tooltip cursor={false} />
-              <Line
-                type="monotone"
-                dataKey={"station"}
-                stroke={"#FF5733"}
-                dot={false}
-              />
-              <Line
-                type="monotone"
-                dataKey={"land"}
-                stroke={"blue"}
-                dot={false}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        )}
+      {data.length > 0 && minYearSelected && maxYearSelected && (
+        <ResponsiveContainer width={900} height={300}>
+          <LineChart
+            data={data.filter(
+              (obj) =>
+                +obj.time > minYearSelected && +obj.time < maxYearSelected
+            )}
+            margin={{ top: 10, bottom: 20 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis
+              dataKey="time"
+              tickFormatter={(value) => value.substring(0, 4)}
+            />
+            <YAxis type="number" domain={[-2, 1]} />
+            <Tooltip cursor={false} />
+            <Line
+              type="monotone"
+              dataKey={"station"}
+              stroke={"#FF5733"}
+              dot={false}
+            />
+            <Line
+              type="monotone"
+              dataKey={"land"}
+              stroke={"blue"}
+              dot={false}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      )}
       <div className="w-full">
         Source: GISTEMP Team, 2020: GISS Surface Temperature Analysis (GISTEMP),
         version 4. NASA Goddard Institute for Space Studies. Dataset accessed
         20YY-MM-DD at{" "}
-        <a href="https://data.giss.nasa.gov/gistemp/">
+        <a href="https://data.giss.nasa.gov/gistemp/" target="_blank">
           https://data.giss.nasa.gov/gistemp/
         </a>
         .<br /> Source data 1880 - present: Lenssen, N., G. Schmidt, J. Hansen,
         M. Menne, A. Persin, R. Ruedy, and D. Zyss, 2019: Improvements in the
         GISTEMP uncertainty model. J. Geophys. Res. Atmos., 124, no. 12,
         6307-6326, doi:10.1029/2018JD029522. Source data year 1 – 1979:
-        <a href="https://earthdata.nasa.gov/">https://earthdata.nasa.gov/</a>
+        <a href="https://earthdata.nasa.gov/" target="_blank">
+          https://earthdata.nasa.gov/
+        </a>
       </div>
     </div>
   );

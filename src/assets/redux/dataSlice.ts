@@ -3,30 +3,36 @@ import { temperatureType } from "../global/types/temperatureType";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface DataState {
+  isClientApiActived: boolean;
   showSidebar: boolean;
-  co2: temperatureType[];
+  temperature: temperatureType[];
 }
 
 const initialState: DataState = {
+  isClientApiActived: false,
   showSidebar: false,
-  co2: [],
+  temperature: [],
 };
 
 export const dataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
+    setIsClientApiActived: (state) => {
+      state.isClientApiActived = true;
+    },
     setShowSidebar: (state) => {
       state.showSidebar = !state.showSidebar;
     },
-    setCo2: (state, action: PayloadAction<temperatureType[]>) => {
-      state.co2 = action.payload;
+    setTemperature: (state, action: PayloadAction<temperatureType[]>) => {
+      state.temperature = action.payload;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
 
-export const { setShowSidebar, setCo2 } = dataSlice.actions;
+export const { setIsClientApiActived, setShowSidebar, setTemperature } =
+  dataSlice.actions;
 
 export default dataSlice.reducer;

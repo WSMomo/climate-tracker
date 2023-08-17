@@ -2,9 +2,6 @@ import styles from "./GridItem.module.css";
 import { LineChart, Line, Tooltip, ResponsiveContainer } from "recharts";
 import { useData } from "../../../hooks/useData";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setCo2 } from "../../redux/dataSlice";
-import { useEffect } from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -24,21 +21,6 @@ function GridItem({
   titleLink,
 }: Props) {
   const data = useData(url);
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    if (data !== undefined) {
-      console.log(children);
-      switch (children) {
-        case "Temperature":
-          console.log(data["result"]);
-          dispatch(setCo2(data["result"]));
-          break;
-        default:
-          break;
-      }
-    }
-  }, [children, data, dispatch]);
 
   return (
     <div className={styles.container}>

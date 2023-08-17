@@ -1,5 +1,7 @@
 import GridItem from "../../components/gridItem/GridItem";
 import styles from "./Home.module.css";
+import { useEffect } from "react";
+
 import {
   ARCTIC_URL,
   CO2_URL,
@@ -7,7 +9,13 @@ import {
   NO2_URL,
   TEMPERATURE_URL,
 } from "../../global/global";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 function Home() {
+  const dati = useSelector((state: RootState) => state.data.temperature);
+  useEffect(() => {
+    console.log(dati);
+  }, [dati]);
   return (
     <div className={styles.container}>
       <GridItem
