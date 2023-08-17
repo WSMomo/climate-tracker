@@ -29,6 +29,7 @@ function ClientApi({ children, className }: Props) {
   const methaneData = useData(METHANE_URL);
   const no2Data = useData(NO2_URL);
   const arcticData = useData(ARCTIC_URL);
+
   const dispatch = useDispatch();
   const isClientApiActived = useSelector(
     (state: RootState) => state.data.isClientApiActived
