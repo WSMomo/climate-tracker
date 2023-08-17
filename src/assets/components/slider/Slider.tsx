@@ -1,5 +1,5 @@
+import styles from "./slider.module.css";
 import ReactSlider from "react-slider";
-
 interface Props {
   minYear: number;
   maxYear: number;
@@ -8,12 +8,12 @@ interface Props {
 
 function Slider({ minYear, maxYear, handleChangeSlider }: Props) {
   return (
-    <div className="w-3/4 h-12">
+    <div className={styles.container}>
       <ReactSlider
-        className="cursor-pointer"
-        thumbClassName="bg-red-500 h-12 w-12 flex justify-center items-center"
-        thumbActiveClassName="bg-white text-black"
-        trackClassName="bg-white h-2 top-5"
+        className={styles.reactSlider}
+        thumbClassName={styles.thumb}
+        thumbActiveClassName={styles.thumbActive}
+        trackClassName={styles.track}
         defaultValue={[minYear, maxYear]}
         min={minYear}
         max={maxYear}

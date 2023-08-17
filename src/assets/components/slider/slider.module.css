@@ -1,0 +1,18 @@
+.container {
+  @apply w-3/4 h-12 m-12;
+}
+.reactSlider {
+  @apply cursor-pointer;
+}
+
+.thumb {
+  @apply bg-red-500 h-12 w-12 flex justify-center items-center;
+}
+
+.thumbActive {
+  @apply bg-white text-black;
+}
+
+.track {
+  @apply bg-white h-2 top-5;
+}

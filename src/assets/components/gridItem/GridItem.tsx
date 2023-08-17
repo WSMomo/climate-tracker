@@ -1,4 +1,4 @@
-import styles from "./GridItem.module.css";
+import styles from "./gridItem.module.css";
 import { LineChart, Line, ResponsiveContainer } from "recharts";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -38,7 +38,7 @@ function GridItem({
           <ResponsiveContainer width="100%" height="80%">
             <LineChart data={data} margin={{ top: 10, bottom: 20 }}>
               <Line
-                className="cursor-pointer"
+                className={styles.line}
                 type="monotone"
                 dataKey={dataKey}
                 stroke={color}
@@ -46,7 +46,7 @@ function GridItem({
               />
               {secondDataKey && (
                 <Line
-                  className="cursor-pointer"
+                  className={styles.line}
                   type="monotone"
                   dataKey={secondDataKey}
                   stroke={secondColor}

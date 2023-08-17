@@ -6,6 +6,10 @@
   @apply text-gray-400 text-2xl text-left p-6;
 }
 
+.line {
+  @apply cursor-pointer;
+}
+
 svg {
   cursor: pointer;
 }

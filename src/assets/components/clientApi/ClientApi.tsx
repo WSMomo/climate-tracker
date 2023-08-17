@@ -79,11 +79,6 @@ function ClientApi({ children, className }: Props) {
     temperatureData,
   ]);
 
-  //DEBUG
-  useEffect(() => {
-    console.log(arcticData);
-  }, [arcticData]);
-
   return <div className={className}>{children}</div>;
 }
 

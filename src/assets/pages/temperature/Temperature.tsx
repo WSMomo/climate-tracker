@@ -9,25 +9,16 @@ import Chart from "../../components/chart/Chart";
 import TemperatureSourceInfo from "./TemperatureSourceInfo";
 
 import styles from "./temperature.module.css";
+import { useMinValue } from "../../hooks/useMinValue";
+import { useMaxValue } from "../../hooks/useMaxValue";
 
 function Temperature() {
   const data = useSelector((state: RootState) => state.data.temperature);
-  const yearArray: number[] = [];
-
-  const [maxYear, setMaxYear] = useState<number>();
-  const [minYear, setMinYear] = useState<number>();
+  const minYear = useMinValue(data, "time");
+  const maxYear = useMaxValue(data, "time");
 
   const [minYearSelected, setMinYearSelected] = useState<number>();
   const [maxYearSelected, setMaxYearSelected] = useState<number>();
-
-  useEffect(() => {
-    if (data.length > 0) {
-      data.map((data) => yearArray.push(+data.time));
-      setMaxYear(Math.floor(Math.max(...yearArray)));
-      setMinYear(Math.floor(Math.min(...yearArray)));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
 
   useEffect(() => {
     setMinYearSelected(minYear);
