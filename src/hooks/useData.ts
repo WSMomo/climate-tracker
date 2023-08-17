@@ -6,7 +6,6 @@ export function useData(url: string) {
     const res = await fetch(url);
     const data = await res.json();
     setData(data);
-    console.log(data);
   }
 
   useEffect(() => {
