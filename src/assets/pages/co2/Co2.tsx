@@ -29,10 +29,8 @@ function Co2() {
           550 parts per million (ppm) in 2050 - the “business as usual”
           scenario.
           <br />
-          <br />
           CO2 is a greenhouse gas that traps heat from the sun and therefore
           makes the Earth warmer.
-          <br />
           <br />
           Historically, the concentration of CO2 in the atmosphere has been
           2-300 ppm. This was the level for tens of thousands of years. But
@@ -50,7 +48,6 @@ function Co2() {
           concentrations? Well, take a wild guess. Despite good intentions and
           ambitious goals, human generated CO2-emissions keep going up.
         </p>
-        <br />
         <br />
         <p>
           In a business-as-usual scenario, global CO2 emissions are projected to
