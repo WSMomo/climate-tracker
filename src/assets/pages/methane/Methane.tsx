@@ -8,9 +8,11 @@ function Methane() {
 
   if (data.length === 0) return <Loader />;
   return (
-    <PageMain data={data} infoTitle={"methane"}>
-      das
-    </PageMain>
+    <>
+      <PageMain data={data} infoTitle={"methane"} removeFirst={true}>
+        das
+      </PageMain>
+    </>
   );
 }
 

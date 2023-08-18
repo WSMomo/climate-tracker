@@ -8,7 +8,6 @@ export interface InfoComponentType {
     secondDataKey?: keyof InfoComponentsType;
     secondColor?: string;
     tickFormat: boolean;
-    removeFirst?: boolean;
   };
 }
 
@@ -49,6 +48,5 @@ export const infoComponents: InfoComponentType = {
     datakey: "trend",
     color: "#FF5733",
     tickFormat: false,
-    removeFirst: true,
   },
 };
