@@ -7,16 +7,12 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { TemperatureType } from "../../global/types/temperatureType";
-import { ArcticType } from "../../global/types/arcticType";
-import { No2Type } from "../../global/types/no2Type";
-import { Co2Type } from "../../global/types/co2Type";
-import { MethaneType } from "../../global/types/methaneType";
+
 import { infoComponents } from "../../global/infoComponents";
-type Data = TemperatureType | ArcticType | No2Type | Co2Type | MethaneType;
+import { InfoComponentsType } from "../../global/types/infoComponentsType";
 
 interface Props {
-  data: Data[];
+  data: InfoComponentsType[];
   minYearSelected: number;
   maxYearSelected: number;
   minValue: number;
