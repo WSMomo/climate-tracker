@@ -6,11 +6,11 @@
 }
 
 .thumb {
-  @apply bg-red-500 h-12 w-12 flex justify-center items-center;
+  @apply bg-text-color text-secondary-color h-12 w-12 flex justify-center items-center rounded-md;
 }
 
 .thumbActive {
-  @apply bg-white text-black;
+  @apply bg-main-color text-text-color;
 }
 
 .track {
