@@ -10,11 +10,18 @@ import {
 import { TemperatureType } from "../../global/types/temperatureType";
 import { ArcticType } from "../../global/types/arcticType";
 import { No2Type } from "../../global/types/no2Type";
-type Data = TemperatureType | ArcticType | No2Type;
+import { Co2Type } from "../../global/types/co2Type";
+import { MethaneType } from "../../global/types/methaneType";
+type Data = TemperatureType | ArcticType | No2Type | Co2Type | MethaneType;
 
 interface Props {
   data: Data[];
-  dataProperty: keyof TemperatureType | keyof ArcticType | keyof No2Type;
+  dataProperty:
+    | keyof TemperatureType
+    | keyof ArcticType
+    | keyof No2Type
+    | keyof Co2Type
+    | keyof MethaneType;
   minYearSelected: number;
   maxYearSelected: number;
   dataKey: string;
