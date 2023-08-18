@@ -22,7 +22,7 @@ function Slider({ minYear, maxYear, handleChangeSlider }: Props) {
         renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>}
         onChange={(value) => handleChangeSlider(value)}
         pearling
-        minDistance={15}
+        minDistance={3}
       />
     </div>
   );

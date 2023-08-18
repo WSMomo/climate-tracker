@@ -9,11 +9,12 @@ import {
 } from "recharts";
 import { TemperatureType } from "../../global/types/temperatureType";
 import { ArcticType } from "../../global/types/arcticType";
-type Data = TemperatureType | ArcticType;
+import { No2Type } from "../../global/types/no2Type";
+type Data = TemperatureType | ArcticType | No2Type;
 
 interface Props {
   data: Data[];
-  dataProperty: keyof TemperatureType | keyof ArcticType;
+  dataProperty: keyof TemperatureType | keyof ArcticType | keyof No2Type;
   minYearSelected: number;
   maxYearSelected: number;
   dataKey: string;

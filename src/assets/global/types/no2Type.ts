@@ -1,1 +1,3 @@
-export interface No2Type {}
+export interface No2Type {
+  date: string;
+}
