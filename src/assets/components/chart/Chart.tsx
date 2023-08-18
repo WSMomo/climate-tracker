@@ -30,6 +30,7 @@ interface Props {
   secondColor?: string;
   minValue: number;
   maxValue: number;
+  tickFormat?: boolean;
 }
 
 function Chart({
@@ -43,6 +44,7 @@ function Chart({
   dataProperty,
   minValue,
   maxValue,
+  tickFormat,
 }: Props) {
   console.log(dataProperty);
   return (
@@ -56,10 +58,14 @@ function Chart({
         margin={{ top: 10, bottom: 20 }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis
-          dataKey={dataProperty}
-          // tickFormatter={(value) => value.substring(0, 4)}
-        />
+        {tickFormat ? (
+          <XAxis
+            dataKey={dataProperty}
+            tickFormatter={(value) => value.substring(0, 4)}
+          />
+        ) : (
+          <XAxis dataKey={dataProperty} />
+        )}
         <YAxis type="number" domain={[minValue, maxValue]} />
         <Tooltip cursor={false} />
         <Line type="monotone" dataKey={dataKey} stroke={color} dot={false} />

@@ -52,6 +52,7 @@ function Temperature() {
           dataProperty="time"
           minValue={minStation}
           maxValue={maxStation}
+          tickFormat={true}
         />
       )}
       <TemperatureSourceInfo />
