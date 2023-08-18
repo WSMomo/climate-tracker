@@ -1,19 +1,15 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { TemperatureType } from "../global/types/temperatureType";
-import { Co2Type } from "../global/types/co2Type";
-import { MethaneType } from "../global/types/methaneType";
-import { No2Type } from "../global/types/no2Type";
-import { ArcticType } from "../global/types/arcticType";
-// import type { PayloadAction } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import { InfoComponentsType } from "../global/types/infoComponentsType";
 
 export interface DataState {
   isClientApiActived: boolean;
   showSidebar: boolean;
-  temperature: TemperatureType[];
-  co2: Co2Type[];
-  methane: MethaneType[];
-  no2: No2Type[];
-  arctic: ArcticType[];
+  temperature: InfoComponentsType[];
+  co2: InfoComponentsType[];
+  methane: InfoComponentsType[];
+  no2: InfoComponentsType[];
+  arctic: InfoComponentsType[];
   allDataLoaded: boolean;
 }
 
@@ -38,19 +34,19 @@ export const dataSlice = createSlice({
     setShowSidebar: (state) => {
       state.showSidebar = !state.showSidebar;
     },
-    setTemperature: (state, action: PayloadAction<TemperatureType[]>) => {
+    setTemperature: (state, action: PayloadAction<InfoComponentsType[]>) => {
       state.temperature = action.payload;
     },
-    setCo2: (state, action: PayloadAction<Co2Type[]>) => {
+    setCo2: (state, action: PayloadAction<InfoComponentsType[]>) => {
       state.co2 = action.payload;
     },
-    setMethane: (state, action: PayloadAction<MethaneType[]>) => {
+    setMethane: (state, action: PayloadAction<InfoComponentsType[]>) => {
       state.methane = action.payload;
     },
-    setNo2: (state, action: PayloadAction<No2Type[]>) => {
+    setNo2: (state, action: PayloadAction<InfoComponentsType[]>) => {
       state.no2 = action.payload;
     },
-    setArctic: (state, action: PayloadAction<ArcticType[]>) => {
+    setArctic: (state, action: PayloadAction<InfoComponentsType[]>) => {
       state.arctic = action.payload;
     },
     setAllDataLoaded: (state) => {

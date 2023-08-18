@@ -1,9 +1,10 @@
 .container {
-  @apply bg-gradient-to-b from-secondary-color to-third-color border border-blue-950 !cursor-pointer;
+  /* @apply bg-gradient-to-b from-secondary-color to-third-color border border-blue-950 rounded-xl p-2 bg-blend-multiply; */
+  @apply bg-secondary-color rounded-xl p-2 hover:opacity-75;
 }
 
 .title {
-  @apply text-gray-400 text-2xl text-left p-6;
+  @apply text-text-color text-2xl text-left p-6;
 }
 
 .line {
@@ -11,5 +12,5 @@
 }
 
 svg {
-  cursor: pointer;
+  @apply cursor-pointer;
 }

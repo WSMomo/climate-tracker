@@ -1,4 +1,5 @@
-export interface ArcticType {
+export interface InfoComponentsType {
+  trend: string;
   Column1: string;
   area: string;
   year: string;
@@ -7,4 +8,8 @@ export interface ArcticType {
   hemisphere: string;
   month: string;
   rank: string;
+  date: string;
+  time: string;
+  station: string;
+  land: string;
 }
