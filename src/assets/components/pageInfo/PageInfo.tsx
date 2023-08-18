@@ -21,7 +21,7 @@ function PageInfo({ buttonText, children }: Props) {
         {buttonText}
       </button>
       {show && (
-        <div className="bg-secondary-color rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-4 text-text-color mb-12 ">
+        <div className="bg-secondary-color rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 text-text-color mb-12 mt-24 ">
           {children}
         </div>
       )}

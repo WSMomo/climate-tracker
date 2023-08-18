@@ -10,6 +10,7 @@ import {
 
 import { infoComponents } from "../../global/infoComponents";
 import { InfoComponentsType } from "../../global/types/infoComponentsType";
+import PageTitle from "../pageTitle/PageTitle";
 
 interface Props {
   data: InfoComponentsType[];
@@ -50,7 +51,11 @@ function Chart({
           <XAxis dataKey={infoComponents[infoTitle].dataProperty} />
         )}
         <YAxis type="number" domain={[minValue, maxValue]} />
-        <Tooltip cursor={false} />
+        <Tooltip
+          cursor={false}
+          wrapperStyle={{ outline: "none" }}
+          content={<PageTitle>dsa</PageTitle>}
+        />
         <Line
           type="monotone"
           dataKey={infoComponents[infoTitle].datakey}

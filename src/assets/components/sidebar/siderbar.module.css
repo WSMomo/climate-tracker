@@ -1,8 +1,5 @@
 .container {
-  @apply fixed top-0 right-0 h-full bg-third-color w-1/4 flex justify-center items-center z-50;
-}
-.link {
-  @apply h-1/6 flex justify-center items-center text-2xl bg-secondary-color text-slate-300 m-2;
+  @apply fixed top-0 right-0 h-full bg-third-color w-3/4 xl:w-1/4 flex justify-center items-center z-50;
 }
 
 .sidebar {
