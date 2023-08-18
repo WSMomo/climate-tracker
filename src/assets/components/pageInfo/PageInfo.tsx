@@ -15,13 +15,13 @@ function PageInfo({ buttonText, children }: Props) {
           show
             ? "bg-text-color text-secondary-color"
             : "bg-secondary-color text-text-color"
-        } rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-4`}
+        } rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-12 mb-12`}
         onClick={() => setShow(!show)}
       >
         {buttonText}
       </button>
       {show && (
-        <div className="bg-secondary-color rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 text-text-color mb-12 mt-24 ">
+        <div className="bg-secondary-color rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 text-text-color mb-12 ">
           {children}
         </div>
       )}
