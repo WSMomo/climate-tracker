@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import dataReducer from "../redux/dataSlice";
+import quizReducer from "./quizReducer";
 export const store = configureStore({
   reducer: {
     data: dataReducer,
+    quiz: quizReducer,
   },
 });
 

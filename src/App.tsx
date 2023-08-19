@@ -6,11 +6,16 @@ import Methane from "./assets/pages/methane/Methane";
 import No2 from "./assets/pages/no2/No2";
 import Arctic from "./assets/pages/arctic/Arctic";
 import Co2 from "./assets/pages/co2/Co2";
+import Quiz from "./assets/pages/quiz/Quiz";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/quiz",
+    element: <Quiz />,
   },
   {
     path: "/temperature",
