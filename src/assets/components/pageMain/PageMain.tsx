@@ -12,56 +12,56 @@ import { InfoComponentsType } from "../../global/types/infoComponentsType";
 interface Props {
   data: InfoComponentsType[];
   infoTitle: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   removeFirst?: boolean;
 }
 
 function PageMain({ data, infoTitle, removeFirst, children }: Props) {
   const removeFirstString = removeFirst ? true : false;
 
-  const { minValue: minYear, maxValue: maxYear } = useMinMaxValue(
+  const { minValue: minXAxis, maxValue: maxXAxis } = useMinMaxValue(
     data,
     infoComponents[infoTitle].dataProperty,
     removeFirstString
   );
-  const { minValue: minDataKey, maxValue: maxDataKey } = useMinMaxValue(
+  const { minValue: minYAxis, maxValue: maxYAxis } = useMinMaxValue(
     data,
     infoComponents[infoTitle].datakey,
     removeFirstString
   );
 
   const {
-    minValueSelected: minYearSelected,
-    maxValueSelected: maxYearSelected,
-    handleChangeSlider,
-  } = useSlider(minYear, maxYear);
+    minValueSelected: minXSelected,
+    maxValueSelected: maxXSelected,
+    handleChangeSlider: handleChangeSliderX,
+  } = useSlider(minXAxis, maxXAxis);
 
   if (data.length === 0) return <Loader />;
 
   return (
     <div className={styles.container}>
       <Sidebar />
-      {minYear && maxYear && (
+      {minXAxis && maxXAxis && (
         <Slider
-          minYear={minYear}
-          maxYear={maxYear}
-          handleChangeSlider={handleChangeSlider}
+          minYear={minXAxis}
+          maxYear={maxXAxis}
+          handleChangeSlider={handleChangeSliderX}
         />
       )}
 
       {/* CHECK EMPTY DATA */}
 
-      {data.length > 0 && minYearSelected && maxYearSelected && (
+      {data.length > 0 && minXSelected && maxXSelected && (
         <Chart
           data={data}
-          minYearSelected={minYearSelected}
-          maxYearSelected={maxYearSelected}
-          minValue={minDataKey}
-          maxValue={maxDataKey}
+          minXSelected={minXSelected}
+          maxXSelected={maxXSelected}
+          minYSelected={minYAxis}
+          maxYSelected={maxYAxis}
           infoTitle={infoTitle}
         />
       )}
-      {children}
+      <div className={styles.chartInfo}>{children}</div>
     </div>
   );
 }

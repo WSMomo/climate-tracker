@@ -1,3 +1,7 @@
 .container {
   @apply text-xs md:text-sm w-3/4 text-center;
 }
+
+a {
+  @apply text-blue-300 hover:text-blue-600;
+}

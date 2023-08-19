@@ -1,11 +1,24 @@
+import Separator from "../separator/Separator";
 import styles from "./sourceInfo.module.css";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 function SourceInfo({ children }: Props) {
-  return <div className={styles.container}>{children}</div>;
+  return (
+    <>
+      <Separator />
+
+      <div className={styles.container}>
+        Sources: <br />
+        <a href="https://global-warming.org/" target="_blank">
+          global-warming.org
+        </a>
+        {children}
+      </div>
+    </>
+  );
 }
 
 export default SourceInfo;

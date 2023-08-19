@@ -14,20 +14,20 @@ import PageTitle from "../pageTitle/PageTitle";
 
 interface Props {
   data: InfoComponentsType[];
-  minYearSelected: number;
-  maxYearSelected: number;
-  minValue: number;
-  maxValue: number;
+  minXSelected: number;
+  maxXSelected: number;
+  minYSelected: number;
+  maxYSelected: number;
   infoTitle: string;
 }
 
 function Chart({
   data,
-  minYearSelected,
-  maxYearSelected,
+  minXSelected,
+  maxXSelected,
+  minYSelected,
+  maxYSelected,
   infoTitle,
-  minValue,
-  maxValue,
 }: Props) {
   return (
     <ResponsiveContainer width="100%" height={300}>
@@ -35,9 +35,9 @@ function Chart({
         data={data.filter(
           (obj) =>
             +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] >
-              minYearSelected &&
+              minXSelected &&
             +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] <
-              maxYearSelected
+              maxXSelected
         )}
         margin={{ top: 10, bottom: 20 }}
       >
@@ -50,7 +50,7 @@ function Chart({
         ) : (
           <XAxis dataKey={infoComponents[infoTitle].dataProperty} />
         )}
-        <YAxis type="number" domain={[minValue, maxValue]} />
+        <YAxis type="number" domain={[minYSelected, maxYSelected]} />
         <Tooltip
           cursor={false}
           wrapperStyle={{ outline: "none" }}
