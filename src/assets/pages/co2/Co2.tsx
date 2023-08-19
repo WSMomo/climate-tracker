@@ -52,7 +52,11 @@ function Co2() {
         </p>
         <SourceInfo>
           <br />
-          <a href="https://www.theworldcounts.com/" target="_blank">
+          <a
+            href="https://www.theworldcounts.com/"
+            target="_blank"
+            className={styles.link}
+          >
             theworldcounts.com
           </a>
         </SourceInfo>

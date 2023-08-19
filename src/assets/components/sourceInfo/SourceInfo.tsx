@@ -12,7 +12,11 @@ function SourceInfo({ children }: Props) {
 
       <div className={styles.container}>
         Sources: <br />
-        <a href="https://global-warming.org/" target="_blank">
+        <a
+          href="https://global-warming.org/"
+          target="_blank"
+          className={styles.link}
+        >
           global-warming.org
         </a>
         {children}

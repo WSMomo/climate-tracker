@@ -67,6 +67,7 @@ function Temperature() {
           <a
             href="https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature"
             target="_blank"
+            className={styles.link}
           >
             climate.gov
           </a>

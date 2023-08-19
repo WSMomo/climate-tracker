@@ -39,6 +39,7 @@ function No2() {
           <a
             href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases#nitrous-oxide"
             target="_blank"
+            className={styles.link}
           >
             epa.gov
           </a>

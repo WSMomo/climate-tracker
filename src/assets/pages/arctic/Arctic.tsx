@@ -48,6 +48,7 @@ function Arctic() {
           <a
             href="https://www.npolar.no/en/themes/climate-change-in-the-arctic/#toggle-id-8"
             target="_blank"
+            className={styles.link}
           >
             npolar.no
           </a>

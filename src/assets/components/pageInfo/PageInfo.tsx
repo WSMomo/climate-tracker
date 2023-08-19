@@ -10,18 +10,22 @@ function PageInfo({ buttonText, children }: Props) {
 
   return (
     <>
-      <button
+      <a
+        href="#pageInfo"
+        onClick={() => setShow(!show)}
         className={`${
           show
             ? "bg-text-color text-secondary-color"
             : "bg-secondary-color text-text-color"
-        } rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-12 mb-12`}
-        onClick={() => setShow(!show)}
+        } text-center rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-12 mb-12`}
       >
         {buttonText}
-      </button>
+      </a>
       {show && (
-        <div className="bg-secondary-color rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 text-text-color mb-12 flex flex-col justify-center items-center pt-8 pb-8 ">
+        <div
+          id="pageInfo"
+          className="bg-secondary-color rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 text-text-color mb-12 flex flex-col justify-center items-center pt-8 pb-8 "
+        >
           {children}
         </div>
       )}

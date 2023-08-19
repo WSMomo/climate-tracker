@@ -9,3 +9,7 @@ h3 {
 p {
   @apply my-2;
 }
+
+.link {
+  @apply text-blue-300 hover:text-blue-600;
+}

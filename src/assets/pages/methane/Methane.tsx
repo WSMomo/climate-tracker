@@ -51,6 +51,7 @@ function Methane() {
           <a
             href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases#methane"
             target="_blank"
+            className={styles.link}
           >
             epa.gov
           </a>
