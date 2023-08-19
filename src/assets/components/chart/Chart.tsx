@@ -29,6 +29,7 @@ function Chart({
   maxYSelected,
   infoTitle,
 }: Props) {
+  console.log(data);
   return (
     <ResponsiveContainer width="100%" height={300} className="min-h-fit">
       <LineChart
@@ -44,7 +45,15 @@ function Chart({
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
           dataKey={infoComponents[infoTitle].dataProperty}
-          tickFormatter={(value) => value[0] + value[1] + value[2] + value[3]}
+          tickFormatter={(value) => {
+            const valueToString = String(value);
+            return (
+              valueToString[0] +
+              valueToString[1] +
+              valueToString[2] +
+              valueToString[3]
+            );
+          }}
         />
         <YAxis type="number" domain={[minYSelected, maxYSelected]} />
         <Tooltip

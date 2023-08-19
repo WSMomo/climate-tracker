@@ -7,7 +7,6 @@ import { useMinMaxValue } from "../../hooks/useMinMaxValue";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { InfoState } from "../../redux/dataSlice";
-import Loader from "../loader/Loader";
 
 interface Props {
   infoTitle: keyof InfoState;
@@ -23,13 +22,6 @@ function PreviewChart({ infoTitle }: Props) {
   );
 
   const chartName = infoTitle[0].toUpperCase() + infoTitle.slice(1);
-
-  if (data.length === 0) return <Loader />;
-
-  if (!Array.isArray(data)) {
-    console.log(data);
-    return <div>Error</div>;
-  }
 
   return (
     <ClientApi className={styles.container}>
