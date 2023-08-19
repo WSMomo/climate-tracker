@@ -1,4 +1,4 @@
-import styles from "../gridItem/gridItem.module.css";
+import styles from "./previewChart.module.css";
 import { Link } from "react-router-dom";
 import ClientApi from "../clientApi/ClientApi";
 import { Line, LineChart, ResponsiveContainer } from "recharts";
