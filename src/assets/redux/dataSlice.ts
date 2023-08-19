@@ -2,14 +2,17 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 import { InfoComponentsType } from "../global/types/infoComponentsType";
 
-export interface DataState {
-  isClientApiActived: boolean;
-  showSidebar: boolean;
+export interface InfoState {
   temperature: InfoComponentsType[];
   co2: InfoComponentsType[];
   methane: InfoComponentsType[];
   no2: InfoComponentsType[];
   arctic: InfoComponentsType[];
+}
+
+export interface DataState extends InfoState {
+  isClientApiActived: boolean;
+  showSidebar: boolean;
   allDataLoaded: boolean;
 }
 

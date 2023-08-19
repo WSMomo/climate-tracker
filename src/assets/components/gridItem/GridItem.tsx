@@ -24,7 +24,7 @@ function GridItem({
   secondColor,
 }: Props) {
   const data = useSelector((state: RootState) => state.data[title]);
-
+  console.log(data);
   if (!Array.isArray(data)) {
     console.log(data);
     return <div>Error</div>;

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export function useData(url: string) {
   const [data, setData] = useState();
 
-  console.log(data);
+  // console.log(data);
 
   useEffect(() => {
     async function fetchData() {

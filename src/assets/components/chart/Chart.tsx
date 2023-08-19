@@ -10,7 +10,7 @@ import {
 
 import { infoComponents } from "../../global/infoComponents";
 import { InfoComponentsType } from "../../global/types/infoComponentsType";
-import PageTitle from "../pageTitle/PageTitle";
+import CustomTooltip from "../customTooltip/CustomTooltip";
 
 interface Props {
   data: InfoComponentsType[];
@@ -42,31 +42,28 @@ function Chart({
         margin={{ top: 10, bottom: 20 }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        {infoComponents[infoTitle].tickFormat ? (
-          <XAxis
-            dataKey={infoComponents[infoTitle].dataProperty}
-            tickFormatter={(value) => value.substring(0, 4)}
-          />
-        ) : (
-          <XAxis dataKey={infoComponents[infoTitle].dataProperty} />
-        )}
+        <XAxis
+          dataKey={infoComponents[infoTitle].dataProperty}
+          tickFormatter={(value) => value[0] + value[1] + value[2] + value[3]}
+        />
         <YAxis type="number" domain={[minYSelected, maxYSelected]} />
         <Tooltip
           cursor={false}
           wrapperStyle={{ outline: "none" }}
-          content={<PageTitle>dsa</PageTitle>}
+          content={<CustomTooltip />}
         />
+        <defs>
+          <linearGradient id="colorUv" x1="0%" y1="100%">
+            <stop offset="0%" stopColor="#3c9dd0" />
+            <stop offset="100%" stopColor="#ED714D" />
+          </linearGradient>
+        </defs>
         <Line
           type="monotone"
+          stroke="url(#colorUv)"
           dataKey={infoComponents[infoTitle].datakey}
-          stroke={infoComponents[infoTitle].color}
           dot={false}
-        />
-        <Line
-          type="monotone"
-          dataKey={infoComponents[infoTitle].secondDataKey}
-          stroke={infoComponents[infoTitle].secondColor}
-          dot={false}
+          strokeWidth={2}
         />
       </LineChart>
     </ResponsiveContainer>
