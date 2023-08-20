@@ -6,51 +6,29 @@ import PageMain from "../../components/pageMain/PageMain";
 import PageTitle from "../../components/pageTitle/PageTitle";
 import SourceInfo from "../../components/sourceInfo/SourceInfo";
 import PageInfo from "../../components/pageInfo/PageInfo";
-
+import { useTranslation } from "react-i18next";
 function Arctic() {
   const data = useSelector((state: RootState) => state.data.arctic);
-
+  const { t } = useTranslation("arctic");
   if (data.length === 0) return <Loader />;
 
   return (
     <div className={styles.pageContainer}>
-      <PageTitle>
-        The Arctic is warming three times as fast and the global average.
-      </PageTitle>
+      <PageTitle>{t("pageTitle")}</PageTitle>
       <PageMain data={data} infoTitle={"arctic"}>
-        This provides the average monthly arctic sea ice extent each September
-        since 1979, derived from satellite observations.
+        {t("pageMain")}
       </PageMain>
       ;
-      <PageInfo buttonText="Learn More About Arctic Warming">
-        <h3>Climate components in the Arctic</h3>
-        <p>
-          The Arctic is characterised by distinct components consisting of water
-          in frozen form: glaciers, snow, permafrost and iced-over water. These
-          components together form the cryosphere. All parts of the cryosphere
-          are sensitive to climate change, and they all play important roles in
-          the global climate system.
-        </p>
-        <h3>Accelerated Arctic Warming and its Consequences</h3>
-        <p>
-          The arctic is warming around twice as fast as global average. Some of
-          the reasons for this are: The arctic amplification, the albedo effect,
-          and black carbon. From 1979 to 1996, we lost 2.2 – 3% of the arctic
-          ice cover. From 2010 to present we are losing 12.85% per decade!
-        </p>
-        <p>
-          Another consequence is permafrost thawing. This is a process in which
-          large amounts of methane is released to the atmosphere, fueling more
-          the process of global warming.
-        </p>
+      <PageInfo buttonText={t("learnMoreButton")}>
+        <h3>{t("h3_first")}</h3>
+        <p>{t("p_first")}</p>
+        <h3>{t("h3_second")}</h3>
+        <p>{t("p_second")}</p>
+        <p>{t("p_third")}</p>
         <SourceInfo>
           <br />
-          <a
-            href="https://www.npolar.no/en/themes/climate-change-in-the-arctic/#toggle-id-8"
-            target="_blank"
-            className={styles.link}
-          >
-            npolar.no
+          <a href={t("sourceInfoLink")} target="_blank" className={styles.link}>
+            {t("sourceInfoDescription")}
           </a>
         </SourceInfo>
       </PageInfo>

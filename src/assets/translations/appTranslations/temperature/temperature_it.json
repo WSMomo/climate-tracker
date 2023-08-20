@@ -1,0 +1,13 @@
+{
+  "pageTitle": "I 10 anni più caldi nel record storico sono tutti avvenuti dopo il 2010.",
+  "pageMain": "Questo grafico fornisce su base mensile l'anomalia della temperatura media globale della superficie dal 1880.04 ai giorni nostri (in gradi Celsius).",
+  "h3_first": "Tasso di aumento della temperatura globale",
+  "p_first": "Il tasso attuale di aumento della temperatura globale non è naturale. Dal 1880 al 1981 è stato di (0,07°C / 0,13°F) per decennio. Dal 1981 questo tasso è aumentato a (0,18°C / 0,32°F).",
+  "h3_second": "Informazioni sulla temperatura superficiale",
+  "p_second": "Il concetto di una temperatura media per l'intero globo può sembrare strano. Dopotutto, in questo preciso momento, le temperature più alte e più basse sulla Terra sono probabilmente distanti più di 55°C (100°F). Le temperature variano dal giorno alla notte e tra gli estremi stagionali negli emisferi settentrionale e meridionale. Ciò significa che alcune parti della Terra sono piuttosto fredde, mentre altre parti sono decisamente calde. Parlare di temperatura \"media\" potrebbe quindi sembrare senza senso. Tuttavia, il concetto di temperatura media globale è comodo per rilevare e monitorare nel tempo i cambiamenti nel bilancio energetico della Terra, ovvero quanto sole assorbe la Terra meno quanto irradia nello spazio come calore.",
+  "p_third": "Per calcolare una temperatura media globale, gli scienziati partono dalle misurazioni della temperatura effettuate in vari luoghi del globo. Poiché l'obiettivo è tracciare i cambiamenti nella temperatura, le misurazioni vengono convertite da letture di temperatura assoluta ad anomalie di temperatura, ovvero la differenza tra la temperatura osservata e la temperatura media a lungo termine per ciascun luogo e data. Diversi gruppi di ricerca indipendenti in tutto il mondo effettuano le proprie analisi dei dati sulla temperatura superficiale e tutti mostrano una tendenza al rialzo simile.",
+  "p_fourth": "Nelle aree inaccessibili con poche misurazioni, gli scienziati utilizzano le temperature circostanti e altre informazioni per stimare i valori mancanti. Ciascun valore viene quindi utilizzato per calcolare una media della temperatura globale. Questo processo fornisce un metodo coerente e affidabile per monitorare i cambiamenti nella temperatura della superficie terrestre nel tempo.",
+  "sourceInfoLink": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+  "sourceInfoDescription": "climate.gov",
+  "learnMoreButton": "Scopri di più sulla temperatura globale"
+}

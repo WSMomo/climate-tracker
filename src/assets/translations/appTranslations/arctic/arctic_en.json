@@ -1,4 +1,12 @@
 {
   "pageTitle": "The Arctic is warming three times as fast and the global average.",
-  "pageMain": "This provides the average monthly arctic sea ice extent each September since 1979, derived from satellite observations."
+  "pageMain": "This provides the average monthly arctic sea ice extent each September since 1979, derived from satellite observations.",
+  "h3_first": "Climate components in the Arctic",
+  "p_first": "The Arctic is characterised by distinct components consisting of water in frozen form: glaciers, snow, permafrost and iced-over water. These components together form the cryosphere. All parts of the cryosphere are sensitive to climate change, and they all play important roles in the global climate system.",
+  "h3_second": "Accelerated Arctic Warming and its Consequences",
+  "p_second": "The arctic is warming around twice as fast as global average. Some of the reasons for this are: The arctic amplification, the albedo effect, and black carbon. From 1979 to 1996, we lost 2.2 - 3% of the arctic ice cover. From 2010 to present we are losing 12.85% per decade!",
+  "p_third": "Another consequence is permafrost thawing. This is a process in which large amounts of methane is released to the atmosphere, fueling more the process of global warming.",
+  "sourceInfoLink": "https://www.npolar.no/en/themes/climate-change-in-the-arctic/#toggle-id-8",
+  "sourceInfoDescription": "npolar.no",
+  "learnMoreButton": "Learn More About Arctic Warming"
 }

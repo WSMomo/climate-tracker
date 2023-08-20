@@ -1,0 +1,13 @@
+{
+  "pageTitle": "The 10 warmest years in the historical record have all occurred since 2010.",
+  "pageMain": "This chart provides on a monthly basis, the global mean surface temperature anomaly from 1880.04 to the present (in celsius).",
+  "h3_first": "Global temperature warming rate",
+  "p_first": "The current global warming rate is not natural. From 1880 to 1981 was (0.07°C / 0.13°F) per decade. Since 1981 this rate has increased to (0.18°C / 0.32°F)",
+  "h3_second": "About surface temperature",
+  "p_second": "The concept of an average temperature for the entire globe may seem odd. After all, at this very moment, the highest and lowest temperatures on Earth are likely more than 100°F (55°C) apart. Temperatures vary from night to day and between seasonal extremes in the Northern and Southern Hemispheres. This means that some parts of Earth are quite cold while other parts are downright hot. To speak of the \"average\" temperature, then, may seem like nonsense. However, the concept of a global average temperature is convenient for detecting and tracking changes in Earth's energy budget—how much sunlight Earth absorbs minus how much it radiates to space as heat—over time.",
+  "p_third": "To calculate a global average temperature, scientists begin with temperature measurements taken at locations around the globe. Because their goal is to track changes in temperature, measurements are converted from absolute temperature readings to temperature anomalies—the difference between the observed temperature and the long-term average temperature for each location and date. Multiple independent research groups across the world perform their own analysis of the surface temperature data, and they all show a similar upward trend.",
+  "p_fourth": "Across inaccessible areas that have few measurements, scientists use surrounding temperatures and other information to estimate the missing values. Each value is then used to calculate a global temperature average. This process provides a consistent, reliable method for monitoring changes in Earth's surface temperature over time.",
+  "sourceInfoLink": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+  "sourceInfoDescription": "climate.gov",
+  "learnMoreButton": "Learn More About global temperature"
+}
