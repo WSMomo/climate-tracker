@@ -12,7 +12,7 @@ type Props = {
 export default function WrongAnswer({ questionNumber }: Props) {
   // LANGUAGE
   const { t } = useTranslation();
-  const language = useSelector((state: RootState) => state.quiz.language);
+  const language = useSelector((state: RootState) => state.language.language);
   const quizData = getQuizData(language);
 
   // QUESTION/ANSWERS DATA

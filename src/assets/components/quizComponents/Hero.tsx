@@ -18,7 +18,7 @@ import Separator from "../separator/Separator";
 export default function Hero() {
   // LANGUAGE
   const { t } = useTranslation();
-  const language = useSelector((state: RootState) => state.quiz.language);
+  const language = useSelector((state: RootState) => state.language.language);
   const resultsSentences: resultsSentencesType = getResultsData(language);
 
   // REDUX

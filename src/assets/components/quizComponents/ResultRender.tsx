@@ -10,7 +10,7 @@ import { QUIZ_LENGTH } from "../../global/quiz/data";
 import Separator from "../separator/Separator";
 
 export default function ResultRender() {
-  const language = useSelector((state: RootState) => state.quiz.language);
+  const language = useSelector((state: RootState) => state.language.language);
   const score = useSelector((state: RootState) => state.quiz.score);
   const resultsSentences: resultsSentencesType = getResultsData(language);
 

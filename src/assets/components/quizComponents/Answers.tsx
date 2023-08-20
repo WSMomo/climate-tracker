@@ -14,7 +14,7 @@ export default function Answers() {
   const index = useSelector((state: RootState) => state.quiz.index); // current index
 
   // LANGUAGE
-  const language = useSelector((state: RootState) => state.quiz.language);
+  const language = useSelector((state: RootState) => state.language.language);
   const quizData = getQuizData(language);
 
   // update current correct answer when index changes
