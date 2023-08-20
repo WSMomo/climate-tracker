@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import i18n from "../../../i18n";
-import { setLanguage } from "../../redux/languagesReducer";
+import { setLanguage } from "../../redux/quizReducer";
 
 export default function Languages() {
   const dispatch = useDispatch();
