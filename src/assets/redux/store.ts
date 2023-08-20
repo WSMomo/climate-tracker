@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import dataReducer from "../redux/dataSlice";
 import quizReducer from "./quizReducer";
+import languagesReducer from "./languagesReducer";
 export const store = configureStore({
   reducer: {
     data: dataReducer,
     quiz: quizReducer,
+    language: languagesReducer,
   },
 });
 
