@@ -67,6 +67,7 @@ export const quizSlice = createSlice({
       state.currentCorrectAnswer === state.currentUserAnswer
         ? (state.score += 1)
         : state.wrongAnswers.push(state.index);
+      state.attempt = state.attempt + 1;
     },
     restart: (state) => {
       return {
@@ -88,7 +89,6 @@ export const quizSlice = createSlice({
     },
     startQuiz: (state) => {
       state.isStarted = true;
-      state.attempt = state.attempt + 1;
     },
     setCurrentUserAnswer: (state, action: PayloadAction<number>) => {
       state.currentUserAnswer = action.payload;

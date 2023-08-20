@@ -1,0 +1,27 @@
+{
+  "initiator": {
+    "sentence": "Neofita",
+    "description": "Ogni sforzo per affrontare il cambiamento climatico inizia con un passo. La tua curiosità sulle questioni ambientali è un ottimo punto di partenza. Continua ad esplorare e imparare!",
+    "image": "/img/seed_initiator.png"
+  },
+  "starter": {
+    "sentence": "Principiante",
+    "description": "Stai appena iniziando a comprendere l'impatto del cambiamento climatico. Continua ad imparare ed esplorare per affrontare questa sfida globale!",
+    "image": "/img/fruits_starter.png"
+  },
+  "aware": {
+    "sentence": "Consapevole",
+    "description": "Ottimo lavoro! Hai dimostrato una buona comprensione dell'interconnessione tra il cambiamento climatico e le azioni umane. Continua ad esplorare per approfondire ancora di più.",
+    "image": "/img/tree_aware.png"
+  },
+  "expert": {
+    "sentence": "Esperto",
+    "description": "Ben fatto! Hai dimostrato una conoscenza approfondita sul cambiamento climatico e le sue implicazioni. Continua così e diventerai un vero esperto nella lotta contro il cambiamento climatico!",
+    "image": "/img/vegetables_expert.png"
+  },
+  "master": {
+    "sentence": "Maestro",
+    "description": "Straordinario! Hai ottenuto il punteggio massimo dimostrando di essere un vero maestro nella comprensione del cambiamento climatico e delle sue sfide. Continua a diffondere consapevolezza e impegno per un futuro più sostenibile.",
+    "image": "/img/earth_master.png"
+  }
+}

@@ -8,7 +8,7 @@ type Props = {
   handleUpdateUserAnswer: () => void;
 };
 
-const selectedAnswerStyle: string = "bg-secondary-color text-main-color";
+const selectedAnswerStyle: string = "bg-secondary-color";
 const notSelectedAnswerStyle: string =
   "cursor-pointer md:hover:opacity-70 transition-all duration-75";
 
@@ -30,7 +30,7 @@ export default function Answer({
 
   return (
     <div
-      className={`border-secondary-color border-[1px] p-2 m-2 ${
+      className={`border-text-color border-[1px] p-2 m-2 ${
         currentUserAnswer === index && selectedAnswerStyle
       }
          ${currentUserAnswer != index && notSelectedAnswerStyle}`}

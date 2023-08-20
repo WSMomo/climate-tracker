@@ -1,12 +1,11 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import QuizQuestions from "./QuizQuestions";
-import QuizHome from "./Home";
+import QuizHome from "./QuizHome";
 import Languages from "./Languages";
 import Result from "./Result";
 import { RootState } from "../../redux/store";
-import { Link } from "react-router-dom";
-import { restart } from "../../redux/quizReducer";
+import ReturnAtHomeButton from "../../components/quizComponents/ReturnAtHomeButton";
 
 export default function Quiz() {
   const isStarted = useSelector((state: RootState) => state.quiz.isStarted);
@@ -15,19 +14,16 @@ export default function Quiz() {
     (state: RootState) => state.quiz.languagesSelected
   );
 
-  const dispatch = useDispatch();
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-main-color">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-main-color w-full">
       {!languagesSelected ? (
         <Languages />
       ) : (
         <>
+          <ReturnAtHomeButton />
           {!isStarted && !isFinished && <QuizHome />}
           {isStarted && !isFinished && <QuizQuestions />}
           {isFinished && <Result />}
-          <Link to="/" onClick={() => dispatch(restart())}>
-            Return at Home
-          </Link>
         </>
       )}
     </div>

@@ -1,0 +1,17 @@
+{
+  "title": "EcoClima: Il Quiz sul Cambiamento Climatico",
+  "intro": "Questo quiz ti aiuterà a conoscere meglio il cambiamento climatico e il suo impatto sull'ambiente.",
+  "getStarted": "Per iniziare, clicca sul pulsante qui sotto.",
+  "startButton": "Scopri Di Più Sul Cambiamento Climatico",
+  "howAccordionTitle": "Come funziona il quiz?",
+  "howAccordionDescription": "Il quiz è composto da una serie di domande a risposta multipla sul cambiamento climatico. Per ogni domanda, seleziona l'opzione corretta. Alla fine del quiz, verrà calcolato il tuo punteggio in base alle risposte corrette.",
+  "whyAccordionTitle": "Perché fare questo quiz?",
+  "whyAccordionDescription": "Fare questo quiz ti aiuterà a conoscere meglio il cambiamento climatico e il suo impatto sull'ambiente. Inoltre, potrai condividere il tuo punteggio con gli amici per aumentare la consapevolezza sul tema.",
+  "howScoreAccordionTitle": "Come viene calcolato il mio punteggio?",
+  "howScoreAccordionDescription": "Il tuo punteggio si basa sul numero di risposte corrette. Ogni risposta giusta vale 1 punto. Il punteggio massimo è 10 punti.",
+  "restartButton": "Riprova",
+  "wrongAnswersAccordionTitle": "Guarda le tue risposte errate",
+  "nextQuestionButton": "AVANTI",
+  "showResultsButton": "FINE",
+  "correctAnswer": "Risposta corretta:"
+}

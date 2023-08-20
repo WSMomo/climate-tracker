@@ -10,7 +10,7 @@ export default function Question() {
   const index = useSelector((state: RootState) => state.quiz.index);
 
   return (
-    <div className="text-lg p-2 mt-4 text-center">
+    <div className="text-lg p-2 mt-4 text-center text-text-color">
       {quizData[index].question}
     </div>
   );

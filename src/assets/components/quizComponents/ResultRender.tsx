@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 
-import Separator from "./Separator";
 import { RootState } from "../../redux/store";
 import {
   getResultsData,
@@ -8,6 +7,7 @@ import {
 } from "../../global/quiz/results";
 import { checkScoreResult } from "../../global/quiz/utility";
 import { QUIZ_LENGTH } from "../../global/quiz/data";
+import Separator from "../separator/Separator";
 
 export default function ResultRender() {
   const language = useSelector((state: RootState) => state.quiz.language);
@@ -19,11 +19,11 @@ export default function ResultRender() {
 
   return (
     <>
-      <div>
+      <div className="text-text-color">
         {score}/{QUIZ_LENGTH}
       </div>
       <Separator />
-      <div className="flex flex-col justify-center items-center text-center px-14">
+      <div className="flex flex-col justify-center items-center text-center px-14 text-text-color">
         <h2 className="p-4 text-3xl">
           {resultsSentences[scoreResult].sentence}
         </h2>

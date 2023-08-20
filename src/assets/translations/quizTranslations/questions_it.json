@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Qual è un contributore significativo all'aumento delle temperature globali?",
+    "options": [
+      "Deforestazione",
+      "Attività solare",
+      "Eruzioni vulcaniche",
+      "Emissioni di gas serra"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quale gas è un importante responsabile dell'effetto serra?",
+    "options": ["Ossigeno", "Azoto", "Anidride carbonica (CO2)", "Elio"],
+    "answer": 2
+  },
+  {
+    "question": "Qual è una fonte comune di emissioni di NO2?",
+    "options": [
+      "Processi industriali",
+      "Formazioni rocciose naturali",
+      "Scorrimento agricolo",
+      "Attività vulcanica"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quale impatto ha la fusione del ghiaccio dell'Artico sui livelli globali del mare?",
+    "options": [
+      "Nessun impatto sui livelli del mare",
+      "Significativo aumento del livello del mare",
+      "Significativa diminuzione del livello del mare",
+      "Leggero aumento del livello del mare"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quale gas viene rilasciato durante il disgelo del permafrost e contribuisce ai cambiamenti climatici?",
+    "options": ["Ossigeno", "Anidride carbonica (CO2)", "Azoto", "Argon"],
+    "answer": 1
+  },
+  {
+    "question": "Qual è una conseguenza dell'aumento dei gas serra?",
+    "options": [
+      "Diminuzione dell'acidità degli oceani",
+      "Potenziamento dello strato di ozono",
+      "Temperature medie più basse",
+      "Ondate di calore più frequenti"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qual è un possibile risultato della deforestazione continua in relazione ai cambiamenti climatici?",
+    "options": [
+      "Riduzione delle emissioni di gas serra",
+      "Aumento della fertilità del suolo",
+      "Riduzione delle temperature globali",
+      "Aumento dei livelli di anidride carbonica"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quale pratica agricola può contribuire a sequestrare il carbonio nel suolo?",
+    "options": [
+      "Uso eccessivo di pesticidi",
+      "Agricoltura di aratura",
+      "Monocoltura",
+      "Agroforestazione"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quale fattore contribuisce alla perdita del ghiaccio dell'Artico?",
+    "options": [
+      "Ridotta radiazione solare",
+      "Aumento della copertura nuvolosa",
+      "Emissioni di gas serra",
+      "Attività vulcanica"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quale ruolo svolge il metano nei cambiamenti climatici?",
+    "options": [
+      "Non ha impatto sui cambiamenti climatici",
+      "È un refrigerante naturale",
+      "Potenzia l'effetto serra",
+      "Assorbe radiazioni ultraviolette"
+    ],
+    "answer": 2
+  }
+]

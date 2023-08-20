@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
-import Separator from "./Separator";
 import { RootState } from "../../redux/store";
 import { getQuizData } from "../../global/quiz/questions";
+import Separator from "../separator/Separator";
 
 type Props = {
   questionNumber: number;
@@ -24,7 +24,7 @@ export default function WrongAnswer({ questionNumber }: Props) {
   return (
     <div>
       <Separator />
-      <ul className="text-center">
+      <ul className="text-center text-text-color">
         <li>
           <div>{question}</div>
           <div className="m-2">

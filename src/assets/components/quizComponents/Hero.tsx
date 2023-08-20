@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import ActionButton from "./ActionButton";
 import Accordion from "./Accordion";
 import HomePageImage from "./HomePageImage";
-import Separator from "./Separator";
 import { RootState } from "../../redux/store";
 import {
   getResultsData,
@@ -14,6 +13,7 @@ import {
 import { checkScoreResult } from "../../global/quiz/utility";
 import { QUIZ_LENGTH } from "../../global/quiz/data";
 import { startQuiz } from "../../redux/quizReducer";
+import Separator from "../separator/Separator";
 
 export default function Hero() {
   // LANGUAGE
