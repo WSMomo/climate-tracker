@@ -11,7 +11,7 @@ const initialState: LanguagesReducerTypes = {
 };
 
 export const languagesSlice = createSlice({
-  name: "quiz",
+  name: "language",
   initialState,
   reducers: {
     setLanguage: (state, action: PayloadAction<string>) => {
