@@ -8,7 +8,7 @@ import { checkScoreResult } from "../../global/quiz/utility";
 
 export default function HomePageImage() {
   // LANGUAGE
-  const language = useSelector((state: RootState) => state.quiz.language);
+  const language = useSelector((state: RootState) => state.language.language);
   const resultsSentences: resultsSentencesType = getResultsData(language);
 
   //REDUX
@@ -20,7 +20,7 @@ export default function HomePageImage() {
   // FIND IMAGE PATH
   const scoreResult = checkScoreResult(highestScore);
   const imageByScore = resultsSentences[scoreResult].image;
-  const homeImage = attempt > 0 ? imageByScore : "/img/farm.png";
+  const homeImage = attempt > 0 ? imageByScore : "/img/quiz/question_mark.png";
 
   return <img className="w-24 md:w-40 m-4" src={homeImage} alt="Food Quiz" />;
 }
