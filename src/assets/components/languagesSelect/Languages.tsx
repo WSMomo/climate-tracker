@@ -19,7 +19,7 @@ export default function Languages() {
         id="languages"
         onChange={handleLanguageChange}
         value={language}
-        className="text-text-color bg-secondary-color appearance-none py-1 px-2 cursor-pointer"
+        className="text-text-color bg-secondary-color appearance-none py-1 px-2 cursor-pointer text-center"
       >
         <option value="en">EN</option>
         <option value="it">IT</option>
