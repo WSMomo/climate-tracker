@@ -1,0 +1,15 @@
+.pageContainer {
+  @apply w-full flex flex-col justify-center items-center;
+}
+
+h3 {
+  @apply text-xl font-bold text-center p-2;
+}
+
+p {
+  @apply my-2;
+}
+
+.link {
+  @apply text-blue-300 hover:text-blue-600;
+}
