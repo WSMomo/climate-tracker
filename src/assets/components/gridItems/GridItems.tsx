@@ -3,7 +3,10 @@ import { infoComponents } from "../../global/infoComponents";
 import PreviewChart from "../previewChart/PreviewChart";
 import styles from "./gridItems.module.css";
 import HomePageImage from "../quizComponents/HomePageImage";
+import { useTranslation } from "react-i18next";
+
 function GridItems() {
+  const { t } = useTranslation("appTranslation");
   return (
     <div className={styles.container} id="grids">
       <Link
@@ -14,7 +17,7 @@ function GridItems() {
         <div className="w-full h-max  flex flex-col justify-center items-center">
           <HomePageImage />
           <div className="text-text-color text-xl text-center p-4">
-            Take the quiz to test you knowledge about climate change
+            {t("homeQuizItem")}
           </div>
         </div>
       </Link>

@@ -7,7 +7,7 @@ import { RootState } from "../../redux/store";
 import Separator from "../separator/Separator";
 
 export default function WrongAnswerRender() {
-  const { t } = useTranslation("translation", { keyPrefix: "quiz" });
+  const { t } = useTranslation("quizTranslation", { keyPrefix: "quiz" });
   const wrongAnswers = useSelector(
     (state: RootState) => state.quiz.wrongAnswers
   );

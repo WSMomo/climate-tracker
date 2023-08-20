@@ -1,19 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 function HomeDescription() {
+  const { t } = useTranslation("appTranslation");
   return (
     <div className="w-full h-screen text-text-color flex flex-col justify-center items-center">
       <h1 className="text-3xl font-bold xl:text-6xl p-4 text-center ">
-        Welcome to Climate Tracker
+        {t("title")}
       </h1>
-      <h2 className="text-xl xl:text-2xl pb-8 text-center">
-        Your Window into Changing Earth
-      </h2>
-      <p className=" w-11/12 md:w-1/2 text-center xl:text-xl">
-        Explore Earth's changes through graphs on temperature, polar ice,
-        methane, NO2, and CO2 over the years. Gain awareness and advocate for a
-        sustainable future.
-      </p>
+      <h2 className="text-xl xl:text-2xl pb-8 text-center">{t("subtitle")}</h2>
+      <p className=" w-11/12 md:w-1/2 text-center xl:text-xl">{t("content")}</p>
       <p className=" w-11/12 md:w-1/2 text-center xl:text-xl mt-4">
-        Scroll down and begin your journey with us today!
+        {t("cta")}
       </p>
       <div className="w-1/6 xl:w-1/12 mt-16">
         <a href="#grids">

@@ -11,7 +11,7 @@ type Props = {
 
 export default function WrongAnswer({ questionNumber }: Props) {
   // LANGUAGE
-  const { t } = useTranslation("translation", { keyPrefix: "quiz" });
+  const { t } = useTranslation("quizTranslation", { keyPrefix: "quiz" });
   const language = useSelector((state: RootState) => state.language.language);
   const quizData = getQuizData(language);
 

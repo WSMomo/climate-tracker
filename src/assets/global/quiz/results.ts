@@ -1,5 +1,5 @@
-import enResultsInfo from "../../translations/result_en.json";
-import itResultsInfo from "../../translations/result_it.json";
+import enResultsInfo from "../../translations/quizTranslations/result_en.json";
+import itResultsInfo from "../../translations/quizTranslations/result_it.json";
 
 export type resultsSentencesType = {
   [key: string]: {

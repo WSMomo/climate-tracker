@@ -1,5 +1,5 @@
-import enQuizData from "../../translations/questions_en.json";
-import itQuizData from "../../translations/questions_it.json";
+import enQuizData from "../../translations/quizTranslations/questions_en.json";
+import itQuizData from "../../translations/quizTranslations/questions_it.json";
 
 export type answerAndQuestions = {
   question: string;
