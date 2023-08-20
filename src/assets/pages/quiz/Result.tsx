@@ -10,8 +10,7 @@ export default function Result() {
   const dispatch = useDispatch();
 
   // LANGUAGE
-  const { t } = useTranslation();
-
+  const { t } = useTranslation("translation", { keyPrefix: "quiz" });
   return (
     <div className="bg-main-color text-secondary-color w-full md:w-3/5 max-w-screen-md min-h-fit p-4 flex flex-col items-center">
       <ResultRender />

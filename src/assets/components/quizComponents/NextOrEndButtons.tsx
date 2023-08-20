@@ -9,8 +9,7 @@ import { nextQuestion, showResults } from "../../redux/quizReducer";
 
 export default function NextOrEndButtons() {
   const dispatch = useDispatch();
-  const { t } = useTranslation();
-
+  const { t } = useTranslation("translation", { keyPrefix: "quiz" });
   const index = useSelector((state: RootState) => state.quiz.index);
   const answersClicked = useSelector(
     (state: RootState) => state.quiz.answersClicked

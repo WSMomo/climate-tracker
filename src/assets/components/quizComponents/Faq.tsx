@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Accordion from "./Accordion";
 
 export default function Faq() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("translation", { keyPrefix: "quiz" });
   return (
     <>
       <Accordion title={t("howAccordionTitle")}>

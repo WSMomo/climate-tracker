@@ -1,14 +1,14 @@
-import i18n from "i18next";
+import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import enTranslation from "./assets/translations/en.json";
-import itTranslation from "./assets/translations/it.json";
-import enQuizTranslations from "./assets/translations/questions_en.json";
-import itQuizTranslations from "./assets/translations/questions_it.json";
-import enResultsTranslations from "./assets/translations/result_en.json";
-import itResultsTranslations from "./assets/translations/result_it.json";
+import enTranslation from "./assets/translations/quizTranslations/quiz_en.json";
+import itTranslation from "./assets/translations/quizTranslations/quiz_it.json";
+import enQuizTranslations from "./assets/translations/quizTranslations/questions_en.json";
+import itQuizTranslations from "./assets/translations/quizTranslations/questions_it.json";
+import enResultsTranslations from "./assets/translations/quizTranslations/result_en.json";
+import itResultsTranslations from "./assets/translations/quizTranslations/result_it.json";
 
-i18n.use(initReactI18next).init({
+i18next.use(initReactI18next).init({
   resources: {
     en: {
       translation: enTranslation,
@@ -28,4 +28,4 @@ i18n.use(initReactI18next).init({
   },
 });
 
-export default i18n;
+export default i18next;
