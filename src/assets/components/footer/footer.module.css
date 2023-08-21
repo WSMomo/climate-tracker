@@ -1,0 +1,23 @@
+.footer {
+  @apply bg-light-third-color w-full  min-h-fit flex justify-center items-center;
+}
+
+.container {
+  @apply w-3/4 max-w-6xl flex flex-col m-4 gap-4;
+}
+
+.actions {
+  @apply flex justify-end gap-4 items-center;
+}
+
+.contacts {
+  @apply flex justify-center items-center gap-4;
+}
+
+.copyright {
+  @apply flex justify-center gap-4 items-center;
+}
+
+:global(.dark) .footer {
+  @apply bg-dark-third-color text-dark-text-color;
+}

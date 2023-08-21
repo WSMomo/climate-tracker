@@ -1,5 +1,5 @@
 .container {
-  @apply absolute top-2 left-16 border border-light-text-color;
+  @apply border border-light-text-color rounded-sm;
 }
 
 .icon {

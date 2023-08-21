@@ -4,6 +4,7 @@ import Loader from "../../components/appComponents/loader/Loader";
 import HomeDescription from "../../components/appComponents/homeDescription/HomeDescription";
 import GridItems from "../../components/appComponents/gridItems/GridItems";
 import styles from "./home.module.css";
+import Footer from "../../components/footer/Footer";
 function Home() {
   const allDataLoaded = useSelector(
     (state: RootState) => state.data.allDataLoaded
@@ -17,6 +18,7 @@ function Home() {
     <div className={styles.container}>
       <HomeDescription />
       <GridItems />
+      <Footer />
     </div>
   );
 }

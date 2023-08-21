@@ -1,0 +1,7 @@
+.container {
+  @apply w-12;
+}
+
+.img {
+  @apply w-full rounded-md;
+}
