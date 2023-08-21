@@ -1,3 +1,0 @@
-.container {
-  @apply text-text-color flex flex-col justify-center items-center w-11/12 max-w-[900px] h-full mt-4 bg-secondary-color rounded-xl p-8;
-}

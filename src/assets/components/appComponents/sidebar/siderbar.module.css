@@ -1,0 +1,14 @@
+.dark .container {
+  @apply fixed top-0 right-0 h-full bg-dark-third-color w-3/4 xl:w-1/4 flex justify-center items-center z-50;
+}
+.light .container {
+  @apply fixed top-0 right-0 h-full bg-light-third-color w-3/4 xl:w-1/4 flex justify-center items-center z-50;
+}
+
+.sidebar {
+  @apply h-3/4 w-full flex flex-col;
+}
+
+.icon {
+  @apply h-12 w-12 text-gray-500;
+}

@@ -1,4 +1,4 @@
-import PageRender from "../../components/pageRender/PageRender";
+import PageRender from "../../components/appComponents/page/pageRender/PageRender";
 
 function Co2() {
   return <PageRender infoTitle={"co2"} />;

@@ -1,4 +1,4 @@
-import PageRender from "../../components/pageRender/PageRender";
+import PageRender from "../../components/appComponents/page/pageRender/PageRender";
 import { infoComponents } from "../../global/infoComponents";
 function Methane() {
   return <PageRender infoTitle={infoComponents.methane.title} />;
