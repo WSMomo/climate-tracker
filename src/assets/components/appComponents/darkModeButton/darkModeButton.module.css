@@ -1,0 +1,15 @@
+.container {
+  @apply absolute top-2 left-16 border border-light-text-color;
+}
+
+.icon {
+  @apply text-light-text-color bg-light-secondary-color appearance-none h-8 w-8 cursor-pointer text-center;
+}
+
+:global(.dark) .container {
+  @apply border-dark-text-color;
+}
+
+:global(.dark) .icon {
+  @apply bg-dark-secondary-color text-dark-text-color;
+}

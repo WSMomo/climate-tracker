@@ -1,8 +1,8 @@
 // DarkMode.tsx
 
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setDarkMode } from "../../redux/darkModeReducer";
+import { useSelector } from "react-redux";
+
 import { RootState } from "../../redux/store";
 
 interface Props {
@@ -10,24 +10,13 @@ interface Props {
 }
 
 function DarkMode({ children }: Props) {
-  const dispatch = useDispatch();
   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
 
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
-  return (
-    <div className={darkMode ? "dark" : ""}>
-      <button
-        className="fixed top-0 left-96 bg-red-500"
-        onClick={() => dispatch(setDarkMode())}
-      >
-        Dark Mode
-      </button>
-      {children}
-    </div>
-  );
+  return <div className={darkMode ? "dark" : ""}>{children}</div>;
 }
 
 export default DarkMode;
