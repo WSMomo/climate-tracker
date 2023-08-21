@@ -36,7 +36,7 @@ export const infoComponents: InfoComponentType = {
     title: "arctic",
     dataProperty: "year",
     datakey: "area",
-    infoName: "area",
+    infoName: "M km²",
   },
   co2: {
     title: "co2",

@@ -60,7 +60,9 @@ function Chart({
         <Tooltip
           cursor={false}
           wrapperStyle={{ outline: "none" }}
-          content={<CustomTooltip />}
+          content={
+            <CustomTooltip infoName={infoComponents[infoTitle].infoName} />
+          }
         />
         <defs>
           <linearGradient id="colorUv" x1="0%" y1="100%">

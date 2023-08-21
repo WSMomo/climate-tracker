@@ -6,16 +6,23 @@ import {
   NameType,
 } from "recharts/types/component/DefaultTooltipContent";
 
-function CustomTooltip({
-  active,
-  payload,
-  label,
-}: TooltipProps<ValueType, NameType>) {
+interface Props extends TooltipProps<ValueType, NameType> {
+  infoName: string;
+}
+
+function CustomTooltip({ active, payload, label, infoName }: Props) {
   if (active) {
     return (
       <div className={styles.container}>
-        <p>{`Year: ${label[0] + label[1] + label[2] + label[3]}`}</p>
-        <p>{payload?.[0].value}&deg;C</p>
+        {typeof label === "string" ? (
+          <p>{`Year: ${label[0] + label[1] + label[2] + label[3]}`}</p>
+        ) : (
+          <p>{`Year: ${label}`}</p>
+        )}
+        <p>
+          {payload?.[0].value}
+          {infoName}
+        </p>
       </div>
     );
   }
