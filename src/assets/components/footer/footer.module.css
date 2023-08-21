@@ -1,5 +1,5 @@
 .footer {
-  @apply bg-light-third-color w-full  min-h-fit flex justify-center items-center;
+  @apply bg-light-third-color w-full  min-h-fit flex justify-center items-center mt-12;
 }
 
 .container {

@@ -6,6 +6,7 @@ import WsMomoIcon from "/img/contacts/marcoMomoHome.png";
 import { Contact } from "../contact/Contact";
 
 import styles from "./footer.module.css";
+import ReturnToTheTop from "../appComponents/returnToTheTop/ReturnToTheTop";
 
 const contacts = {
   linkedin: {
@@ -32,6 +33,7 @@ function Footer() {
         <div className={styles.actions}>
           <Languages />
           <DarkModeButton />
+          <ReturnToTheTop />
         </div>
         <div className={styles.contacts}>
           {Object.keys(contacts).map((contactKey) => {

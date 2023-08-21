@@ -12,6 +12,7 @@ import Loader from "../loader/Loader";
 import SourceInfo from "../sourceInfo/SourceInfo";
 import PageInfo from "../pageInfo/PageInfo";
 import SourceLink from "../sourceLink/SourceLink";
+import ReturnToTheTop from "../returnToTheTop/ReturnToTheTop";
 
 interface Props {
   infoTitle: keyof InfoState;
@@ -62,6 +63,7 @@ function PageRender({ infoTitle, removeFirst }: Props) {
             {t("sourceInfoDescription")}
           </SourceLink>
         </SourceInfo>
+        <ReturnToTheTop />
       </PageInfo>
     </div>
   );
