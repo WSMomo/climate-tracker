@@ -4,3 +4,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.App {
+  @apply flex h-full min-h-screen justify-center items-center bg-light-main-color text-light-text-color  dark:bg-dark-main-color dark:text-dark-text-color w-full;
+}

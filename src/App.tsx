@@ -41,7 +41,7 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <div className="flex h-full min-h-screen justify-center items-center bg-main-color w-full">
+    <div className="App">
       <RouterProvider router={router} />
     </div>
   );

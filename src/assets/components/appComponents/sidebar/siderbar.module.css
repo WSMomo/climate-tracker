@@ -1,8 +1,5 @@
-.dark .container {
-  @apply fixed top-0 right-0 h-full bg-dark-third-color w-3/4 xl:w-1/4 flex justify-center items-center z-50;
-}
-.light .container {
-  @apply fixed top-0 right-0 h-full bg-light-third-color w-3/4 xl:w-1/4 flex justify-center items-center z-50;
+.container {
+  @apply fixed top-0 right-0 h-full bg-light-third-color text-light-text-color dark:text-dark-text-color dark:bg-dark-third-color w-3/4 xl:w-1/4 flex justify-center items-center z-50;
 }
 
 .sidebar {

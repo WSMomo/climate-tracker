@@ -2,11 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import dataReducer from "../redux/dataSlice";
 import quizReducer from "./quizReducer";
 import languagesReducer from "./languagesReducer";
+import darkModeReducer from "./darkModeReducer";
 export const store = configureStore({
   reducer: {
     data: dataReducer,
     quiz: quizReducer,
     language: languagesReducer,
+    darkMode: darkModeReducer,
   },
 });
 
