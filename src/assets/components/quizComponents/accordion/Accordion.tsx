@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./Accordion.module.css";
 
 type Props = {
   title: string;
@@ -14,22 +15,19 @@ export default function Accordion({ title, children }: Props) {
   return (
     <div
       className={`
-      w-4/5 p-2 m-2
-    ${
-      isHidden
-        ? "bg-light-secondary-color text-light-text-color dark:bg-dark-secondary-color dark:text-dark-text-color"
-        : "border border-light-text-color dark:border-dark-text-color"
-    }`}
+        ${styles.accordion} 
+        ${isHidden ? styles.hiddenAccordion : styles.visibleAccordion}`}
     >
       {/* ACCORDION TITLE */}
-      <h2
-        onClick={handleClick}
-        className="font-semibold m-2 cursor-pointer text-center"
-      >
+      <h2 onClick={handleClick} className={styles.title}>
         {title}
       </h2>
       {/* ACCORDION DESCRIPTION */}
-      <div className={`${isHidden ? "hidden" : ""} p-2`}>{children}</div>
+      <div
+        className={`${isHidden ? styles.hiddenContent : ""} ${styles.content}`}
+      >
+        {children}
+      </div>
     </div>
   );
 }

@@ -2,8 +2,8 @@
 
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
 import { setDarkMode } from "../../redux/darkModeReducer";
+import { RootState } from "../../redux/store";
 
 interface Props {
   children: React.ReactNode;
