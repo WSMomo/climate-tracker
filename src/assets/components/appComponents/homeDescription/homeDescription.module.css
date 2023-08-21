@@ -19,5 +19,9 @@
 }
 
 .icon {
-  @apply w-1/6 xl:w-1/12 mt-16;
+  @apply w-1/6 xl:w-1/12 mt-32;
+}
+
+.svg {
+  @apply animate-bounce-slow;
 }

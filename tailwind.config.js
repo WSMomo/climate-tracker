@@ -4,18 +4,21 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        "bounce-slow": "bounce 3s linear infinite",
+      },
       colors: {
         light: {
-          "main-color": "#FFFFFF",
-          "secondary-color": "#E5E5E5",
-          "third-color": "#F0F0F0",
-          "text-color": "#000000",
+          "main-color": "#fafafa",
+          "secondary-color": "#e4e5f1",
+          "third-color": "#d2d3db",
+          "text-color": "#484b6a",
         },
         dark: {
-          "main-color": "#292929",
-          "secondary-color": "#121212",
-          "third-color": "#1A232A",
-          "text-color": "#FFF",
+          "main-color": "#242526",
+          "secondary-color": "#18191a",
+          "third-color": "#3a3b3c",
+          "text-color": "#e4e6eb",
         },
       },
     },

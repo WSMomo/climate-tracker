@@ -15,6 +15,7 @@ function HomeDescription() {
       <div className={styles.icon}>
         <a href="#grids">
           <svg
+            className={styles.svg}
             fill={darkMode ? "#FFF" : "#000"}
             version="1.1"
             id="Layer_1"
