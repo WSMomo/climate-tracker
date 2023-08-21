@@ -1,0 +1,11 @@
+.container {
+  @apply w-full flex justify-end;
+}
+
+.icon {
+  @apply w-8 h-8 bg-dark-text-color text-dark-secondary-color rounded-full hover:bg-dark-secondary-color hover:text-dark-text-color;
+}
+
+:global(.dark) .icon {
+  @apply bg-dark-secondary-color text-dark-text-color hover:bg-dark-text-color hover:text-dark-secondary-color;
+}

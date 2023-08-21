@@ -1,5 +1,5 @@
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
-
+import styles from "./returnToTheTop.module.css";
 function ReturnToTheTop() {
   function scollToTop() {
     window.scrollTo({
@@ -8,9 +8,9 @@ function ReturnToTheTop() {
   }
 
   return (
-    <div className="w-full flex justify-end">
+    <div className={styles.container}>
       <button onClick={scollToTop} title="Return to the Top">
-        <ArrowUpCircleIcon className="w-8 h-8 bg-dark-text-color text-dark-secondary-color rounded-full hover:bg-dark-secondary-color hover:text-dark-text-color" />
+        <ArrowUpCircleIcon className={styles.icon} />
       </button>
     </div>
   );
