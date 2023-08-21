@@ -1,9 +1,9 @@
 import styles from "./siderbar.module.css";
 import { useSelector } from "react-redux";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import SidebarLink from "./sidebarLink/SidebarLink";
-import SidebarButton from "./sidebarButton/SidebarButton";
+import SidebarLink from "../sidebarLink/SidebarLink";
 import { RootState } from "../../../redux/store";
+import SidebarButton from "../sidebarButton/SidebarButton";
 
 function Sidebar() {
   const showSidebar = useSelector((state: RootState) => state.data.showSidebar);

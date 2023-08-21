@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import styles from "./sidebarButton.module.css";
-import { setShowSidebar } from "../../../../redux/dataSlice";
+import { setShowSidebar } from "../../../redux/dataSlice";
 interface Props {
   children: React.ReactNode;
 }

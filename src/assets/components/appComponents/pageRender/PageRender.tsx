@@ -10,9 +10,9 @@ import { RootState } from "../../../redux/store";
 import { InfoState } from "../../../redux/dataSlice";
 import { infoComponents } from "../../../global/infoComponents";
 import Loader from "../loader/Loader";
-import SourceLink from "../source/sourceLink/SourceLink";
-import SourceInfo from "../source/sourceInfo/SourceInfo";
+import SourceInfo from "../sourceInfo/SourceInfo";
 import PageInfo from "../pageInfo/PageInfo";
+import SourceLink from "../sourceLink/SourceLink";
 
 interface Props {
   infoTitle: keyof InfoState;

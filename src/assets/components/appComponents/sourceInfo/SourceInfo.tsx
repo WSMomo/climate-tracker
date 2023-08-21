@@ -1,4 +1,4 @@
-import Separator from "../../../separator/Separator";
+import Separator from "../../separator/Separator";
 import SourceLink from "../sourceLink/SourceLink";
 import styles from "./sourceInfo.module.css";
 
