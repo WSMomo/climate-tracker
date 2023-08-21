@@ -6,6 +6,9 @@ import { RootState } from "../../../redux/store";
 function HomeDescription() {
   const { t } = useTranslation("appTranslation");
   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+
+  const iconColor = darkMode ? "#e4e6eb" : "#484b6a";
+
   return (
     <div className={styles.container} id="#home">
       <h1 className={styles.title}>{t("title")}</h1>
@@ -16,7 +19,7 @@ function HomeDescription() {
         <a href="#grids">
           <svg
             className={styles.svg}
-            fill={darkMode ? "#FFF" : "#000"}
+            fill={iconColor}
             version="1.1"
             id="Layer_1"
             viewBox="0 0 512 512"

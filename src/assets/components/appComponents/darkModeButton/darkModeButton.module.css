@@ -1,9 +1,9 @@
 .container {
-  @apply border border-light-text-color rounded-sm;
+  @apply border border-light-text-color rounded-full;
 }
 
 .icon {
-  @apply text-light-text-color bg-light-secondary-color appearance-none h-8 w-8 cursor-pointer text-center hover:bg-light-text-color hover:text-light-main-color;
+  @apply text-light-text-color bg-light-secondary-color appearance-none h-8 w-8 cursor-pointer text-center hover:bg-light-text-color hover:text-light-main-color rounded-full;
 }
 
 :global(.dark) .container {
