@@ -10,7 +10,11 @@ interface Props {
 export function Contact({ contactKey }: Props) {
   return (
     <div className={styles.container}>
-      <a href={contactKey.url} target="_blank">
+      <a
+        href={contactKey.url}
+        target="_blank"
+        title={`Visit my ${contactKey.title}`}
+      >
         <img
           src={contactKey.img}
           alt={contactKey.title}

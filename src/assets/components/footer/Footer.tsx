@@ -20,7 +20,7 @@ const contacts = {
     url: "https://github.com/wsmomo/",
   },
   website: {
-    title: "wsMomo",
+    title: "portfolio",
     img: WsMomoIcon,
     url: "https://wsmomo.github.io/Portfolio-Marco-Momo/",
   },
