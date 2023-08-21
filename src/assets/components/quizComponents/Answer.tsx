@@ -8,7 +8,8 @@ type Props = {
   handleUpdateUserAnswer: () => void;
 };
 
-const selectedAnswerStyle: string = "bg-secondary-color";
+const selectedAnswerStyle: string =
+  "bg-light-secondary-color dark:bg-dark-secondary-color ";
 const notSelectedAnswerStyle: string =
   "cursor-pointer md:hover:opacity-70 transition-all duration-75";
 
@@ -30,7 +31,7 @@ export default function Answer({
 
   return (
     <div
-      className={`border-text-color border-[1px] p-2 m-2 ${
+      className={`border-light-text-color dark:border-dark-text-color border-[1px] p-2 m-2 ${
         currentUserAnswer === index && selectedAnswerStyle
       }
          ${currentUserAnswer != index && notSelectedAnswerStyle}`}

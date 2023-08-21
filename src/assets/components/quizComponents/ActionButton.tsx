@@ -6,7 +6,7 @@ type Props = {
 export default function ActionButton({ handleClick, children }: Props) {
   return (
     <button
-      className="border px-8 py-2 md:hover:opacity-75 m-4 text-text-color"
+      className="px-8 py-2 md:hover:opacity-75 m-4 text-light-text-color dark:text-dark-text-color bg-light-secondary-color dark:bg-dark-secondary-color"
       onClick={handleClick}
     >
       {children}

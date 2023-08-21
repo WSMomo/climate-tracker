@@ -20,7 +20,7 @@ function DarkMode({ children }: Props) {
   return (
     <div className={darkMode ? "dark" : ""}>
       <button
-        className="fixed bg-red-500"
+        className="fixed top-0 left-96 bg-red-500"
         onClick={() => dispatch(setDarkMode())}
       >
         Dark Mode

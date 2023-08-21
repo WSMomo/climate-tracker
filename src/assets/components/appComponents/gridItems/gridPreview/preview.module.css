@@ -1,9 +1,9 @@
 .container {
-  @apply bg-light-secondary-color text-light-text-color dark:text-dark-text-color dark:bg-dark-secondary-color rounded-xl p-2 hover:opacity-75 min-h-fit;
+  @apply bg-light-secondary-color text-light-text-color dark:bg-dark-secondary-color dark:text-dark-text-color rounded-xl p-2 hover:opacity-75 min-h-fit;
 }
 
 .title {
-  @apply text-light-text-color dark:text-dark-text-color text-2xl text-left p-6;
+  @apply text-2xl text-left p-6;
 }
 
 /* CHART PREVIEW */

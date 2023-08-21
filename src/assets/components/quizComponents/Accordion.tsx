@@ -14,11 +14,11 @@ export default function Accordion({ title, children }: Props) {
   return (
     <div
       className={`
-      w-4/5 p-2 m-2 text-text-color
+      w-4/5 p-2 m-2
     ${
       isHidden
-        ? "bg-secondary-color text-text-color"
-        : "border border-text-color"
+        ? "bg-light-secondary-color text-light-text-color dark:bg-dark-secondary-color dark:text-dark-text-color"
+        : "border border-light-text-color dark:border-dark-text-color"
     }`}
     >
       {/* ACCORDION TITLE */}

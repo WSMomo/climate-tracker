@@ -24,7 +24,7 @@ export default function Answers() {
   }, [index]);
 
   return (
-    <div className="w-11/12 md:w-2/3 text-text-color">
+    <div className="w-11/12 md:w-2/3">
       {quizData[index].options.map((option, optionIndex) => (
         <Answer
           key={optionIndex}
