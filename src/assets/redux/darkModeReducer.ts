@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 function getInitialDarkModeState(): boolean {
   const savedMode = localStorage.getItem("darkMode");
@@ -19,13 +19,11 @@ export const darkModeSlice = createSlice({
   reducers: {
     setDarkMode: (state) => {
       state.darkMode = !state.darkMode;
-    },
-    setSavedDarkMode: (state, action: PayloadAction<boolean>) => {
-      state.darkMode = action.payload;
+      localStorage.setItem("darkMode", JSON.stringify(state.darkMode));
     },
   },
 });
 
-export const { setDarkMode, setSavedDarkMode } = darkModeSlice.actions;
+export const { setDarkMode } = darkModeSlice.actions;
 
 export default darkModeSlice.reducer;

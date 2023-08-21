@@ -60,7 +60,6 @@ i18next.use(initReactI18next).init({
       results: itResultsTranslations,
     },
   },
-  lng: "en",
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,

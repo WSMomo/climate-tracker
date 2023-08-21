@@ -7,7 +7,8 @@ export type LanguagesReducerTypes = {
 
 function getInitalLanguageState(): string {
   const savedLanguage = localStorage.getItem("language");
-  return savedLanguage ? JSON.parse(savedLanguage) : "en";
+  console.log(savedLanguage);
+  return savedLanguage ? JSON.parse(savedLanguage) : "";
 }
 
 const initialState: LanguagesReducerTypes = {
@@ -22,6 +23,7 @@ export const languagesSlice = createSlice({
     setLanguage: (state, action: PayloadAction<string>) => {
       state.language = action.payload;
       state.languagesSelected = true;
+      localStorage.setItem("language", JSON.stringify(state.language));
     },
   },
 });
