@@ -1,0 +1,3 @@
+.container {
+  @apply flex justify-end w-2/4;
+}

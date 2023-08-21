@@ -1,0 +1,7 @@
+.title {
+  @apply text-3xl;
+}
+
+.getStarted {
+  @apply m-4;
+}

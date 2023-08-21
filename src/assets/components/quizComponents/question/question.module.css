@@ -1,0 +1,3 @@
+.question {
+  @apply text-lg p-2 mt-4 text-center;
+}

@@ -5,6 +5,8 @@ import { RootState } from "../../../redux/store";
 import { getQuizData } from "../../../global/quiz/questions";
 import Separator from "../../separator/Separator";
 
+import styles from "./wrongAnswer.module.css";
+
 type Props = {
   questionNumber: number;
 };
@@ -24,12 +26,12 @@ export default function WrongAnswer({ questionNumber }: Props) {
   return (
     <div>
       <Separator />
-      <ul className="text-center text-text-color">
+      <ul className={styles.container}>
         <li>
           <div>{question}</div>
-          <div className="m-2">
+          <div className={styles.correctAnswerSentence}>
             {t("correctAnswer")}
-            <span className="font-semibold"> {correctAnswer}</span>
+            <span className={styles.correctAnswer}> {correctAnswer}</span>
           </div>
         </li>
       </ul>

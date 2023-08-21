@@ -2,6 +2,8 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { returnAtHome } from "../../../redux/quizReducer";
 import { HomeIcon } from "@heroicons/react/24/outline";
+import styles from "./returnAtHomeButton.module.css";
+
 function ReturnAtHomeButton() {
   const dispatch = useDispatch();
 
@@ -9,10 +11,10 @@ function ReturnAtHomeButton() {
     <Link
       to="/"
       onClick={() => dispatch(returnAtHome())}
-      className="fixed top-1 left-1 min-w-fit bg-text-color text-secondary-color p-4 rounded-xl"
+      className={styles.button}
       title="Return at Home"
     >
-      <HomeIcon className="w-8" />
+      <HomeIcon className={styles.icon} />
     </Link>
   );
 }

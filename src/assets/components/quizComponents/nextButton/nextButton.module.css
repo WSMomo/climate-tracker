@@ -1,0 +1,11 @@
+.button {
+  @apply bg-light-secondary-color py-1 px-4;
+}
+
+:global(.dark) .button {
+  @apply bg-dark-secondary-color;
+}
+
+.disabled {
+  @apply opacity-40;
+}

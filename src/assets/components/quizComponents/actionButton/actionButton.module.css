@@ -1,0 +1,7 @@
+.actionButton {
+  @apply px-8 py-2 md:hover:opacity-75 m-4 text-light-text-color bg-light-secondary-color;
+}
+
+:global(.dark) .actionButton {
+  @apply text-dark-text-color bg-dark-secondary-color;
+}

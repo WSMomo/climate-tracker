@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import { getQuizData } from "../../../global/quiz/questions";
+import styles from "./question.module.css";
 
 export default function Question() {
   // LANGUAGE
@@ -9,9 +10,5 @@ export default function Question() {
 
   const index = useSelector((state: RootState) => state.quiz.index);
 
-  return (
-    <div className="text-lg p-2 mt-4 text-center text-text-color">
-      {quizData[index].question}
-    </div>
-  );
+  return <div className={styles.question}>{quizData[index].question}</div>;
 }

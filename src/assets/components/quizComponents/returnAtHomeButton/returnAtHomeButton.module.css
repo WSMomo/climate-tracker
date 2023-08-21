@@ -1,0 +1,7 @@
+.button {
+  @apply fixed top-1 left-1 min-w-fit  p-4 rounded-xl;
+}
+
+.icon {
+  @apply w-8;
+}

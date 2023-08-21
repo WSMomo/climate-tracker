@@ -8,6 +8,7 @@ import {
 import { checkScoreResult } from "../../../global/quiz/utility";
 import { QUIZ_LENGTH } from "../../../global/quiz/data";
 import Separator from "../../separator/Separator";
+import styles from "./resultRender.module.css";
 
 export default function ResultRender() {
   const language = useSelector((state: RootState) => state.language.language);
@@ -19,20 +20,22 @@ export default function ResultRender() {
 
   return (
     <>
-      <div className="text-text-color">
+      <div>
         {score}/{QUIZ_LENGTH}
       </div>
       <Separator />
-      <div className="flex flex-col justify-center items-center text-center px-14 text-text-color">
-        <h2 className="p-4 text-3xl">
+      <div className={styles.container}>
+        <h2 className={styles.sentence}>
           {resultsSentences[scoreResult].sentence}
         </h2>
         <img
-          className="w-1/6 m-4"
+          className={styles.img}
           src={resultsSentences[scoreResult].image}
           alt={resultsSentences[scoreResult].sentence}
         />
-        <p className="text-lg">{resultsSentences[scoreResult].description}</p>
+        <p className={styles.description}>
+          {resultsSentences[scoreResult].description}
+        </p>
       </div>
     </>
   );

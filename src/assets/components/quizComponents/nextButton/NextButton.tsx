@@ -1,3 +1,4 @@
+import styles from "./nextButton.module.css";
 type Props = {
   disabled: boolean;
   onClick: () => void;
@@ -7,9 +8,7 @@ type Props = {
 export default function Button({ disabled, onClick, children }: Props) {
   return (
     <button
-      className={`bg-light-secondary-color dark:bg-dark-secondary-color py-1 px-4 ${
-        disabled ? "opacity-40" : ""
-      }`}
+      className={`${styles.button} ${disabled ? styles.disabled : ""}`}
       disabled={disabled}
       onClick={onClick}
     >

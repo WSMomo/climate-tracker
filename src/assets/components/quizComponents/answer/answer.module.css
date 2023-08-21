@@ -1,0 +1,19 @@
+.answer {
+  @apply border-light-text-color  border-[1px] p-2 m-2;
+}
+
+.selectedAnswer {
+  @apply bg-light-secondary-color;
+}
+
+.notSelectedAnswer {
+  @apply cursor-pointer md:hover:opacity-70 transition-all duration-75;
+}
+
+:global(.dark) .answer {
+  @apply border-dark-text-color;
+}
+
+:global(.dark) .selectedAnswer {
+  @apply bg-dark-secondary-color;
+}

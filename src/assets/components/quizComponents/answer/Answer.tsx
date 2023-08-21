@@ -1,17 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import { setAnswersClicked } from "../../../redux/quizReducer";
-
+import styles from "./answer.module.css";
 type Props = {
   index: number;
   children: React.ReactNode;
   handleUpdateUserAnswer: () => void;
 };
-
-const selectedAnswerStyle: string =
-  "bg-light-secondary-color dark:bg-dark-secondary-color ";
-const notSelectedAnswerStyle: string =
-  "cursor-pointer md:hover:opacity-70 transition-all duration-75";
 
 export default function Answer({
   children,
@@ -31,10 +26,10 @@ export default function Answer({
 
   return (
     <div
-      className={`border-light-text-color dark:border-dark-text-color border-[1px] p-2 m-2 ${
-        currentUserAnswer === index && selectedAnswerStyle
-      }
-         ${currentUserAnswer != index && notSelectedAnswerStyle}`}
+      className={`${currentUserAnswer === index && styles.selectedAnswer}
+         ${currentUserAnswer != index && styles.notSelectedAnswer} ${
+        styles.answer
+      }`}
       onClick={handleClick}
     >
       {children}

@@ -6,6 +6,7 @@ import NextButton from "../nextButton/NextButton";
 import { RootState } from "../../../redux/store";
 import { QUIZ_LENGTH } from "../../../global/quiz/data";
 import { nextQuestion, showResults } from "../../../redux/quizReducer";
+import styles from "./nextOrEndButtons.module.css";
 
 export default function NextOrEndButtons() {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ export default function NextOrEndButtons() {
   );
 
   return (
-    <div className="flex justify-end w-2/4">
+    <div className={styles.container}>
       {index === QUIZ_LENGTH - 1 ? (
         <NextButton
           disabled={!answersClicked}

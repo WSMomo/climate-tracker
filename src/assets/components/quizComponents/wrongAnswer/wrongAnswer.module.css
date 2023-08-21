@@ -1,0 +1,11 @@
+.container {
+  @apply text-center;
+}
+
+.correctAnswerSentence {
+  @apply m-2;
+}
+
+.correctAnswer {
+  @apply font-semibold;
+}

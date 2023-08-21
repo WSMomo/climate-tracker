@@ -5,7 +5,7 @@ import {
   resultsSentencesType,
 } from "../../../global/quiz/results";
 import { checkScoreResult } from "../../../global/quiz/utility";
-
+import styles from "./homePageImage.module.css";
 export default function HomePageImage() {
   // LANGUAGE
   const language = useSelector((state: RootState) => state.language.language);
@@ -22,5 +22,5 @@ export default function HomePageImage() {
   const imageByScore = resultsSentences[scoreResult].image;
   const homeImage = attempt > 0 ? imageByScore : "/img/quiz/question_mark.png";
 
-  return <img className="w-24 md:w-40 m-4" src={homeImage} alt="Food Quiz" />;
+  return <img className={styles.img} src={homeImage} alt="Food Quiz" />;
 }

@@ -1,0 +1,27 @@
+.container {
+  @apply w-5/6 flex flex-col items-center justify-center;
+}
+
+.index {
+  @apply w-fit border border-light-text-color  text-light-text-color my-4 p-2;
+}
+
+.progressionBar {
+  @apply w-4/5 bg-light-secondary-color border-light-text-color  border-[1px] h-4;
+}
+
+.progression {
+  @apply h-full bg-light-text-color;
+}
+
+:global(.dark) .index {
+  @apply border-dark-text-color text-dark-text-color;
+}
+
+:global(.dark) .progressionBar {
+  @apply bg-dark-secondary-color border-dark-text-color;
+}
+
+:global(.dark) .progression {
+  @apply bg-dark-text-color;
+}
