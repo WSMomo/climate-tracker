@@ -1,13 +1,12 @@
-import Sidebar from "../../sidebar/Sidebar";
-import Slider from "../../slider/Slider";
-import Loader from "../../loader/Loader";
-
+import { infoComponents } from "../../../global/infoComponents";
+import { InfoComponentsType } from "../../../global/types/infoComponentsType";
+import { useMinMaxValue } from "../../../hooks/useMinMaxValue";
+import { useSlider } from "../../../hooks/useSlider";
+import Chart from "../chart/Chart";
+import Loader from "../loader/Loader";
+import Sidebar from "../sidebar/Sidebar";
+import Slider from "../slider/Slider";
 import styles from "./pageMain.module.css";
-import { InfoComponentsType } from "../../../../global/types/infoComponentsType";
-import { useMinMaxValue } from "../../../../hooks/useMinMaxValue";
-import { infoComponents } from "../../../../global/infoComponents";
-import { useSlider } from "../../../../hooks/useSlider";
-import Chart from "../../chart/Chart";
 
 interface Props {
   data: InfoComponentsType[];

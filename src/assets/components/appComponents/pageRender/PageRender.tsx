@@ -6,14 +6,13 @@ import PageMain from "../pageMain/PageMain";
 import styles from "./pages.module.css";
 
 import i18next from "i18next";
-
-import Loader from "../../loader/Loader";
-import SourceInfo from "../../source/sourceInfo/SourceInfo";
+import { RootState } from "../../../redux/store";
+import { InfoState } from "../../../redux/dataSlice";
+import { infoComponents } from "../../../global/infoComponents";
+import Loader from "../loader/Loader";
+import SourceLink from "../source/sourceLink/SourceLink";
+import SourceInfo from "../source/sourceInfo/SourceInfo";
 import PageInfo from "../pageInfo/PageInfo";
-import { InfoState } from "../../../../redux/dataSlice";
-import { RootState } from "../../../../redux/store";
-import { infoComponents } from "../../../../global/infoComponents";
-import SourceLink from "../../source/sourceLink/SourceLink";
 
 interface Props {
   infoTitle: keyof InfoState;
