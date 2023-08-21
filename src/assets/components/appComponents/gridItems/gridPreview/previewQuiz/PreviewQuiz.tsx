@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "../preview.module.css";
 import { useTranslation } from "react-i18next";
-import HomePageImage from "../../../../quizComponents/HomePageImage";
+import HomePageImage from "../../../../quizComponents/homePageImage/HomePageImage";
 
 export function PreviewQuiz() {
   const { t } = useTranslation("appTranslation");

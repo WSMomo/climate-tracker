@@ -4,7 +4,7 @@ import QuizQuestions from "./QuizQuestions";
 import QuizHome from "./QuizHome";
 import Result from "./Result";
 import { RootState } from "../../redux/store";
-import ReturnAtHomeButton from "../../components/quizComponents/ReturnAtHomeButton";
+import ReturnAtHomeButton from "../../components/quizComponents/returnAtHomeButton/ReturnAtHomeButton";
 
 export default function Quiz() {
   const isStarted = useSelector((state: RootState) => state.quiz.isStarted);

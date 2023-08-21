@@ -2,18 +2,18 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useTranslation } from "react-i18next";
 
-import ActionButton from "./ActionButton";
-import Accordion from "./Accordion";
-import HomePageImage from "./HomePageImage";
-import { RootState } from "../../redux/store";
+import ActionButton from "../actionButton/ActionButton";
+import Accordion from "../accordion/Accordion";
+import HomePageImage from "../homePageImage/HomePageImage";
+import { RootState } from "../../../redux/store";
 import {
   getResultsData,
   resultsSentencesType,
-} from "../../global/quiz/results";
-import { checkScoreResult } from "../../global/quiz/utility";
-import { QUIZ_LENGTH } from "../../global/quiz/data";
-import { startQuiz } from "../../redux/quizReducer";
-import Separator from "../separator/Separator";
+} from "../../../global/quiz/results";
+import { checkScoreResult } from "../../../global/quiz/utility";
+import { QUIZ_LENGTH } from "../../../global/quiz/data";
+import { startQuiz } from "../../../redux/quizReducer";
+import Separator from "../../separator/Separator";
 
 export default function Hero() {
   // LANGUAGE

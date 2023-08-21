@@ -14,10 +14,8 @@ function CustomTooltip({
   if (active) {
     return (
       <div className={styles.container}>
-        <p className="">{`Year: ${
-          label[0] + label[1] + label[2] + label[3]
-        }`}</p>
-        <p className="desc">{payload?.[0].value}&deg;C</p>
+        <p>{`Year: ${label[0] + label[1] + label[2] + label[3]}`}</p>
+        <p>{payload?.[0].value}&deg;C</p>
       </div>
     );
   }

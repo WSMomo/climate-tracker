@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
-import Accordion from "./Accordion";
-import WrongAnswer from "./WrongAnswer";
-import { RootState } from "../../redux/store";
-import Separator from "../separator/Separator";
+import Accordion from "../accordion/Accordion";
+import WrongAnswer from "../wrongAnswer/WrongAnswer";
+import { RootState } from "../../../redux/store";
+import Separator from "../../separator/Separator";
 
 export default function WrongAnswerRender() {
   const { t } = useTranslation("quizTranslation", { keyPrefix: "quiz" });

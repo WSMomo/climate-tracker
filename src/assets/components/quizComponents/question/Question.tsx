@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
-import { getQuizData } from "../../global/quiz/questions";
+import { RootState } from "../../../redux/store";
+import { getQuizData } from "../../../global/quiz/questions";
 
 export default function Question() {
   // LANGUAGE

@@ -1,7 +1,7 @@
-import Answers from "../../components/quizComponents/Answers";
-import NextOrEndButtons from "../../components/quizComponents/NextOrEndButtons";
-import ProgressionBar from "../../components/quizComponents/ProgressionBar";
-import Question from "../../components/quizComponents/Question";
+import Answers from "../../components/quizComponents/answers/Answers";
+import NextOrEndButtons from "../../components/quizComponents/nextOrEndButtons/NextOrEndButtons";
+import ProgressionBar from "../../components/quizComponents/progressionBar/ProgressionBar";
+import Question from "../../components/quizComponents/question/Question";
 import Separator from "../../components/separator/Separator";
 
 export default function QuizQuestions() {

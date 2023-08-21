@@ -1,6 +1,6 @@
 import styles from "./loader.module.css";
 
-import ClientApi from "../clientApi/ClientApi";
+import ClientApi from "../../clientApi/ClientApi";
 import Sidebar from "../sidebar/Sidebar";
 
 function Loader() {

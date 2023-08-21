@@ -1,3 +1,7 @@
 .separator {
-  @apply w-4/5 h-[1px] bg-light-text-color dark:bg-dark-text-color opacity-20 mt-6 mb-4;
+  @apply w-4/5 h-[1px] bg-light-text-color opacity-20 mt-6 mb-4;
+}
+
+:global(.dark) .separator {
+  @apply bg-dark-text-color;
 }

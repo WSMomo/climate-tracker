@@ -17,3 +17,7 @@
 .cta {
   @apply w-11/12 md:w-1/2 text-center xl:text-xl mt-4;
 }
+
+.icon {
+  @apply w-1/6 xl:w-1/12 mt-16;
+}

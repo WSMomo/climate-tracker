@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import { useEffect } from "react";
-import { useData } from "../../../hooks/useData";
-import { RootState } from "../../../redux/store";
+import { useData } from "../../hooks/useData";
+import { RootState } from "../../redux/store";
 import {
   setAllDataLoaded,
   setArctic,
@@ -11,14 +11,14 @@ import {
   setMethane,
   setNo2,
   setTemperature,
-} from "../../../redux/dataSlice";
+} from "../../redux/dataSlice";
 import {
   ARCTIC_URL,
   CO2_URL,
   METHANE_URL,
   NO2_URL,
   TEMPERATURE_URL,
-} from "../../../global/global";
+} from "../../global/global";
 
 interface Props {
   children: React.ReactNode;

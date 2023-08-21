@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Line, LineChart, ResponsiveContainer } from "recharts";
 import { useSelector } from "react-redux";
 
-import ClientApi from "../../../clientApi/ClientApi";
+import ClientApi from "../../../../clientApi/ClientApi";
 import { InfoState } from "../../../../../redux/dataSlice";
 import { RootState } from "../../../../../redux/store";
 import { infoComponents } from "../../../../../global/infoComponents";

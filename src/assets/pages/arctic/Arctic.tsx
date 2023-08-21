@@ -1,4 +1,4 @@
-import PageRender from "../../components/appComponents/page/pageRender/PageRender";
+import PageRender from "../../components/appComponents/pageRender/PageRender";
 
 function Arctic() {
   return <PageRender infoTitle={"arctic"} removeFirst={true} />;

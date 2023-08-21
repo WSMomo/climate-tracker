@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import Accordion from "./Accordion";
+import Accordion from "../accordion/Accordion";
 
 export default function Faq() {
   const { t } = useTranslation("quizTranslation", { keyPrefix: "quiz" });

@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { returnAtHome } from "../../redux/quizReducer";
+import { returnAtHome } from "../../../redux/quizReducer";
 import { HomeIcon } from "@heroicons/react/24/outline";
 function ReturnAtHomeButton() {
   const dispatch = useDispatch();

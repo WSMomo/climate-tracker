@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
+import { RootState } from "../../../redux/store";
 import {
   getResultsData,
   resultsSentencesType,
-} from "../../global/quiz/results";
-import { checkScoreResult } from "../../global/quiz/utility";
+} from "../../../global/quiz/results";
+import { checkScoreResult } from "../../../global/quiz/utility";
 
 export default function HomePageImage() {
   // LANGUAGE

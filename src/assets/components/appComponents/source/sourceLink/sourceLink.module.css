@@ -1,6 +1,3 @@
-.container {
-  @apply text-xs md:text-sm w-3/4 text-center;
-}
 .link {
   @apply text-blue-400 hover:text-blue-800;
 }

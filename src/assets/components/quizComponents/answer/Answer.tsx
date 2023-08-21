@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
-import { setAnswersClicked } from "../../redux/quizReducer";
+import { RootState } from "../../../redux/store";
+import { setAnswersClicked } from "../../../redux/quizReducer";
 
 type Props = {
   index: number;

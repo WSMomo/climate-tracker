@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
-import Answer from "./Answer";
-import { RootState } from "../../redux/store";
-import { getQuizData } from "../../global/quiz/questions";
+import Answer from "../answer/Answer";
+import { RootState } from "../../../redux/store";
+import { getQuizData } from "../../../global/quiz/questions";
 import {
   setCurrentCorrectAnswer,
   setCurrentUserAnswer,
-} from "../../redux/quizReducer";
+} from "../../../redux/quizReducer";
 
 export default function Answers() {
   const dispatch = useDispatch();

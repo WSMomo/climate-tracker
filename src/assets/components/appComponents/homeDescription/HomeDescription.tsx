@@ -12,7 +12,7 @@ function HomeDescription() {
       <h2 className={styles.subtitle}>{t("subtitle")}</h2>
       <p className={styles.content}>{t("content")}</p>
       <p className={styles.cta}>{t("cta")}</p>
-      <div className="w-1/6 xl:w-1/12 mt-16">
+      <div className={styles.icon}>
         <a href="#grids">
           <svg
             fill={darkMode ? "#FFF" : "#000"}

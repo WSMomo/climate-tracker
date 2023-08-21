@@ -9,17 +9,21 @@
   @apply bg-light-text-color text-light-secondary-color h-12 w-12 flex justify-center items-center rounded-md;
 }
 
-.dark .thumbActive {
-  @apply bg-dark-main-color text-dark-text-color;
-}
-.light .thumbActive {
-  @apply bg-light-main-color text-light-text-color;
+.thumbActive {
+  @apply bg-light-main-color text-light-text-color outline-none;
 }
 
 .track {
-  @apply bg-white h-2 top-5;
+  @apply bg-light-text-color h-2 top-5;
 }
 
 :global(.dark) .thumb {
   @apply bg-dark-text-color text-dark-secondary-color;
+}
+
+:global(.dark) .thumbActive {
+  @apply bg-dark-main-color text-dark-text-color;
+}
+:global(.dark) .track {
+  @apply bg-light-main-color;
 }

@@ -1,5 +1,5 @@
-import Faq from "../../components/quizComponents/Faq";
-import Hero from "../../components/quizComponents/Hero";
+import Faq from "../../components/quizComponents/faq/Faq";
+import Hero from "../../components/quizComponents/hero/Hero";
 import Separator from "../../components/separator/Separator";
 
 export default function Home() {

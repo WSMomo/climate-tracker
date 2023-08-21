@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
-import ResultRender from "../../components/quizComponents/ResultRender";
-import ActionButton from "../../components/quizComponents/ActionButton";
-import WrongAnswerRender from "../../components/quizComponents/WrongAnswerRender";
+import ResultRender from "../../components/quizComponents/resultRender/ResultRender";
+import ActionButton from "../../components/quizComponents/actionButton/ActionButton";
+import WrongAnswerRender from "../../components/quizComponents/wrongAnswerRender/WrongAnswerRender";
 import { useTranslation } from "react-i18next";
 import { restart } from "../../redux/quizReducer";
 

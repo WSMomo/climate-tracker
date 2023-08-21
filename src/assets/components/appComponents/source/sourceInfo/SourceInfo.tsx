@@ -1,6 +1,6 @@
 import Separator from "../../../separator/Separator";
 import SourceLink from "../sourceLink/SourceLink";
-import styles from "../source.module.css";
+import styles from "./sourceInfo.module.css";
 
 interface Props {
   children?: React.ReactNode;

@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
 
-import { RootState } from "../../redux/store";
+import { RootState } from "../../../redux/store";
 import {
   getResultsData,
   resultsSentencesType,
-} from "../../global/quiz/results";
-import { checkScoreResult } from "../../global/quiz/utility";
-import { QUIZ_LENGTH } from "../../global/quiz/data";
-import Separator from "../separator/Separator";
+} from "../../../global/quiz/results";
+import { checkScoreResult } from "../../../global/quiz/utility";
+import { QUIZ_LENGTH } from "../../../global/quiz/data";
+import Separator from "../../separator/Separator";
 
 export default function ResultRender() {
   const language = useSelector((state: RootState) => state.language.language);

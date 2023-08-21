@@ -1,5 +1,5 @@
 .container {
-  @apply text-light-text-color  flex flex-col justify-center items-center w-11/12 max-w-[900px] h-full mt-4 bg-light-secondary-color  rounded-xl p-8;
+  @apply text-light-text-color flex flex-col justify-center items-center w-11/12 max-w-[900px] h-full mt-4 bg-light-secondary-color  rounded-xl p-8;
 }
 
 .chartInfo {
