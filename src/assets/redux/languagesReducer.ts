@@ -5,8 +5,13 @@ export type LanguagesReducerTypes = {
   languagesSelected: boolean;
 };
 
+function getInitalLanguageState(): string {
+  const savedLanguage = localStorage.getItem("language");
+  return savedLanguage ? JSON.parse(savedLanguage) : "en";
+}
+
 const initialState: LanguagesReducerTypes = {
-  language: "en",
+  language: getInitalLanguageState(),
   languagesSelected: false,
 };
 

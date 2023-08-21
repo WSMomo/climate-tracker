@@ -4,6 +4,15 @@ import { QUIZ_LENGTH } from "../global/quiz/data";
 
 const progressionPercentage = 100 / QUIZ_LENGTH;
 
+function getInitialHighScore(): number {
+  const savedHighScore = localStorage.getItem("highscore");
+  return savedHighScore ? JSON.parse(savedHighScore) : 0;
+}
+function getInitialAttempts(): number {
+  const savedAttempt = localStorage.getItem("attempt");
+  return savedAttempt ? JSON.parse(savedAttempt) : 0;
+}
+
 export type QuizReducerTypes = {
   isStarted: boolean;
   isFinished: boolean;
@@ -23,8 +32,8 @@ const initialState: QuizReducerTypes = {
   isFinished: false,
   index: 0,
   score: 0,
-  highestScore: 0,
-  attempt: 0,
+  highestScore: getInitialHighScore(),
+  attempt: getInitialAttempts(),
   progression: progressionPercentage,
   answersClicked: false,
   currentUserAnswer: null,
@@ -60,6 +69,11 @@ export const quizSlice = createSlice({
         ? (state.score += 1)
         : state.wrongAnswers.push(state.index);
       state.attempt = state.attempt + 1;
+      state.score > state.highestScore
+        ? (state.highestScore = state.score)
+        : state.score;
+      localStorage.setItem("highscore", JSON.stringify(state.highestScore));
+      localStorage.setItem("attempt", JSON.stringify(state.highestScore));
     },
     restart: (state) => {
       return {

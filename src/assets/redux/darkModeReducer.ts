@@ -1,13 +1,13 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
+function getInitialDarkModeState(): boolean {
+  const savedMode = localStorage.getItem("darkMode");
+  return savedMode ? JSON.parse(savedMode) : false;
+}
+
 export interface DarkModeInterface {
   darkMode: boolean;
 }
-
-const getInitialDarkModeState = (): boolean => {
-  const savedMode = localStorage.getItem("darkMode");
-  return savedMode ? JSON.parse(savedMode) : false;
-};
 
 const initialState: DarkModeInterface = {
   darkMode: getInitialDarkModeState(),
