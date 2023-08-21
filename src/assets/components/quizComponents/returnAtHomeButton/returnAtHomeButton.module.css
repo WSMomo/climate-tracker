@@ -3,5 +3,5 @@
 }
 
 .icon {
-  @apply w-8;
+  @apply w-6 md:w-8;
 }

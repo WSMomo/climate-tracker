@@ -3,7 +3,7 @@
 }
 
 .icon {
-  @apply text-light-text-color bg-light-secondary-color appearance-none h-8 w-8 cursor-pointer text-center;
+  @apply text-light-text-color bg-light-secondary-color appearance-none h-8 w-8 cursor-pointer text-center hover:bg-light-text-color hover:text-light-main-color;
 }
 
 :global(.dark) .container {
@@ -11,5 +11,5 @@
 }
 
 :global(.dark) .icon {
-  @apply bg-dark-secondary-color text-dark-text-color;
+  @apply bg-dark-secondary-color text-dark-text-color hover:bg-dark-text-color hover:text-dark-main-color;
 }

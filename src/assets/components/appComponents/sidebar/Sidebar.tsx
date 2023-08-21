@@ -5,6 +5,8 @@ import SidebarLink from "../sidebarLink/SidebarLink";
 import { RootState } from "../../../redux/store";
 import SidebarButton from "../sidebarButton/SidebarButton";
 import { useTranslation } from "react-i18next";
+import Languages from "../../languagesSelect/Languages";
+import DarkModeButton from "../darkModeButton/DarkModeButton";
 
 function Sidebar() {
   const showSidebar = useSelector((state: RootState) => state.data.showSidebar);
@@ -20,10 +22,12 @@ function Sidebar() {
       {/* VISIBLE SIDEBAR */}
       {showSidebar && (
         <div className={styles.container}>
-          <SidebarButton>
-            <XMarkIcon className={styles.icon} />
-          </SidebarButton>
           <div className={styles.sidebar}>
+            <div>
+              <SidebarButton>
+                <XMarkIcon className={styles.icon} />
+              </SidebarButton>
+            </div>
             <SidebarLink routeLink="/">Home</SidebarLink>
             <SidebarLink routeLink="/temperature">
               {t("temperature")}
@@ -32,6 +36,10 @@ function Sidebar() {
             <SidebarLink routeLink="/methane">{t("methane")}</SidebarLink>
             <SidebarLink routeLink="/no2">{t("no2")}</SidebarLink>
             <SidebarLink routeLink="/arctic">{t("arctic")}</SidebarLink>
+            <div className={styles.actions}>
+              <Languages />
+              <DarkModeButton />
+            </div>
           </div>
         </div>
       )}

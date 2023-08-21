@@ -1,5 +1,5 @@
 .container {
-  @apply fixed top-0 right-0 h-full bg-light-third-color text-light-text-color  w-3/4 xl:w-1/4 flex justify-center items-center z-50;
+  @apply fixed top-0 right-0 h-full bg-light-third-color text-light-text-color  w-3/4 xl:w-1/4 flex justify-center items-center  z-50;
 }
 
 .sidebar {
@@ -8,6 +8,10 @@
 
 .icon {
   @apply h-12 w-12 text-light-text-color;
+}
+
+.actions {
+  @apply flex justify-center items-center gap-4 mt-8;
 }
 
 :global(.dark) .container {
