@@ -1,8 +1,8 @@
 import DarkModeButton from "../appComponents/darkModeButton/DarkModeButton";
 import Languages from "../languagesSelect/Languages";
-import LinkedinIcon from "../../../../public/img/contacts/linkedin.png";
-import GithubIcon from "../../../../public/img/contacts/gitHub.png";
-import WsMomoIcon from "../../../../public/img/contacts/marcoMomoHome.png";
+import LinkedinIcon from "/img/contacts/linkedin.png";
+import GithubIcon from "/img/contacts/gitHub.png";
+import WsMomoIcon from "/img/contacts/marcoMomoHome.png";
 import { Contact } from "../contact/Contact";
 
 import styles from "./footer.module.css";

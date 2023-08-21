@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import { Line, LineChart, ResponsiveContainer } from "recharts";
 import { useSelector } from "react-redux";
 
-import ClientApi from "../../../../clientApi/ClientApi";
-import { InfoState } from "../../../../../redux/dataReducer";
-import { RootState } from "../../../../../redux/store";
-import { infoComponents } from "../../../../../global/infoComponents";
-import { useMinMaxValue } from "../../../../../hooks/useMinMaxValue";
-
 import { useTranslation } from "react-i18next";
+import { RootState } from "../../../../redux/store";
+import { infoComponents } from "../../../../global/infoComponents";
+import { useMinMaxValue } from "../../../../hooks/useMinMaxValue";
+import { InfoState } from "../../../../redux/dataReducer";
+import ClientApi from "../../../clientApi/ClientApi";
 interface Props {
   infoTitle: keyof InfoState;
 }

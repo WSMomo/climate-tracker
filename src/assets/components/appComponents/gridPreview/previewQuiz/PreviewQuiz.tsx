@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import styles from "../preview.module.css";
 import { useTranslation } from "react-i18next";
-import HomePageImage from "../../../../quizComponents/homePageImage/HomePageImage";
 import { useSelector } from "react-redux";
-import { RootState } from "../../../../../redux/store";
+import { RootState } from "../../../../redux/store";
 import {
   getResultsData,
   resultsSentencesType,
-} from "../../../../../global/quiz/results";
-import { checkScoreResult } from "../../../../../global/quiz/utility";
+} from "../../../../global/quiz/results";
+import { checkScoreResult } from "../../../../global/quiz/utility";
+import HomePageImage from "../../../quizComponents/homePageImage/HomePageImage";
 
 export function PreviewQuiz() {
   const { t } = useTranslation("appTranslation");
