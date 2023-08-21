@@ -11,7 +11,7 @@ import {
   setMethane,
   setNo2,
   setTemperature,
-} from "../../redux/dataSlice";
+} from "../../redux/dataReducer";
 import {
   ARCTIC_URL,
   CO2_URL,

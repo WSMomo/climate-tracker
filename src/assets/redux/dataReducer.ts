@@ -1,6 +1,6 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
-import { InfoComponentsType } from "../global/types/infoComponentsType";
+import { InfoComponentsType } from "../global/infoComponents";
 
 export interface InfoState {
   temperature: InfoComponentsType[];

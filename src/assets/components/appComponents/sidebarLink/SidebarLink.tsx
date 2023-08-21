@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./sidebarLink.module.css";
 import { useDispatch } from "react-redux";
-import { setShowSidebar } from "../../../redux/dataSlice";
+import { setShowSidebar } from "../../../redux/dataReducer";
 
 interface Props {
   routeLink: string;

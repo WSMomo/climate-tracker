@@ -4,7 +4,7 @@ import { Line, LineChart, ResponsiveContainer } from "recharts";
 import { useSelector } from "react-redux";
 
 import ClientApi from "../../../../clientApi/ClientApi";
-import { InfoState } from "../../../../../redux/dataSlice";
+import { InfoState } from "../../../../../redux/dataReducer";
 import { RootState } from "../../../../../redux/store";
 import { infoComponents } from "../../../../../global/infoComponents";
 import { useMinMaxValue } from "../../../../../hooks/useMinMaxValue";

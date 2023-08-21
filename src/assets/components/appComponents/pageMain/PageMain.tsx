@@ -1,5 +1,7 @@
-import { infoComponents } from "../../../global/infoComponents";
-import { InfoComponentsType } from "../../../global/types/infoComponentsType";
+import {
+  InfoComponentsType,
+  infoComponents,
+} from "../../../global/infoComponents";
 import { useMinMaxValue } from "../../../hooks/useMinMaxValue";
 import { useSlider } from "../../../hooks/useSlider";
 import Chart from "../chart/Chart";

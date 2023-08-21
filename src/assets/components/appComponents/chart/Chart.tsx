@@ -10,8 +10,10 @@ import {
 
 import CustomTooltip from "../customTooltip/CustomTooltip";
 import styles from "./chart.module.css";
-import { InfoComponentsType } from "../../../global/types/infoComponentsType";
-import { infoComponents } from "../../../global/infoComponents";
+import {
+  InfoComponentsType,
+  infoComponents,
+} from "../../../global/infoComponents";
 interface Props {
   data: InfoComponentsType[];
   minXSelected: number;

@@ -1,4 +1,4 @@
-import { InfoState } from "../redux/dataSlice";
+import { InfoState } from "../redux/dataReducer";
 
 export interface InfoComponentsType {
   trend: string;

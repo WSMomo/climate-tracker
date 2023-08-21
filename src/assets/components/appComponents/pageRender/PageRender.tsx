@@ -7,7 +7,7 @@ import styles from "./pages.module.css";
 
 import i18next from "i18next";
 import { RootState } from "../../../redux/store";
-import { InfoState } from "../../../redux/dataSlice";
+import { InfoState } from "../../../redux/dataReducer";
 import { infoComponents } from "../../../global/infoComponents";
 import Loader from "../loader/Loader";
 import SourceInfo from "../sourceInfo/SourceInfo";

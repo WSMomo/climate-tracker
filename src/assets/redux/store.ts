@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import dataReducer from "../redux/dataSlice";
+import dataReducer from "./dataReducer";
 import quizReducer from "./quizReducer";
 import languagesReducer from "./languagesReducer";
 import darkModeReducer from "./darkModeReducer";
