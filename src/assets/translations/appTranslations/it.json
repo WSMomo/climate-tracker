@@ -3,5 +3,10 @@
   "subtitle": "La tua finestra sul cambiamento della Terra",
   "content": "Esplora i cambiamenti della Terra attraverso grafici sulla temperatura, il ghiaccio polare, il metano, il NO2 e il CO2 nel corso degli anni. Acquisisci consapevolezza e promuovi un futuro sostenibile.",
   "cta": "Scorri verso il basso e inizia il tuo viaggio con noi oggi stesso!",
-  "homeQuizItem": "Fai il quiz per testare le tue conoscenze sul cambiamento climatico"
+  "homeQuizItem": "Fai il quiz per testare le tue conoscenze sul cambiamento climatico",
+  "temperature": "Temperatura",
+  "arctic": "Artico",
+  "no2": "Diossido di Azoto",
+  "co2": "Anidride Carbonica",
+  "methane": "Metano"
 }

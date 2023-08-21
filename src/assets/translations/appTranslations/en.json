@@ -3,5 +3,10 @@
   "subtitle": "Your Window into Changing Earth",
   "content": "Explore Earth's changes through graphs on temperature, polar ice, methane, NO2, and CO2 over the years. Gain awareness and advocate for a sustainable future.",
   "cta": "Scroll down and begin your journey with us today!",
-  "homeQuizItem": "Take the quiz to test you knowledge about climate change"
+  "homeQuizItem": "Take the quiz to test you knowledge about climate change",
+  "temperature": "Temperature",
+  "arctic": "Arctic",
+  "no2": "Nitrogen Dioxide",
+  "co2": "Carbon Dioxide",
+  "methane": "Methane"
 }

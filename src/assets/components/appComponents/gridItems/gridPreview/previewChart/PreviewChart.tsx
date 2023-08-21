@@ -9,6 +9,7 @@ import { RootState } from "../../../../../redux/store";
 import { infoComponents } from "../../../../../global/infoComponents";
 import { useMinMaxValue } from "../../../../../hooks/useMinMaxValue";
 
+import { useTranslation } from "react-i18next";
 interface Props {
   infoTitle: keyof InfoState;
 }
@@ -21,13 +22,14 @@ function PreviewChart({ infoTitle }: Props) {
     infoComponents[infoTitle].dataProperty,
     true
   );
-
-  const chartName = infoTitle[0].toUpperCase() + infoTitle.slice(1);
+  const { t } = useTranslation("appTranslation");
+  const chartName = t(infoTitle);
+  const translatedName = chartName[0].toUpperCase() + chartName.slice(1);
 
   return (
     <ClientApi className={styles.container}>
       <Link to={"/" + infoTitle}>
-        <h2 className={styles.title}>{chartName}</h2>
+        <h2 className={styles.title}>{translatedName}</h2>
         {data !== undefined && (
           <ResponsiveContainer width="100%" height={300}>
             <LineChart
