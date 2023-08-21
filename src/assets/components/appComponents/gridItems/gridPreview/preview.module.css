@@ -1,5 +1,5 @@
 .container {
-  @apply bg-light-secondary-color text-light-text-color dark:bg-dark-secondary-color dark:text-dark-text-color rounded-xl p-2 hover:opacity-75 min-h-fit;
+  @apply bg-light-secondary-color text-light-text-color rounded-xl p-2 hover:opacity-75 min-h-fit;
 }
 
 .title {
@@ -23,5 +23,15 @@ svg {
 }
 
 .quizDescription {
-  @apply text-light-text-color dark:text-dark-text-color text-xl text-center p-4;
+  @apply text-light-text-color  text-xl text-center p-4;
+}
+
+/* DARK */
+
+:global(.dark) .container {
+  @apply bg-dark-secondary-color text-dark-text-color;
+}
+
+:global(.dark) .quizDescription {
+  @apply text-dark-text-color;
 }

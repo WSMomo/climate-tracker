@@ -13,6 +13,7 @@ import PageInfo from "../pageInfo/PageInfo";
 import { InfoState } from "../../../../redux/dataSlice";
 import { RootState } from "../../../../redux/store";
 import { infoComponents } from "../../../../global/infoComponents";
+import SourceLink from "../../source/sourceLink/SourceLink";
 
 interface Props {
   infoTitle: keyof InfoState;
@@ -52,9 +53,9 @@ function PageRender({ infoTitle, removeFirst }: Props) {
         <p>{t("p_third")}</p>
         <SourceInfo>
           <br />
-          <a href={t("sourceInfoLink")} target="_blank" className={styles.link}>
+          <SourceLink url={t("sourceInfoLink")}>
             {t("sourceInfoDescription")}
-          </a>
+          </SourceLink>
         </SourceInfo>
       </PageInfo>
     </div>

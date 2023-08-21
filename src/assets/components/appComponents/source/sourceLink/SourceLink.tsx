@@ -1,4 +1,4 @@
-import styles from "./sourceLink.module.css";
+import styles from "../source.module.css";
 
 interface Props {
   url: string;

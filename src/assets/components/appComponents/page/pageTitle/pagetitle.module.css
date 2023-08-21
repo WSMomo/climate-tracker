@@ -1,3 +1,7 @@
 .title {
-  @apply bg-light-secondary-color text-light-text-color dark:bg-dark-secondary-color rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-32 dark:text-dark-text-color text-2xl text-center;
+  @apply bg-light-secondary-color text-light-text-color rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-32  text-2xl text-center;
+}
+
+:global(.dark) .title {
+  @apply bg-dark-secondary-color text-dark-text-color;
 }

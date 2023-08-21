@@ -5,10 +5,7 @@
   @apply cursor-pointer;
 }
 
-.dark .thumb {
-  @apply bg-dark-text-color text-dark-secondary-color h-12 w-12 flex justify-center items-center rounded-md;
-}
-.light .thumb {
+.thumb {
   @apply bg-light-text-color text-light-secondary-color h-12 w-12 flex justify-center items-center rounded-md;
 }
 
@@ -21,4 +18,8 @@
 
 .track {
   @apply bg-white h-2 top-5;
+}
+
+:global(.dark) .thumb {
+  @apply bg-dark-text-color text-dark-secondary-color;
 }

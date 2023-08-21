@@ -1,12 +1,24 @@
 /* PAGE INFO */
 .showInfoButton {
-  @apply bg-light-text-color text-light-secondary-color dark:bg-dark-text-color dark:text-dark-secondary-color text-center rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-12 mb-12;
+  @apply bg-light-text-color text-light-secondary-color  text-center rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-12 mb-12;
 }
 
 .hideInfoButton {
-  @apply bg-light-secondary-color text-light-text-color dark:bg-dark-secondary-color dark:text-dark-text-color text-center rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-12 mb-12;
+  @apply bg-light-secondary-color text-light-text-color  text-center rounded-xl w-11/12 max-w-[900px] min-h-fit p-2 mt-12 mb-12;
 }
 
 .pageInfoContainer {
-  @apply bg-light-secondary-color dark:bg-dark-secondary-color rounded-xl w-11/12 max-w-[900px] min-h-fit text-light-text-color dark:text-dark-text-color mb-12 flex flex-col justify-center items-center p-8;
+  @apply bg-light-secondary-color  rounded-xl w-11/12 max-w-[900px] min-h-fit text-light-text-color  mb-12 flex flex-col justify-center items-center p-8;
+}
+
+:global(.dark) .showInfoButton {
+  @apply text-dark-secondary-color bg-dark-text-color;
+}
+
+:global(.dark) .hideInfoButton {
+  @apply bg-dark-secondary-color text-dark-text-color;
+}
+
+:global(.dark) .pageInfoContainer {
+  @apply bg-dark-secondary-color text-dark-text-color;
 }

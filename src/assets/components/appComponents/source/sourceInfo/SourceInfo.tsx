@@ -1,5 +1,6 @@
 import Separator from "../../../separator/Separator";
-import styles from "./sourceInfo.module.css";
+import SourceLink from "../sourceLink/SourceLink";
+import styles from "../source.module.css";
 
 interface Props {
   children?: React.ReactNode;
@@ -12,13 +13,9 @@ function SourceInfo({ children }: Props) {
 
       <div className={styles.container}>
         Sources: <br />
-        <a
-          href="https://global-warming.org/"
-          target="_blank"
-          className={styles.link}
-        >
+        <SourceLink url="https://global-warming.org/">
           global-warming.org
-        </a>
+        </SourceLink>
         {children}
       </div>
     </>

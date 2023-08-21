@@ -1,5 +1,5 @@
 .container {
-  @apply fixed top-0 right-0 h-full bg-light-third-color text-light-text-color dark:text-dark-text-color dark:bg-dark-third-color w-3/4 xl:w-1/4 flex justify-center items-center z-50;
+  @apply fixed top-0 right-0 h-full bg-light-third-color text-light-text-color  w-3/4 xl:w-1/4 flex justify-center items-center z-50;
 }
 
 .sidebar {
@@ -7,5 +7,13 @@
 }
 
 .icon {
-  @apply h-12 w-12 text-gray-500;
+  @apply h-12 w-12 text-light-text-color;
+}
+
+:global(.dark) .container {
+  @apply bg-dark-third-color text-dark-text-color;
+}
+
+:global(.dark) .icon {
+  @apply text-dark-text-color;
 }

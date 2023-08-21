@@ -1,7 +1,15 @@
 .container {
-  @apply absolute top-2 right-2 border border-light-text-color dark:border-dark-text-color;
+  @apply absolute top-2 right-2 border border-light-text-color;
 }
 
 .select {
-  @apply text-light-text-color dark:text-dark-text-color bg-light-secondary-color dark:bg-dark-secondary-color appearance-none py-1 px-2 cursor-pointer text-center;
+  @apply text-light-text-color bg-light-secondary-color appearance-none py-1 px-2 cursor-pointer text-center;
+}
+
+:global(.dark) .container {
+  @apply border-dark-text-color;
+}
+
+:global(.dark) .select {
+  @apply bg-dark-secondary-color text-dark-text-color;
 }
