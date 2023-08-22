@@ -37,12 +37,18 @@ function PageMain({ data, infoTitle, removeFirst, children }: Props) {
     handleChangeSlider: handleChangeSliderX,
   } = useSlider(minXAxis, maxXAxis);
 
+  // CONDITIONAL
+  const minAndMaxXAxis = minXAxis && maxXAxis;
+  const emptyData = data.length > 0 && minXSelected && maxXSelected;
+
   if (data.length === 0) return <Loader />;
 
   return (
     <div className={styles.container}>
       <Sidebar />
-      {minXAxis && maxXAxis && (
+
+      {/* SLIDER */}
+      {minAndMaxXAxis && (
         <Slider
           minYear={minXAxis}
           maxYear={maxXAxis}
@@ -51,8 +57,7 @@ function PageMain({ data, infoTitle, removeFirst, children }: Props) {
       )}
 
       {/* CHECK EMPTY DATA */}
-
-      {data.length > 0 && minXSelected && maxXSelected && (
+      {emptyData && (
         <Chart
           data={data}
           minXSelected={minXSelected}

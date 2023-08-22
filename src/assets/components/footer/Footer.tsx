@@ -35,6 +35,7 @@ function Footer() {
           <ReturnToTheTop />
         </div>
         <div className={styles.contacts}>
+          {/* SHOW CONTACTS */}
           {Object.keys(contacts).map((contactKey) => {
             const contact = contacts[contactKey as keyof typeof contacts];
             return <Contact contactKey={contact} key={contactKey} />;

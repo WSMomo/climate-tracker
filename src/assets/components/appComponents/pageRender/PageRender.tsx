@@ -23,7 +23,7 @@ function PageRender({ infoTitle, removeFirst }: Props) {
   const data = useSelector((state: RootState) => state.data[infoTitle]);
   const { t } = useTranslation(infoComponents[infoTitle].title);
 
-  // Check if key exists
+  // CHECK IF KEY EXISTS
   const pageTitleExist = "pageTitle" === t("pageTitle");
   const pageMainExist = "pageMain" === t("pageMain");
   const h3_firstExist = "h3_first" === t("h3_first");

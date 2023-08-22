@@ -15,10 +15,24 @@ interface Props {
 function PreviewChart({ infoTitle }: Props) {
   const data = useSelector((state: RootState) => state.data[infoTitle]);
 
+  // COLOR FOR LINE CHARTS
+  const minLineColor = "#4ad1e3";
+  const maxLineColor = "#b01602";
+
+  // VALUES FOR THE AXIS
   const { minValue: minXAxis, maxValue: maxXAxis } = useMinMaxValue(
     data,
     infoComponents[infoTitle].dataProperty,
     true
+  );
+
+  // FILTER THE DATA by SLIDER
+  const filteredData = data.filter(
+    (obj) =>
+      +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] >
+        minXAxis &&
+      +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] <
+        maxXAxis
   );
 
   const { minValue: minYAxis, maxValue: maxYAxis } = useMinMaxValue(
@@ -37,23 +51,12 @@ function PreviewChart({ infoTitle }: Props) {
         <h2 className={styles.title}>{translatedName}</h2>
         {data !== undefined && (
           <ResponsiveContainer width="100%" height={300}>
-            <LineChart
-              data={data.filter(
-                (obj) =>
-                  +obj[
-                    infoComponents[infoTitle].dataProperty as keyof typeof obj
-                  ] > minXAxis &&
-                  +obj[
-                    infoComponents[infoTitle].dataProperty as keyof typeof obj
-                  ] < maxXAxis
-              )}
-              margin={{ top: 10, bottom: 20 }}
-            >
+            <LineChart data={filteredData} margin={{ top: 10, bottom: 20 }}>
               <YAxis hide domain={[minYAxis, maxYAxis]} />
               <defs>
                 <linearGradient id="colorUv" x1="0%" y1="100%">
-                  <stop offset="0%" stopColor="#3c9dd0" />
-                  <stop offset="100%" stopColor="#ED714D" />
+                  <stop offset="0%" stopColor={minLineColor} />
+                  <stop offset="100%" stopColor={maxLineColor} />
                 </linearGradient>
               </defs>
               <Line

@@ -8,16 +8,18 @@ function Loader() {
   const { t } = useTranslation("appTranslation");
   const [showRefreshButton, setShowRefreshButton] = useState(false);
 
+  // RELOAD THE PAGE
   function refresh() {
     return window.location.reload();
   }
 
+  // AFTER 5 SECONDS SHOW THE BUTTON
   useEffect(() => {
-    const timeourId = setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setShowRefreshButton(true);
     }, 5000);
 
-    return () => clearTimeout(timeourId);
+    return () => clearTimeout(timeoutId);
   });
 
   return (

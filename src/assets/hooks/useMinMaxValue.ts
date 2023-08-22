@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 export function useMinMaxValue(
   data: object[],
   value: string,
