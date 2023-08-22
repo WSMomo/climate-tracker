@@ -2,26 +2,26 @@
   "initiator": {
     "sentence": "Novice",
     "description": "Every effort to address climate change starts with a step. Your curiosity about environmental issues is a great starting point. Keep exploring and learning!",
-    "image": "/img/seed_initiator.png"
+    "image": "/img/quiz/initiator.png"
   },
   "starter": {
     "sentence": "Beginner",
     "description": "You're just beginning to understand the impact of climate change. Keep learning and exploring to tackle this global challenge!",
-    "image": "/img/fruits_starter.png"
+    "image": "/img/quiz/starter.png"
   },
   "aware": {
     "sentence": "Aware",
     "description": "Great job! You've demonstrated a good understanding of the interplay between climate change and human actions. Keep exploring to deepen your knowledge even further.",
-    "image": "/img/tree_aware.png"
+    "image": "/img/quiz/aware.png"
   },
   "expert": {
     "sentence": "Expert",
     "description": "Well done! You've shown in-depth knowledge about climate change and its implications. Keep it up, and you'll become a true expert in the fight against climate change!",
-    "image": "/img/vegetables_expert.png"
+    "image": "/img/quiz/expert.png"
   },
   "master": {
     "sentence": "Master",
     "description": "Extraordinary! You've achieved the highest score, proving to be a true master in understanding climate change and its challenges. Keep spreading awareness and commitment for a more sustainable future.",
-    "image": "/img/earth_master.png"
+    "image": "/img/quiz/master.png"
   }
 }
