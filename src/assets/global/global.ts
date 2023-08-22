@@ -1,11 +1,9 @@
-export const TEMPERATURE_URL: string =
-  "https://global-warming.org/api/temperature-api";
+export const TEMPERATURE_URL: string = import.meta.env.VITE_TEMPERATURE_URL;
 
-export const CO2_URL: string = "https://global-warming.org/api/co2-api";
-export const METHANE_URL: string = "https://global-warming.org/api/methane-api";
-export const NO2_URL: string =
-  "https://global-warming.org/api/nitrous-oxide-api";
-export const ARCTIC_URL: string = "https://global-warming.org/api/arctic-api";
+export const CO2_URL: string = import.meta.env.VITE_CO2_URL;
+export const METHANE_URL: string = import.meta.env.VITE_METHANE_URL;
+export const NO2_URL: string = import.meta.env.VITE_NO2_URL;
+export const ARCTIC_URL: string = import.meta.env.VITE_ARCTIC_URL;
 
 export function getFirstsDigit(input: number | string): string {
   const label = String(input);
