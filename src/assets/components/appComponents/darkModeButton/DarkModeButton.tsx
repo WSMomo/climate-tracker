@@ -1,8 +1,8 @@
-import { useDispatch, useSelector } from "react-redux";
+import styles from "./darkModeButton.module.css";
 import { SunIcon } from "@heroicons/react/24/outline";
 import { MoonIcon } from "@heroicons/react/24/outline";
 
-import styles from "./darkModeButton.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import { setDarkMode } from "../../../redux/darkModeReducer";
 

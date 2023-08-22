@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import styles from "./homeDescription.module.css";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 

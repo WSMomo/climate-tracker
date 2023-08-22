@@ -1,5 +1,6 @@
 import styles from "./slider.module.css";
 import ReactSlider from "react-slider";
+
 interface Props {
   minYear: number;
   maxYear: number;

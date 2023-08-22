@@ -1,3 +1,4 @@
+import styles from "./chart.module.css";
 import {
   CartesianGrid,
   Line,
@@ -7,13 +8,12 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-
 import CustomTooltip from "../customTooltip/CustomTooltip";
-import styles from "./chart.module.css";
 import {
   InfoComponentsType,
   infoComponents,
 } from "../../../global/infoComponents";
+
 interface Props {
   data: InfoComponentsType[];
   minXSelected: number;

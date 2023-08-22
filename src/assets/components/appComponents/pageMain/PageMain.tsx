@@ -1,3 +1,4 @@
+import styles from "./pageMain.module.css";
 import {
   InfoComponentsType,
   infoComponents,
@@ -8,7 +9,6 @@ import Chart from "../chart/Chart";
 import Loader from "../loader/Loader";
 import Sidebar from "../sidebar/Sidebar";
 import Slider from "../slider/Slider";
-import styles from "./pageMain.module.css";
 
 interface Props {
   data: InfoComponentsType[];

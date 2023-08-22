@@ -1,6 +1,5 @@
-import { TooltipProps } from "recharts";
 import styles from "./curstomTooltip.module.css";
-
+import { TooltipProps } from "recharts";
 import {
   ValueType,
   NameType,

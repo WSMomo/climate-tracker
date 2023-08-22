@@ -1,10 +1,6 @@
+import styles from "./hero.module.css";
 import { useDispatch, useSelector } from "react-redux";
-
 import { useTranslation } from "react-i18next";
-
-import ActionButton from "../actionButton/ActionButton";
-import Accordion from "../accordion/Accordion";
-import HomePageImage from "../homePageImage/HomePageImage";
 import { RootState } from "../../../redux/store";
 import {
   getResultsData,
@@ -13,8 +9,12 @@ import {
 import { checkScoreResult } from "../../../global/quiz/utility";
 import { QUIZ_LENGTH } from "../../../global/quiz/data";
 import { startQuiz } from "../../../redux/quizReducer";
+
+import ActionButton from "../actionButton/ActionButton";
+import Accordion from "../accordion/Accordion";
+import HomePageImage from "../homePageImage/HomePageImage";
 import Separator from "../../separator/Separator";
-import styles from "./hero.module.css";
+
 export default function Hero() {
   // LANGUAGE
   const { t } = useTranslation("quizTranslation", { keyPrefix: "quiz" });

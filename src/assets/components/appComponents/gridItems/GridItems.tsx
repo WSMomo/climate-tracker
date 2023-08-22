@@ -1,7 +1,7 @@
-import { infoComponents } from "../../../global/infoComponents";
-import PreviewChart from "../gridPreview/previewChart/PreviewChart";
-import { PreviewQuiz } from "../gridPreview/previewQuiz/PreviewQuiz";
 import styles from "./gridItems.module.css";
+import PreviewChart from "../gridPreview/previewChart/PreviewChart";
+import { infoComponents } from "../../../global/infoComponents";
+import { PreviewQuiz } from "../gridPreview/previewQuiz/PreviewQuiz";
 
 function GridItems() {
   return (

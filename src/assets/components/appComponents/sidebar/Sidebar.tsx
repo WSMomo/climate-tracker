@@ -1,10 +1,11 @@
 import styles from "./siderbar.module.css";
 import { useSelector } from "react-redux";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import SidebarLink from "../sidebarLink/SidebarLink";
-import { RootState } from "../../../redux/store";
-import SidebarButton from "../sidebarButton/SidebarButton";
 import { useTranslation } from "react-i18next";
+import { RootState } from "../../../redux/store";
+
+import SidebarLink from "../sidebarLink/SidebarLink";
+import SidebarButton from "../sidebarButton/SidebarButton";
 import Languages from "../../languagesSelect/Languages";
 import DarkModeButton from "../darkModeButton/DarkModeButton";
 

@@ -1,5 +1,5 @@
-import { useState } from "react";
 import styles from "./accordion.module.css";
+import { useState } from "react";
 
 type Props = {
   title: string;

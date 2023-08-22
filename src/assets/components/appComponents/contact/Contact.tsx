@@ -7,7 +7,7 @@ interface Props {
     url: string;
   };
 }
-export function Contact({ contactKey }: Props) {
+function Contact({ contactKey }: Props) {
   return (
     <div className={styles.container}>
       <a
@@ -24,3 +24,5 @@ export function Contact({ contactKey }: Props) {
     </div>
   );
 }
+
+export default Contact;

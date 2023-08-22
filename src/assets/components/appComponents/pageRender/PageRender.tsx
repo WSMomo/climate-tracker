@@ -1,13 +1,12 @@
+import styles from "./pages.module.css";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import PageTitle from "../pageTitle/PageTitle";
-import PageMain from "../pageMain/PageMain";
-
-import styles from "./pages.module.css";
-
 import { RootState } from "../../../redux/store";
 import { InfoState } from "../../../redux/dataReducer";
 import { infoComponents } from "../../../global/infoComponents";
+
+import PageTitle from "../pageTitle/PageTitle";
+import PageMain from "../pageMain/PageMain";
 import Loader from "../loader/Loader";
 import SourceInfo from "../sourceInfo/SourceInfo";
 import PageInfo from "../pageInfo/PageInfo";

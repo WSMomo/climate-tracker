@@ -1,14 +1,14 @@
+import styles from "./answers.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
-import Answer from "../answer/Answer";
 import { RootState } from "../../../redux/store";
 import { getQuizData } from "../../../global/quiz/questions";
 import {
   setCurrentCorrectAnswer,
   setCurrentUserAnswer,
 } from "../../../redux/quizReducer";
-import styles from "./answers.module.css";
+import Answer from "../answer/Answer";
 export default function Answers() {
   const dispatch = useDispatch();
   const index = useSelector((state: RootState) => state.quiz.index); // current index

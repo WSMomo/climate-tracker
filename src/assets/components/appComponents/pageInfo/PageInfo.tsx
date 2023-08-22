@@ -1,5 +1,5 @@
-import { useState } from "react";
 import styles from "./pageInfo.module.css";
+import { useState } from "react";
 interface Props {
   buttonText: string;
   children: React.ReactNode;

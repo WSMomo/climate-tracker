@@ -1,7 +1,7 @@
+import styles from "./answer.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import { setAnswersClicked } from "../../../redux/quizReducer";
-import styles from "./answer.module.css";
 type Props = {
   index: number;
   children: React.ReactNode;

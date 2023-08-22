@@ -1,12 +1,10 @@
+import styles from "./nextOrEndButtons.module.css";
 import { useDispatch, useSelector } from "react-redux";
-
 import { useTranslation } from "react-i18next";
-
-import NextButton from "../nextButton/NextButton";
 import { RootState } from "../../../redux/store";
 import { QUIZ_LENGTH } from "../../../global/quiz/data";
 import { nextQuestion, showResults } from "../../../redux/quizReducer";
-import styles from "./nextOrEndButtons.module.css";
+import NextButton from "../nextButton/NextButton";
 
 export default function NextOrEndButtons() {
   const dispatch = useDispatch();

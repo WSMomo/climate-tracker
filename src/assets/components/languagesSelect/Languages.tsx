@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
-import i18n from "../../../i18n";
 import styles from "./languages.module.css";
+import i18n from "../../../i18n";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { setLanguage } from "../../redux/languagesReducer";
 import { useEffect } from "react";

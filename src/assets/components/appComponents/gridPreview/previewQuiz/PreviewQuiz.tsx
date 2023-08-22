@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import styles from "../preview.module.css";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../redux/store";

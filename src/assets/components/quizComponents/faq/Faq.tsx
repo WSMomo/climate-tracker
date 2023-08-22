@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-
 import Accordion from "../accordion/Accordion";
 
 export default function Faq() {

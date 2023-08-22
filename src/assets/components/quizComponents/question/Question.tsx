@@ -1,7 +1,7 @@
+import styles from "./question.module.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import { getQuizData } from "../../../global/quiz/questions";
-import styles from "./question.module.css";
 
 export default function Question() {
   // LANGUAGE

@@ -1,11 +1,9 @@
+import styles from "./wrongAnswer.module.css";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
-
 import { RootState } from "../../../redux/store";
 import { getQuizData } from "../../../global/quiz/questions";
 import Separator from "../../separator/Separator";
-
-import styles from "./wrongAnswer.module.css";
 
 type Props = {
   questionNumber: number;

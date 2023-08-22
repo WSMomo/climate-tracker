@@ -2,7 +2,6 @@ import styles from "../preview.module.css";
 import { Link } from "react-router-dom";
 import { Line, LineChart, ResponsiveContainer } from "recharts";
 import { useSelector } from "react-redux";
-
 import { useTranslation } from "react-i18next";
 import { RootState } from "../../../../redux/store";
 import { infoComponents } from "../../../../global/infoComponents";

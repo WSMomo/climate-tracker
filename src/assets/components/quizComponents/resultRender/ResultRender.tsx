@@ -1,5 +1,5 @@
+import styles from "./resultRender.module.css";
 import { useSelector } from "react-redux";
-
 import { RootState } from "../../../redux/store";
 import {
   getResultsData,
@@ -8,7 +8,6 @@ import {
 import { checkScoreResult } from "../../../global/quiz/utility";
 import { QUIZ_LENGTH } from "../../../global/quiz/data";
 import Separator from "../../separator/Separator";
-import styles from "./resultRender.module.css";
 
 export default function ResultRender() {
   const language = useSelector((state: RootState) => state.language.language);

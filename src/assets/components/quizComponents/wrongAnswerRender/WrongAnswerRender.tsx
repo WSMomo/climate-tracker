@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { RootState } from "../../../redux/store";
 
 import Accordion from "../accordion/Accordion";
 import WrongAnswer from "../wrongAnswer/WrongAnswer";
-import { RootState } from "../../../redux/store";
 import Separator from "../../separator/Separator";
 
 export default function WrongAnswerRender() {

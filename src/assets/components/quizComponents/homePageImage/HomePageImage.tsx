@@ -1,3 +1,4 @@
+import styles from "./homePageImage.module.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import {
@@ -5,7 +6,6 @@ import {
   resultsSentencesType,
 } from "../../../global/quiz/results";
 import { checkScoreResult } from "../../../global/quiz/utility";
-import styles from "./homePageImage.module.css";
 export default function HomePageImage() {
   // LANGUAGE
   const language = useSelector((state: RootState) => state.language.language);
