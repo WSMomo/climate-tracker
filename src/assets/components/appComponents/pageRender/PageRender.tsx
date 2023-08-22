@@ -12,7 +12,7 @@ import SourceInfo from "../sourceInfo/SourceInfo";
 import PageInfo from "../pageInfo/PageInfo";
 import SourceLink from "../sourceLink/SourceLink";
 import ReturnToTheTop from "../returnToTheTop/ReturnToTheTop";
-import Transition from "../../transitions/Transition";
+import Transition from "../../transition/Transition";
 
 interface Props {
   infoTitle: keyof InfoState;

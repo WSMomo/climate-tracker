@@ -4,7 +4,7 @@ import NextOrEndButtons from "../../../components/quizComponents/nextOrEndButton
 import ProgressionBar from "../../../components/quizComponents/progressionBar/ProgressionBar";
 import Question from "../../../components/quizComponents/question/Question";
 import Separator from "../../../components/separator/Separator";
-import Transition from "../../../components/transitions/Transition";
+import Transition from "../../../components/transition/Transition";
 export default function QuizQuestions() {
   return (
     <>

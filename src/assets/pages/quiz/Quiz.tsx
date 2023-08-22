@@ -6,7 +6,7 @@ import QuizQuestions from "./quizQuestions/QuizQuestions";
 import QuizHome from "./quizHome/QuizHome";
 import Result from "./quizResult/Result";
 import ReturnAtHomeButton from "../../components/quizComponents/returnAtHomeButton/ReturnAtHomeButton";
-import Transition from "../../components/transitions/Transition";
+import Transition from "../../components/transition/Transition";
 import ActionsButtons from "../../components/actionsButtons/ActionsButtons";
 
 export default function Quiz() {
