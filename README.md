@@ -2,7 +2,7 @@
 <div align="center">
     <img src="/public/chart.ico" alt="Logo" width="80" height="80">
 
-<h3 align="center">Climate Tracker</h3>
+<h4 align="center">Climate Tracker</h4>
 
   <p align="center">
 Welcome to Climate Tracker, an interactive app that allows you to explore and understand climate change through clear and comprehensive data and graphs. <br />
@@ -70,7 +70,7 @@ Discover how climate variations impact our planet and what we can do to promote 
 
 <ul style="list-style-type: none;">
     <li>
-      <h6>Navigating the Home</h6>
+      <h4>Navigating the Home</h4>
       <ul>
         <li>Begin the experience by scrolling down or clicking the arrow</li>
       <img src="/public/img/readme/homeDescription.png" alt="home">
@@ -81,7 +81,7 @@ Discover how climate variations impact our planet and what we can do to promote 
       </ul>
     </li>
     <li>
-      <h6>Taking the Quiz</h6>
+      <h4>Taking the Quiz</h4>
       <ul>
         <li>Initiate the quiz by clicking the main button</li>
       <img src="/public/img/readme/quizHome.png" alt="quizHome">
@@ -94,7 +94,7 @@ Discover how climate variations impact our planet and what we can do to promote 
       </ul>
     </li>
     <li>
-      <h6>Climate Information</h6>
+      <h4>Climate Information</h4>
       <ul>
       <li>Clicking on the climate grid items allows you to view a chart with relevant information.</li>
       <img src="/public/img/readme/climateHome.png" alt="Climate Home">
@@ -110,11 +110,11 @@ Discover how climate variations impact our planet and what we can do to promote 
 ## Technical Choices
 
 <div>
-  <h6>React</h6>
+  <h4>React</h4>
   <div>Chosen to create dynamic and engaging interfaces thanks to its component-based structure and virtual DOM.</div>
   <br>
 
-  <h6>Redux</h6>
+  <h4>Redux</h4>
   <div>Used to manage the global state of the application in a consistent and predictable manner.</div>
     <ul>
     <li><strong>App & Data Reducer:</strong> Manages the general application state and data.</li>
@@ -124,31 +124,31 @@ Discover how climate variations impact our planet and what we can do to promote 
   </ul>
   <br>
 
-  <h6>Typescript</h6>
+  <h4>Typescript</h4>
   <div>Added to enhance code safety through static typing and error detection during development.</div>
   <br>
   
-  <h6>TailwindCSS</h6>
+  <h4>TailwindCSS</h4>
   <div>Adopted to style the application quickly and efficiently, using pre-defined HTML classes.</div>
   <br>
   
-  <h6>i18n</h6>
+  <h4>i18n</h4>
   <div>Integrated to support multilingualism, allowing users to select their preferred language and making the application accessible to a wide audience.</div>
   <br>
   
-   <h6>Local Storage</h6>
+   <h4>Local Storage</h4>
   <div>Utilized Local Storage to save user preferences such as dark/light mode, selected language, and quiz results. This ensures a consistent experience for returning users.</div>
   <br>
   
-  <h6>React Router</h6>
+  <h4>React Router</h4>
   <div>Implemented to enable client-side routing, allowing for smooth navigation and rendering of different views in the application.</div>
   <br>
   
-  <h6>Recharts</h6>
+  <h4>Recharts</h4>
   <div>Utilized to create interactive and visually appealing charts illustrating data related to climate change.</div>
   <br>
 
-  <h6>Framer Motion</h6>
+  <h4>Framer Motion</h4>
   <div>Incorporated to provide seamless transitions, animations, and fluidity during navigation, enhancing user experience.</div>
   <br>
 </div>
