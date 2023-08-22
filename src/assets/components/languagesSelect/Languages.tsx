@@ -9,8 +9,8 @@ export default function Languages() {
   const dispatch = useDispatch();
   const language = useSelector((state: RootState) => state.language.language);
 
-  function handleLanguageChange(event: React.ChangeEvent<HTMLSelectElement>) {
-    const selectedLanguage = event.target.value;
+  function handleLanguage() {
+    const selectedLanguage = language === "en" ? "it" : "en";
     dispatch(setLanguage(selectedLanguage));
   }
 
@@ -18,18 +18,13 @@ export default function Languages() {
     i18n.changeLanguage(language);
   }, [language]);
 
+  console.log("language", language);
+
   return (
     <div className={styles.container}>
-      <select
-        name="languages"
-        id="languages"
-        onChange={handleLanguageChange}
-        value={language}
-        className={styles.select}
-      >
-        <option value="en">EN</option>
-        <option value="it">IT</option>
-      </select>
+      <button className={styles.select} onClick={handleLanguage}>
+        {language.toUpperCase()}
+      </button>
     </div>
   );
 }
