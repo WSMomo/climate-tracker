@@ -2,6 +2,7 @@ import styles from "./homeDescription.module.css";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
+import ActionsButtons from "../../actionsButtons/ActionsButtons";
 
 function HomeDescription() {
   const { t } = useTranslation("appTranslation");
@@ -11,6 +12,9 @@ function HomeDescription() {
 
   return (
     <div className={styles.container} id="#home">
+      <div className={styles.actionsButton}>
+        <ActionsButtons />
+      </div>
       <h1 className={styles.title}>{t("title")}</h1>
       <h2 className={styles.subtitle}>{t("subtitle")}</h2>
       <p className={styles.content}>{t("content")}</p>

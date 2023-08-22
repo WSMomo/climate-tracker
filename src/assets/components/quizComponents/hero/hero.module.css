@@ -1,5 +1,5 @@
 .title {
-  @apply text-3xl;
+  @apply text-3xl mt-12;
 }
 
 .getStarted {

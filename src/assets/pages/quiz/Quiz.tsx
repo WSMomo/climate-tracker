@@ -7,6 +7,7 @@ import QuizHome from "./quizHome/QuizHome";
 import Result from "./quizResult/Result";
 import ReturnAtHomeButton from "../../components/quizComponents/returnAtHomeButton/ReturnAtHomeButton";
 import Transition from "../../components/Transition/Transition";
+import ActionsButtons from "../../components/actionsButtons/ActionsButtons";
 
 export default function Quiz() {
   const isStarted = useSelector((state: RootState) => state.quiz.isStarted);
@@ -17,7 +18,10 @@ export default function Quiz() {
   return (
     <Transition>
       <div className={styles.quiz}>
-        <ReturnAtHomeButton />
+        <div className={styles.navbar}>
+          <ReturnAtHomeButton />
+          <ActionsButtons />
+        </div>
         {isHomeVisible && <QuizHome />}
         {isQuizVisible && <QuizQuestions />}
         {isResultVisible && <Result />}
