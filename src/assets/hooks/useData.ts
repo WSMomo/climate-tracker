@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 
-export function useData(url: string) {
+export function useData(url: string, climateCondition: object[]) {
   const [data, setData] = useState();
-
-  // console.log(data);
-
   useEffect(() => {
+    if (climateCondition.length !== 0) return;
+
     async function fetchData() {
       try {
         const res = await fetch(url);
@@ -18,7 +17,7 @@ export function useData(url: string) {
 
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url]);
+  }, [url, climateCondition]);
 
   return data;
 }

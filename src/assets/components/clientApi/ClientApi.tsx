@@ -25,11 +25,17 @@ interface Props {
   className?: string;
 }
 function ClientApi({ children, className }: Props) {
-  const temperatureData = useData(TEMPERATURE_URL);
-  const co2Data = useData(CO2_URL);
-  const methaneData = useData(METHANE_URL);
-  const no2Data = useData(NO2_URL);
-  const arcticData = useData(ARCTIC_URL);
+  const temperature = useSelector((state: RootState) => state.data.temperature);
+  const arctic = useSelector((state: RootState) => state.data.arctic);
+  const co2 = useSelector((state: RootState) => state.data.co2);
+  const methane = useSelector((state: RootState) => state.data.methane);
+  const no2 = useSelector((state: RootState) => state.data.no2);
+
+  const temperatureData = useData(TEMPERATURE_URL, temperature);
+  const co2Data = useData(CO2_URL, co2);
+  const methaneData = useData(METHANE_URL, methane);
+  const no2Data = useData(NO2_URL, no2);
+  const arcticData = useData(ARCTIC_URL, arctic);
 
   const dispatch = useDispatch();
   const isClientApiActived = useSelector(
