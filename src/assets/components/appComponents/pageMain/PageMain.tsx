@@ -57,8 +57,8 @@ function PageMain({ data, infoTitle, removeFirst, children }: Props) {
           data={data}
           minXSelected={minXSelected}
           maxXSelected={maxXSelected}
-          minYSelected={minYAxis}
-          maxYSelected={maxYAxis}
+          minY={minYAxis}
+          maxY={maxYAxis}
           infoTitle={infoTitle}
         />
       )}

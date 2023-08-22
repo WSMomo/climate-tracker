@@ -4,20 +4,20 @@ import {
   ValueType,
   NameType,
 } from "recharts/types/component/DefaultTooltipContent";
-
+import { useTranslation } from "react-i18next";
+import { getFirstsDigit } from "../../../global/global";
 interface Props extends TooltipProps<ValueType, NameType> {
   infoName: string;
 }
 
 function CustomTooltip({ active, payload, label, infoName }: Props) {
+  const { t } = useTranslation("appTranslation");
+
   if (active) {
     return (
       <div className={styles.container}>
-        {typeof label === "string" ? (
-          <p>{`Year: ${label[0] + label[1] + label[2] + label[3]}`}</p>
-        ) : (
-          <p>{`Year: ${label}`}</p>
-        )}
+        <p>{`${t("date")}: ${getFirstsDigit(label)}`}</p>
+
         <p>
           {payload?.[0].value}
           {infoName}

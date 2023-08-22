@@ -13,13 +13,14 @@ import {
   InfoComponentsType,
   infoComponents,
 } from "../../../global/infoComponents";
+import { getFirstsDigit } from "../../../global/global";
 
 interface Props {
   data: InfoComponentsType[];
   minXSelected: number;
   maxXSelected: number;
-  minYSelected: number;
-  maxYSelected: number;
+  minY: number;
+  maxY: number;
   infoTitle: string;
 }
 
@@ -27,36 +28,31 @@ function Chart({
   data,
   minXSelected,
   maxXSelected,
-  minYSelected,
-  maxYSelected,
+  minY,
+  maxY,
   infoTitle,
 }: Props) {
+  // COLOR FOR LINE CHARTS
+  const minLineColor = "#4ad1e3";
+  const maxLineColor = "#b01602";
+
+  // FILTER THE DATA by SLIDER
+  const filteredData = data.filter(
+    (obj) =>
+      +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] >
+        minXSelected &&
+      +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] <
+        maxXSelected
+  );
   return (
     <ResponsiveContainer width="100%" height={300} className={styles.container}>
-      <LineChart
-        data={data.filter(
-          (obj) =>
-            +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] >
-              minXSelected &&
-            +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] <
-              maxXSelected
-        )}
-        margin={{ top: 10, bottom: 20 }}
-      >
+      <LineChart data={filteredData} margin={{ top: 10, bottom: 20 }}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
           dataKey={infoComponents[infoTitle].dataProperty}
-          tickFormatter={(value) => {
-            const valueToString = String(value);
-            return (
-              valueToString[0] +
-              valueToString[1] +
-              valueToString[2] +
-              valueToString[3]
-            );
-          }}
+          tickFormatter={(value) => getFirstsDigit(value)}
         />
-        <YAxis type="number" domain={[minYSelected, maxYSelected]} />
+        <YAxis type="number" domain={[minY, maxY]} />
         <Tooltip
           cursor={false}
           wrapperStyle={{ outline: "none" }}
@@ -66,8 +62,8 @@ function Chart({
         />
         <defs>
           <linearGradient id="colorUv" x1="0%" y1="100%">
-            <stop offset="0%" stopColor="#3c9dd0" />
-            <stop offset="100%" stopColor="#ED714D" />
+            <stop offset="0%" stopColor={minLineColor} />
+            <stop offset="100%" stopColor={maxLineColor} />
           </linearGradient>
         </defs>
         <Line
