@@ -1,11 +1,10 @@
 import styles from "./footer.module.css";
 import Contact from "../appComponents/contact/Contact";
-import DarkModeButton from "../appComponents/darkModeButton/DarkModeButton";
-import Languages from "../languagesSelect/Languages";
 import LinkedinIcon from "/img/contacts/linkedin.png";
 import GithubIcon from "/img/contacts/gitHub.png";
 import WsMomoIcon from "/img/contacts/marcoMomoHome.png";
 import ReturnToTheTop from "../appComponents/returnToTheTop/ReturnToTheTop";
+import ActionsButtons from "../actionsButtons/ActionsButtons";
 
 const contacts = {
   linkedin: {
@@ -30,8 +29,7 @@ function Footer() {
     <div className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.actions}>
-          <Languages />
-          <DarkModeButton />
+          <ActionsButtons />
           <ReturnToTheTop />
         </div>
         <div className={styles.contacts}>

@@ -30,6 +30,7 @@ function Sidebar() {
               </SidebarButton>
             </div>
             <SidebarLink routeLink="/">Home</SidebarLink>
+            <SidebarLink routeLink="/quiz">Quiz</SidebarLink>
             <SidebarLink routeLink="/temperature">
               {t("temperature")}
             </SidebarLink>
