@@ -6,7 +6,7 @@ import { restart } from "../../../redux/quizReducer";
 import ResultRender from "../../../components/quizComponents/resultRender/ResultRender";
 import ActionButton from "../../../components/quizComponents/actionButton/ActionButton";
 import WrongAnswerRender from "../../../components/quizComponents/wrongAnswerRender/WrongAnswerRender";
-import Transition from "../../../components/Transition/Transition";
+import Transition from "../../../components/transitions/Transition";
 
 export default function Result() {
   // REDUX

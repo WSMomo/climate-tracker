@@ -5,7 +5,7 @@ import Loader from "../../components/appComponents/loader/Loader";
 import HomeDescription from "../../components/appComponents/homeDescription/HomeDescription";
 import GridItems from "../../components/appComponents/gridItems/GridItems";
 import Footer from "../../components/footer/Footer";
-import Transition from "../../components/Transition/Transition";
+import Transition from "../../components/transitions/Transition";
 function Home() {
   const allDataLoaded = useSelector(
     (state: RootState) => state.data.allDataLoaded
