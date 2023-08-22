@@ -1,12 +1,11 @@
+import styles from "./quiz.module.css";
 import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
-import QuizQuestions from "./quiQuestions/QuizQuestions";
+import QuizQuestions from "./quizQuestions/QuizQuestions";
 import QuizHome from "./quizHome/QuizHome";
 import Result from "./quizResult/Result";
-import { RootState } from "../../redux/store";
 import ReturnAtHomeButton from "../../components/quizComponents/returnAtHomeButton/ReturnAtHomeButton";
-
-import styles from "./quiz.module.css";
 
 export default function Quiz() {
   const isStarted = useSelector((state: RootState) => state.quiz.isStarted);
