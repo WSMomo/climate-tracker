@@ -8,5 +8,6 @@
   "arctic": "Arctic",
   "no2": "Nitrogen Dioxide",
   "co2": "Carbon Dioxide",
-  "methane": "Methane"
+  "methane": "Methane",
+  "refreshButton": "Uh-oh! It looks like someone's been playing with the wires. Press me to get everything back on track!"
 }

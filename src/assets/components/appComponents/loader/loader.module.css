@@ -1,7 +1,19 @@
-.loader {
+.container {
+  @apply flex flex-col justify-center items-center gap-12;
+}
+
+.loaderAnimation {
   @apply inline-block h-16 w-16 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] text-light-text-color;
 }
 
-:global(.dark) .loader {
+.refreshButton {
+  @apply border w-1/2 p-4 rounded-xl border-light-text-color hover:bg-light-text-color hover:text-light-main-color;
+}
+
+:global(.dark) .loaderAnimation {
   @apply text-dark-text-color;
+}
+
+:global(.dark) .refreshButton {
+  @apply border-dark-text-color hover:bg-dark-text-color hover:text-dark-main-color;
 }
