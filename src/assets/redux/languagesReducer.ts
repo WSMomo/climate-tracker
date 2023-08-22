@@ -8,7 +8,7 @@ export type LanguagesReducerTypes = {
 function getInitalLanguageState(): string {
   const savedLanguage = localStorage.getItem("language");
   console.log(savedLanguage);
-  return savedLanguage ? JSON.parse(savedLanguage) : "";
+  return savedLanguage ? JSON.parse(savedLanguage) : "en";
 }
 
 const initialState: LanguagesReducerTypes = {
