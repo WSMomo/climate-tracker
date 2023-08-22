@@ -4,17 +4,20 @@ import NextOrEndButtons from "../../../components/quizComponents/nextOrEndButton
 import ProgressionBar from "../../../components/quizComponents/progressionBar/ProgressionBar";
 import Question from "../../../components/quizComponents/question/Question";
 import Separator from "../../../components/separator/Separator";
+import Transition from "../../../components/Transition/Transition";
 export default function QuizQuestions() {
   return (
     <>
-      <div className={styles.questions}>
-        <ProgressionBar />
-        <Question />
-        <Separator />
-        <Answers />
-        <Separator />
-        <NextOrEndButtons />
-      </div>
+      <Transition>
+        <div className={styles.questions}>
+          <ProgressionBar />
+          <Question />
+          <Separator />
+          <Answers />
+          <Separator />
+          <NextOrEndButtons />
+        </div>
+      </Transition>
     </>
   );
 }
