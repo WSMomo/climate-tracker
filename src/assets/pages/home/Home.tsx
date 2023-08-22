@@ -5,6 +5,7 @@ import Loader from "../../components/appComponents/loader/Loader";
 import HomeDescription from "../../components/appComponents/homeDescription/HomeDescription";
 import GridItems from "../../components/appComponents/gridItems/GridItems";
 import Footer from "../../components/footer/Footer";
+import Transition from "../../components/Transition/Transition";
 function Home() {
   const allDataLoaded = useSelector(
     (state: RootState) => state.data.allDataLoaded
@@ -15,11 +16,13 @@ function Home() {
   }
 
   return (
-    <div className={styles.container}>
-      <HomeDescription />
-      <GridItems />
-      <Footer />
-    </div>
+    <Transition>
+      <div className={styles.container}>
+        <HomeDescription />
+        <GridItems />
+        <Footer />
+      </div>
+    </Transition>
   );
 }
 
