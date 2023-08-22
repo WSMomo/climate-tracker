@@ -1,0 +1,15 @@
+.container {
+  @apply flex flex-col justify-center items-center gap-12 w-1/2 text-center max-w-[800px];
+}
+
+.errorMessage {
+  @apply text-2xl;
+}
+
+.refreshButton {
+  @apply text-lg border w-1/2 p-4 rounded-xl border-light-text-color hover:bg-light-text-color hover:text-light-main-color;
+}
+
+:global(.dark) .refreshButton {
+  @apply border-dark-text-color hover:bg-dark-text-color hover:text-dark-main-color;
+}

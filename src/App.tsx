@@ -8,6 +8,7 @@ import Arctic from "./assets/pages/arctic/Arctic";
 import Co2 from "./assets/pages/co2/Co2";
 import Quiz from "./assets/pages/quiz/Quiz";
 import { AnimatePresence } from "framer-motion";
+import ErrorPage from "./assets/pages/errorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/co2",
     element: <Co2 />,
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);
 

@@ -9,5 +9,6 @@
   "no2": "Nitrogen Dioxide",
   "co2": "Carbon Dioxide",
   "methane": "Methane",
-  "refreshButton": "Uh-oh! It looks like someone's been playing with the wires. Press me to get everything back on track!"
+  "refreshButton": "Uh-oh! It looks like someone's been playing with the wires. Press me to get everything back on track!",
+  "errorPage": "We're sorry, it seems that something has gone on vacation instead of loading the page properly. We're working to get it back home as soon as possible!"
 }
