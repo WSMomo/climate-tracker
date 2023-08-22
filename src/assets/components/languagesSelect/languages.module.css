@@ -2,14 +2,21 @@
   @apply rounded-full;
 }
 
-.select {
+.button {
   @apply p-1 text-light-text-color bg-light-secondary-color appearance-none  h-8 w-8 cursor-pointer text-center hover:bg-light-text-color hover:text-light-main-color rounded-full;
 }
 
-.select:focus {
-  @apply outline-none;
+.button:active,
+.button:focus {
+  @apply outline-none text-light-text-color bg-light-secondary-color;
 }
 
-:global(.dark) .select {
+:global(.dark) .button {
   @apply bg-dark-secondary-color text-dark-text-color hover:bg-dark-text-color hover:text-dark-main-color;
+}
+:global(.dark) .button:active {
+  @apply bg-dark-secondary-color text-dark-text-color;
+}
+:global(.dark) .button:focus {
+  @apply bg-dark-secondary-color text-dark-text-color;
 }

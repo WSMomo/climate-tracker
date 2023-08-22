@@ -18,11 +18,9 @@ export default function Languages() {
     i18n.changeLanguage(language);
   }, [language]);
 
-  console.log("language", language);
-
   return (
     <div className={styles.container}>
-      <button className={styles.select} onClick={handleLanguage}>
+      <button className={styles.button} onClick={handleLanguage}>
         {language.toUpperCase()}
       </button>
     </div>
