@@ -1,6 +1,6 @@
 import styles from "../preview.module.css";
 import { Link } from "react-router-dom";
-import { Line, LineChart, ResponsiveContainer } from "recharts";
+import { Line, LineChart, ResponsiveContainer, YAxis } from "recharts";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { RootState } from "../../../../redux/store";
@@ -20,6 +20,13 @@ function PreviewChart({ infoTitle }: Props) {
     infoComponents[infoTitle].dataProperty,
     true
   );
+
+  const { minValue: minYAxis, maxValue: maxYAxis } = useMinMaxValue(
+    data,
+    infoComponents[infoTitle].datakey,
+    true
+  );
+
   const { t } = useTranslation("appTranslation");
   const chartName = t(infoTitle);
   const translatedName = chartName[0].toUpperCase() + chartName.slice(1);
@@ -42,6 +49,7 @@ function PreviewChart({ infoTitle }: Props) {
               )}
               margin={{ top: 10, bottom: 20 }}
             >
+              <YAxis hide domain={[minYAxis, maxYAxis]} />
               <defs>
                 <linearGradient id="colorUv" x1="0%" y1="100%">
                   <stop offset="0%" stopColor="#3c9dd0" />
