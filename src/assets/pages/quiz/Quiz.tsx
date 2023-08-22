@@ -11,14 +11,16 @@ import Transition from "../../components/Transition/Transition";
 export default function Quiz() {
   const isStarted = useSelector((state: RootState) => state.quiz.isStarted);
   const isFinished = useSelector((state: RootState) => state.quiz.isFinished);
-
+  const isHomeVisible = !isStarted && !isFinished;
+  const isQuizVisible = isStarted && !isFinished;
+  const isResultVisible = isFinished;
   return (
     <Transition>
       <div className={styles.quiz}>
         <ReturnAtHomeButton />
-        {!isStarted && !isFinished && <QuizHome />}
-        {isStarted && !isFinished && <QuizQuestions />}
-        {isFinished && <Result />}
+        {isHomeVisible && <QuizHome />}
+        {isQuizVisible && <QuizQuestions />}
+        {isResultVisible && <Result />}
       </div>
     </Transition>
   );
