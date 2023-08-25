@@ -6,6 +6,7 @@ import HomeDescription from "../../components/appComponents/homeDescription/Home
 import GridItems from "../../components/appComponents/gridItems/GridItems";
 import Footer from "../../components/footer/Footer";
 import Transition from "../../components/transition/Transition";
+import { Helmet } from "react-helmet";
 function Home() {
   const allDataLoaded = useSelector(
     (state: RootState) => state.data.allDataLoaded
@@ -16,13 +17,18 @@ function Home() {
   }
 
   return (
-    <Transition>
-      <div className={styles.container}>
-        <HomeDescription />
-        <GridItems />
-        <Footer />
-      </div>
-    </Transition>
+    <>
+      <Helmet>
+        <title>Climate Tracker</title>
+      </Helmet>
+      <Transition>
+        <div className={styles.container}>
+          <HomeDescription />
+          <GridItems />
+          <Footer />
+        </div>
+      </Transition>
+    </>
   );
 }
 
