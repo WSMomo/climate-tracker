@@ -6,7 +6,7 @@ import HomeDescription from "../../components/appComponents/homeDescription/Home
 import GridItems from "../../components/appComponents/gridItems/GridItems";
 import Footer from "../../components/footer/Footer";
 import Transition from "../../components/transition/Transition";
-import { Helmet } from "react-helmet";
+import PageNavTitle from "../../components/navTitle/NavTitle";
 function Home() {
   const allDataLoaded = useSelector(
     (state: RootState) => state.data.allDataLoaded
@@ -18,9 +18,7 @@ function Home() {
 
   return (
     <>
-      <Helmet>
-        <title>Climate Tracker</title>
-      </Helmet>
+      <PageNavTitle title="Home" />
       <Transition>
         <div className={styles.container}>
           <HomeDescription />
