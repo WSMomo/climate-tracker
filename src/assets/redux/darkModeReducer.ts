@@ -15,9 +15,6 @@ function getPreferredColorScheme(): boolean {
 // ELSE GET THE SAVED THEME
 function getInitialDarkModeState(): boolean {
   const savedMode = localStorage.getItem("darkMode");
-  console.log(savedMode);
-  console.log(getPreferredColorScheme());
-  console.log(savedMode ? JSON.parse(savedMode) : getPreferredColorScheme());
   return savedMode ? JSON.parse(savedMode) : getPreferredColorScheme();
 }
 
