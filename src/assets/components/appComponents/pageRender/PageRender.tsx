@@ -23,7 +23,6 @@ interface Props {
 function PageRender({ infoTitle, removeFirst }: Props) {
   const data = useSelector((state: RootState) => state.data[infoTitle]);
   const { t } = useTranslation(infoComponents[infoTitle].title);
-  console.log(infoTitle);
   // CHECK IF KEY EXISTS
   const pageTitleExist = "pageTitle" === t("pageTitle");
   const pageMainExist = "pageMain" === t("pageMain");
