@@ -1,8 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+function getPreferredColorScheme(): boolean {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    return true; //dark
+  } else {
+    return false; //light
+  }
+}
+
+// IF FIRST ACCESS GET THE SYSTEM PREFERENCE THEME
+// ELSE GET THE SAVED THEME
 function getInitialDarkModeState(): boolean {
   const savedMode = localStorage.getItem("darkMode");
-  return savedMode ? JSON.parse(savedMode) : false;
+  return savedMode ? JSON.parse(savedMode) : getPreferredColorScheme();
 }
 
 export interface DarkModeInterface {

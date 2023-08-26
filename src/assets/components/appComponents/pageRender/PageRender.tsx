@@ -13,6 +13,7 @@ import PageInfo from "../pageInfo/PageInfo";
 import SourceLink from "../sourceLink/SourceLink";
 import ReturnToTheTop from "../returnToTheTop/ReturnToTheTop";
 import Transition from "../../transition/Transition";
+import NavTitle from "../../navTitle/NavTitle";
 
 interface Props {
   infoTitle: keyof InfoState;
@@ -22,7 +23,7 @@ interface Props {
 function PageRender({ infoTitle, removeFirst }: Props) {
   const data = useSelector((state: RootState) => state.data[infoTitle]);
   const { t } = useTranslation(infoComponents[infoTitle].title);
-
+  console.log(infoTitle);
   // CHECK IF KEY EXISTS
   const pageTitleExist = "pageTitle" === t("pageTitle");
   const pageMainExist = "pageMain" === t("pageMain");
@@ -35,39 +36,42 @@ function PageRender({ infoTitle, removeFirst }: Props) {
 
   if (data.length === 0) return <Loader />;
   return (
-    <Transition>
-      <div className={styles.pageContainer}>
-        {!pageTitleExist && <PageTitle>{t("pageTitle")}</PageTitle>}
-        {!pageMainExist && removeFirst ? (
-          <PageMain data={data} infoTitle={infoComponents[infoTitle].title}>
-            {t("pageMain")}
-          </PageMain>
-        ) : (
-          <PageMain
-            data={data}
-            infoTitle={infoComponents[infoTitle].title}
-            removeFirst={true}
-          >
-            {t("pageMain")}
-          </PageMain>
-        )}
-        <PageInfo buttonText={t("learnMoreButton")}>
-          {!h3_firstExist && <h3>{t("h3_first")}</h3>}
-          {!p_firstExist && <p>{t("p_first")}</p>}
-          {!h3_secondExist && <h3>{t("h3_second")}</h3>}
-          {!p_secondExist && <p>{t("p_second")}</p>}
-          {!p_thirdExist && <p>{t("p_third")}</p>}
-          {!p_fourthExist && <p>{t("p_fourth")}</p>}
-          <SourceInfo>
-            <br />
-            <SourceLink url={t("sourceInfoLink")}>
-              {t("sourceInfoDescription")}
-            </SourceLink>
-          </SourceInfo>
-          <ReturnToTheTop />
-        </PageInfo>
-      </div>
-    </Transition>
+    <>
+      <NavTitle title={infoTitle} />
+      <Transition>
+        <div className={styles.pageContainer}>
+          {!pageTitleExist && <PageTitle>{t("pageTitle")}</PageTitle>}
+          {!pageMainExist && removeFirst ? (
+            <PageMain data={data} infoTitle={infoComponents[infoTitle].title}>
+              {t("pageMain")}
+            </PageMain>
+          ) : (
+            <PageMain
+              data={data}
+              infoTitle={infoComponents[infoTitle].title}
+              removeFirst={true}
+            >
+              {t("pageMain")}
+            </PageMain>
+          )}
+          <PageInfo buttonText={t("learnMoreButton")}>
+            {!h3_firstExist && <h3>{t("h3_first")}</h3>}
+            {!p_firstExist && <p>{t("p_first")}</p>}
+            {!h3_secondExist && <h3>{t("h3_second")}</h3>}
+            {!p_secondExist && <p>{t("p_second")}</p>}
+            {!p_thirdExist && <p>{t("p_third")}</p>}
+            {!p_fourthExist && <p>{t("p_fourth")}</p>}
+            <SourceInfo>
+              <br />
+              <SourceLink url={t("sourceInfoLink")}>
+                {t("sourceInfoDescription")}
+              </SourceLink>
+            </SourceInfo>
+            <ReturnToTheTop />
+          </PageInfo>
+        </div>
+      </Transition>
+    </>
   );
 }
 

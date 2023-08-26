@@ -6,6 +6,7 @@ import HomeDescription from "../../components/appComponents/homeDescription/Home
 import GridItems from "../../components/appComponents/gridItems/GridItems";
 import Footer from "../../components/footer/Footer";
 import Transition from "../../components/transition/Transition";
+import PageNavTitle from "../../components/navTitle/NavTitle";
 function Home() {
   const allDataLoaded = useSelector(
     (state: RootState) => state.data.allDataLoaded
@@ -16,13 +17,16 @@ function Home() {
   }
 
   return (
-    <Transition>
-      <div className={styles.container}>
-        <HomeDescription />
-        <GridItems />
-        <Footer />
-      </div>
-    </Transition>
+    <>
+      <PageNavTitle title="Home" />
+      <Transition>
+        <div className={styles.container}>
+          <HomeDescription />
+          <GridItems />
+          <Footer />
+        </div>
+      </Transition>
+    </>
   );
 }
 
