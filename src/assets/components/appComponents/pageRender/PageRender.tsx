@@ -13,7 +13,7 @@ import PageInfo from "../pageInfo/PageInfo";
 import SourceLink from "../sourceLink/SourceLink";
 import ReturnToTheTop from "../returnToTheTop/ReturnToTheTop";
 import Transition from "../../transition/Transition";
-import PageNavTitle from "../navTitle/NavTitle";
+import NavTitle from "../../navTitle/NavTitle";
 
 interface Props {
   infoTitle: keyof InfoState;
@@ -37,7 +37,7 @@ function PageRender({ infoTitle, removeFirst }: Props) {
   if (data.length === 0) return <Loader />;
   return (
     <>
-      <PageNavTitle infoTitle={infoTitle} />
+      <NavTitle title={infoTitle} />
       <Transition>
         <div className={styles.pageContainer}>
           {!pageTitleExist && <PageTitle>{t("pageTitle")}</PageTitle>}
