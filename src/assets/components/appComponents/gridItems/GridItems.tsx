@@ -11,7 +11,7 @@ function GridItems() {
       <PreviewChart infoTitle={infoComponents.co2.title} />
       <PreviewChart infoTitle={infoComponents.methane.title} />
       <PreviewChart infoTitle={infoComponents.no2.title} />
-      <PreviewChart infoTitle={infoComponents.arctic.title} />
+      {/* <PreviewChart infoTitle={infoComponents.arctic.title} /> */}
     </div>
   );
 }
