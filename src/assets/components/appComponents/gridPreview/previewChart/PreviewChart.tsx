@@ -4,7 +4,10 @@ import { Line, LineChart, ResponsiveContainer, YAxis } from "recharts";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { RootState } from "../../../../redux/store";
-import { infoComponents } from "../../../../global/infoComponents";
+import {
+  InfoComponentsType,
+  infoComponents,
+} from "../../../../global/infoComponents";
 import { useMinMaxValue } from "../../../../hooks/useMinMaxValue";
 import { InfoState } from "../../../../redux/dataReducer";
 import ClientApi from "../../../clientApi/ClientApi";
@@ -27,13 +30,18 @@ function PreviewChart({ infoTitle }: Props) {
   );
 
   // FILTER THE DATA by SLIDER
-  const filteredData = data.filter(
-    (obj) =>
-      +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] >
-        minXAxis &&
-      +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] <
-        maxXAxis
-  );
+  console.log(infoComponents[infoTitle]);
+  console.log(data);
+  let filteredData: [] | InfoComponentsType[] = [];
+  if (infoComponents[infoTitle].title !== "arctic") {
+    filteredData = data.filter(
+      (obj) =>
+        +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] >
+          minXAxis &&
+        +obj[infoComponents[infoTitle].dataProperty as keyof typeof obj] <
+          maxXAxis
+    );
+  }
 
   const { minValue: minYAxis, maxValue: maxYAxis } = useMinMaxValue(
     data,
