@@ -1,7 +1,11 @@
 import PageRender from "../../components/appComponents/pageRender/PageRender";
 
 function Arctic() {
-  return <PageRender infoTitle={"arctic"} removeFirst={true} />;
+  return (
+    <div className="hidden">
+      <PageRender infoTitle={"arctic"} removeFirst={true} />;
+    </div>
+  );
 }
 
 export default Arctic;
