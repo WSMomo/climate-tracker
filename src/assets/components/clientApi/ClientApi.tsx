@@ -31,23 +31,11 @@ function ClientApi({ children, className }: Props) {
   const methane = useSelector((state: RootState) => state.data.methane);
   const no2 = useSelector((state: RootState) => state.data.no2);
 
-  const temperatureData = useData(
-    "https://global-warming.org/api/temperature-api",
-    temperature
-  );
-  const co2Data = useData("https://global-warming.org/api/co2-api", co2);
-  const methaneData = useData(
-    "https://global-warming.org/api/methane-api",
-    methane
-  );
-  const no2Data = useData(
-    "https://global-warming.org/api/nitrous-oxide-api",
-    no2
-  );
-  const arcticData = useData(
-    "https://global-warming.org/api/arctic-api",
-    arctic
-  );
+  const temperatureData = useData(TEMPERATURE_URL, temperature);
+  const co2Data = useData(CO2_URL, co2);
+  const methaneData = useData(METHANE_URL, methane);
+  const no2Data = useData(NO2_URL, no2);
+  const arcticData = useData(ARCTIC_URL, arctic);
 
   const dispatch = useDispatch();
   const isClientApiActived = useSelector(
