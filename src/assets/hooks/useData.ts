@@ -4,7 +4,7 @@ export function useData(url: string, climateCondition: object[]) {
   const [data, setData] = useState();
   useEffect(() => {
     // CHECK, if climateCondition is not empty not fetch url
-    if (climateCondition.length !== 0) return;
+    if (!climateCondition || climateCondition.length !== 0) return;
 
     async function fetchData() {
       try {
