@@ -30,8 +30,8 @@ function PreviewChart({ infoTitle }: Props) {
   );
 
   // FILTER THE DATA by SLIDER
-  console.log(infoComponents[infoTitle]);
-  console.log(data);
+  // console.log(infoComponents[infoTitle]);
+  // console.log(data);
   let filteredData: [] | InfoComponentsType[] = [];
   if (infoComponents[infoTitle].title !== "arctic") {
     filteredData = data.filter(
