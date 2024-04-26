@@ -5,7 +5,7 @@ import { useData } from "../../hooks/useData";
 import { RootState } from "../../redux/store";
 import {
   setAllDataLoaded,
-  setArctic,
+  // setArctic,
   setCo2,
   setIsClientApiActived,
   setMethane,
@@ -13,7 +13,7 @@ import {
   setTemperature,
 } from "../../redux/dataReducer";
 import {
-  ARCTIC_URL,
+  // ARCTIC_URL,
   CO2_URL,
   METHANE_URL,
   NO2_URL,
@@ -26,7 +26,7 @@ interface Props {
 }
 function ClientApi({ children, className }: Props) {
   const temperature = useSelector((state: RootState) => state.data.temperature);
-  const arctic = useSelector((state: RootState) => state.data.arctic);
+  // const arctic = useSelector((state: RootState) => state.data.arctic);
   const co2 = useSelector((state: RootState) => state.data.co2);
   const methane = useSelector((state: RootState) => state.data.methane);
   const no2 = useSelector((state: RootState) => state.data.no2);
@@ -35,7 +35,7 @@ function ClientApi({ children, className }: Props) {
   const co2Data = useData(CO2_URL, co2);
   const methaneData = useData(METHANE_URL, methane);
   const no2Data = useData(NO2_URL, no2);
-  const arcticData = useData(ARCTIC_URL, arctic);
+  // const arcticData = useData(ARCTIC_URL, arctic);
 
   const dispatch = useDispatch();
   const isClientApiActived = useSelector(
@@ -59,26 +59,32 @@ function ClientApi({ children, className }: Props) {
       dispatch(setNo2(no2Data["nitrous"]));
     }
 
-    if (arcticData) {
-      dispatch(setArctic(arcticData["arcticData"]));
-    }
+    // if (arcticData) {
+    //   dispatch(setArctic(arcticData["arcticData"]));
+    // }
 
     if (
       !isClientApiActived &&
       temperatureData &&
       co2Data &&
       methaneData &&
-      no2Data &&
-      arcticData
+      no2Data
+      // && arcticData
     ) {
       dispatch(setIsClientApiActived());
     }
-    if (temperatureData && co2Data && methaneData && no2Data && arcticData) {
+    if (
+      temperatureData &&
+      co2Data &&
+      methaneData &&
+      no2Data
+      // && arcticData
+    ) {
       dispatch(setAllDataLoaded());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
-    arcticData,
+    // arcticData,
     co2Data,
     isClientApiActived,
     methaneData,

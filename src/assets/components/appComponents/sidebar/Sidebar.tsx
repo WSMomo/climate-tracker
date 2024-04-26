@@ -37,7 +37,7 @@ function Sidebar() {
             <SidebarLink routeLink="/co2">{t("co2")}</SidebarLink>
             <SidebarLink routeLink="/methane">{t("methane")}</SidebarLink>
             <SidebarLink routeLink="/no2">{t("no2")}</SidebarLink>
-            <SidebarLink routeLink="/arctic">{t("arctic")}</SidebarLink>
+            {/* <SidebarLink routeLink="/arctic">{t("arctic")}</SidebarLink> */}
             <div className={styles.actions}>
               <Languages />
               <DarkModeButton />
